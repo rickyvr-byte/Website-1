@@ -1093,6 +1093,52 @@
         <p>— Our Class</p>`;
     });
 
+    // ── KONAMI CODE ─────────────────────────────────────────────
+const konamiCode = [
+    "ArrowUp","ArrowUp",
+    "ArrowDown","ArrowDown",
+    "ArrowLeft","ArrowRight",
+    "ArrowLeft","ArrowRight",
+    "b","a"
+];
+
+let konamiIndex = 0;
+let konamiReward = 1000;
+
+document.addEventListener("keydown", (e) => {
+    const key = e.key.toLowerCase();
+
+    if (key === konamiCode[konamiIndex].toLowerCase()) {
+        konamiIndex++;
+
+        if (konamiIndex === konamiCode.length) {
+            activateKonami();
+            konamiIndex = 0;
+        }
+    } else {
+        konamiIndex = 0;
+    }
+});
+
+function activateKonami() {
+    // Give points
+    blehPoints += konamiReward;
+    totalEarned += konamiReward;
+
+    notify("KONAMI CODE! +" + fmt(konamiReward) + " blehPoints 👀");
+
+    // Increase reward (add a zero)
+    konamiReward *= 10;
+
+    // Cap at 100,000,000 then reset
+    if (konamiReward > 100000000) {
+        konamiReward = 1000;
+        notify("Konami reward reset! 🔄");
+    }
+
+    updateDisplay();
+}
+
     // ── INIT ───────────────────────────────────────────────────────────────
     recalcAuto();
     recalcClick();

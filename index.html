@@ -11,23 +11,17 @@
         background: #2b2b2b;
     }
 
-    /* TOP BAR FIXED */
     .top {
         background: #8b2e00;
         height: 220px;
-        position: fixed; /* <-- stay at top */
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         overflow: hidden;
-        z-index: 1000; /* above content */
+        z-index: 1000;
     }
 
-    .left-text {
-        display: none;
-    }
-
-    /* CONE LEFT */
     .cone {
         position: absolute;
         left: 40px;
@@ -38,7 +32,6 @@
         cursor: pointer;
     }
 
-    /* LOGO CENTER */
     .logo {
         position: absolute;
         left: 50%;
@@ -48,7 +41,6 @@
         object-fit: contain;
     }
 
-    /* Wave container */
     .wave-container {
         position: absolute;
         bottom: 0;
@@ -68,27 +60,61 @@
         to { transform: translateX(-50%); }
     }
 
-    /* content spacing so it's not hidden behind top */
     .content {
-        margin-top: 220px; /* same as top height */
-        height: 2000px; /* just for demo scrolling */
+        margin-top: 220px;
+        height: 2000px;
         background: #2b2b2b;
+        padding-top: 40px;
+    }
+
+    .card {
+        width: 50%;
+        margin: 40px auto;
+        background: #3a3a3a;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-decoration: none;
+        display: block;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .card-img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .card-info {
+        padding: 15px;
+        color: white;
+    }
+
+    .card-info h2 {
+        margin: 0 0 5px 0;
+    }
+
+    .card-info p {
+        margin: 0;
+        font-size: 14px;
+        color: #ccc;
     }
 </style>
 </head>
 <body>
 
 <div class="top">
-
-    <!-- CONE LEFT -->
     <img src="ConeTransp.png" class="cone">
-
-    <!-- LOGO CENTER -->
     <img src="RickyStuffLogo.png" class="logo">
 
     <div class="wave-container">
         <svg viewBox="0 0 2400 120" preserveAspectRatio="none">
-
             <path d="M0,30 
                      C150,70 350,-30 600,30 
                      C850,90 1050,-10 1200,30
@@ -104,19 +130,25 @@
                      C2050,120 2250,20 2400,60
                      L2400,120 L0,120 Z"
                   fill="#2b2b2b"></path>
-
         </svg>
     </div>
-
 </div>
 
-<div class="content"></div>
+<div class="content">
+    <a href="sillymillyclicker.html" class="card">
+        <img src="sillymillythumbnail.png" class="card-img">
+        <div class="card-info">
+            <h2>Silly Milly Clicker</h2>
+            <p>Click silly milly also just cookie clicker basiclyyy</p>
+        </div>
+    </a>
+</div>
 
 <script>
     const cone = document.querySelector(".cone");
 
     cone.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "instant" });
+        window.scrollTo({ top: 0, behavior: "auto" });
 
         const flash = document.createElement("div");
         flash.style.position = "fixed";
@@ -128,7 +160,7 @@
         flash.style.opacity = "1";
         flash.style.pointerEvents = "none";
         flash.style.transition = "opacity 0.4s ease";
-        flash.style.zIndex = "9999"; // <-- ensures it covers the fixed top
+        flash.style.zIndex = "9999";
 
         document.body.appendChild(flash);
 

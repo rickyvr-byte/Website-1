@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silly Milly Clicker! | millyclicker</title>
+<style id="mainStyle">
+    body {
+        background: #f5f5f5;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        text-align: center;
+        padding: 20px;
+        transition: background 0.3s, color 0.3s;
+        color: black;
+    }
+
+    h1 { color: #ff69b4; }
+
+    #blehCat {
+        width: 250px;
+        cursor: pointer;
+        transition: transform 0.1s;
+        border-radius: 12px;
+    }
+    #blehCat:active { transform: scale(0.9); }
+
+    #stats { margin-top: 20px; font-size: 18px; }
+
+    .stat-row {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 4px 0;
+    }
+    .stat-cell { min-width: 180px; text-align: left; }
+
+    #rebirthInfo {
+        margin-top: 8px;
+        font-size: 15px;
+        color: #c45fb4;
+        font-weight: bold;
+    }
+
+    .panel {
+        margin: 20px auto;
+        padding: 15px;
+        display: none;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        text-align: left;
+        max-width: 420px;
+    }
+    .panel h2 { text-align: center; margin-bottom: 10px; color: #ff69b4; }
+
+    .shop-item {
+        margin: 10px 0;
+        padding: 10px;
+        border: 2px solid #ffb6c1;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    .shop-item:hover { background-color: #ffe4ef; }
+    .shop-title { font-weight: bold; }
+    .shop-cost  { font-size: 14px; color: #555; }
+    .shop-owned { font-size: 13px; color: #aaa; float: right; }
+
+    /* Rebirth button */
+    #rebirthBtn {
+        display: none;
+        margin: 10px auto;
+        padding: 10px 28px;
+        background: linear-gradient(135deg, #c45fb4, #ff69b4);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(196,95,180,0.4);
+        transition: transform 0.15s, box-shadow 0.15s;
+    }
+    #rebirthBtn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(196,95,180,0.55);
+    }
+
+    /* Rebirth overlay */
+    #rebirthOverlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: 100000;
+        justify-content: center;
+        align-items: center;
+    }
+    #rebirthOverlay.show { display: flex; }
+    #rebirthBox {
+        background: #fff;
+        border-radius: 16px;
+        padding: 30px 36px;
+        max-width: 360px;
+        text-align: center;
+        box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        animation: popIn 0.3s ease;
+    }
+    @keyframes popIn {
+        from { transform: scale(0.7); opacity: 0; }
+        to   { transform: scale(1);   opacity: 1; }
+    }
+    #rebirthBox h2 { color: #c45fb4; margin-bottom: 10px; }
+    #rebirthBox p  { font-size: 15px; margin: 6px 0; color: #444; }
+    #rebirthBox .rb-reward { color: #c45fb4; font-weight: bold; font-size: 16px; margin: 10px 0; }
+    .rb-confirm-btn {
+        margin: 6px;
+        padding: 10px 22px;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #rbYes { background: #c45fb4; color: white; }
+    #rbNo  { background: #ddd;    color: #555;  }
+
+    /* Achievements */
+    .ach-section-title {
+        font-weight: bold;
+        color: #ff69b4;
+        font-size: 15px;
+        margin: 14px 0 6px 0;
+        border-bottom: 1px solid #ffb6c1;
+        padding-bottom: 4px;
+    }
+    .ach-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 7px 0;
+        font-size: 14px;
+    }
+    .ach-dot {
+        width: 14px; height: 14px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        background: #ddd;
+    }
+    .ach-dot.earned { background: linear-gradient(135deg, #ff69b4, #ffb347); }
+    .ach-dot.rebirth-earned { background: linear-gradient(135deg, #c45fb4, #9b59b6); }
+    .ach-name  { flex: 1; }
+    .ach-lock  { color: #bbb; font-size: 13px; }
+    .ach-check { color: #ff69b4; font-weight: bold; }
+    .ach-check.rb { color: #c45fb4; }
+
+    .floating {
+        position: fixed;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ff69b4;
+        animation: floatUp 1.2s ease-out forwards;
+        pointer-events: none;
+        user-select: none;
+        z-index: 9999;
+    }
+    @keyframes floatUp {
+        from { opacity: 1; transform: translateY(0); }
+        to   { opacity: 0; transform: translateY(-100px); }
+    }
+
+    .toggle-btn {
+        margin: 5px;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #ff69b4;
+        color: #fff;
+        font-weight: bold;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        transition: background 0.2s;
+    }
+    .toggle-btn:hover { background: #ff85c1; }
+
+    #notifContainer {
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-width: 260px;
+    }
+    .notif {
+        background: #fff;
+        border-left: 4px solid #ff69b4;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+        padding: 10px 14px;
+        font-size: 14px;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        color: #333;
+        animation: slideIn 0.3s ease, fadeOut 0.5s ease 2.5s forwards;
+        pointer-events: none;
+    }
+    .notif.silly   { border-left-color: #ffb347; }
+    .notif.save    { border-left-color: #82c882; }
+    .notif.rebirth { border-left-color: #c45fb4; }
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-30px); }
+        to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to   { opacity: 0; }
+    }
+
+    #sillyBanner {
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        background: #ffb347;
+        color: white;
+        font-weight: bold;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 15px;
+        padding: 6px;
+        display: none;
+        z-index: 9998;
+        text-align: center;
+    }
+
+    .milestone-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #ff69b4, #ffb347);
+        color: white;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 13px;
+        margin: 3px;
+        animation: badgePop 0.4s ease;
+    }
+    @keyframes badgePop {
+        0%   { transform: scale(0); }
+        70%  { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+    #badges { margin-top: 10px; min-height: 24px; }
+
+    body.dark { background: #1a1a1a; color: #f5f5f5; }
+    body.dark h1, body.dark .panel h2 { color: #ffb6c1; }
+    body.dark .panel { background: #2a2a2a; border: 1px solid #555; }
+    body.dark .shop-item { border-color: #888; }
+    body.dark .shop-item:hover { background-color: #444; }
+    body.dark .shop-cost { color: #ccc; }
+    body.dark .shop-owned { color: #888; }
+    body.dark .notif { background: #2a2a2a; color: #f5f5f5; }
+    body.dark #rebirthBox { background: #2a2a2a; }
+    body.dark #rebirthBox p { color: #ccc; }
+    body.dark .ach-lock { color: #666; }
+    body.dark .ach-section-title { color: #ffb6c1; border-color: #555; }
+
+    body.teacher { color: blue; }
+    body.teacher h1, body.teacher .panel h2 { color: blue; }
+    body.teacher .floating { color: blue; }
+</style>
+</head>
+<body>
+
+<div id="notifContainer"></div>
+<div id="sillyBanner">SILLY MODE ACTIVE</div>
+
+<!-- Rebirth confirm overlay -->
+<div id="rebirthOverlay">
+    <div id="rebirthBox">
+        <h2>Rebirth</h2>
+        <p>You are about to rebirth!</p>
+        <p>This will reset your points and all upgrades.</p>
+        <p class="rb-reward" id="rbRewardText"></p>
+        <p>Your total earned and achievements are kept forever.</p>
+        <br>
+        <button class="rb-confirm-btn" id="rbYes">Rebirth!</button>
+        <button class="rb-confirm-btn" id="rbNo">Cancel</button>
+    </div>
+</div>
+
+<h1 id="mainTitle">Silly Milly Clicker!</h1>
+
+<div style="position: relative; display: inline-block;">
+    <img src="https://i.ibb.co/gZ0Mw644/Bleh-cad.jpg" id="blehCat" alt="Bleh Cat">
+</div>
+
+<div id="stats">
+    <div class="stat-row">
+        <span class="stat-cell">Points: <span id="points">0</span></span>
+        <span class="stat-cell">Total Earned: <span id="totalEarned">0</span></span>
+    </div>
+    <div class="stat-row">
+        <span class="stat-cell">Per Click: <span id="ppc">1</span></span>
+        <span class="stat-cell">Auto/sec: <span id="autoPoints">0</span></span>
+    </div>
+    <div id="rebirthInfo"></div>
+    <div id="badges"></div>
+</div>
+
+<div style="margin-top: 14px;">
+    <button id="toggleShop"     class="toggle-btn">Toggle Shop</button>
+    <button id="toggleSettings" class="toggle-btn">Settings</button>
+    <button id="toggleAch"      class="toggle-btn">Achievements</button>
+    <button id="saveBtn"        class="toggle-btn">Save Game</button>
+    <button id="readMsS"        class="toggle-btn" style="display:none;">Read this Ms S</button>
+</div>
+
+<button id="rebirthBtn">Rebirth (requires <span id="rebirthCostLabel">10,000</span> total pts)</button>
+
+<div id="teacherMessage" class="panel" style="display:none;"></div>
+
+<!-- SHOP -->
+<div id="shop" class="panel">
+    <h2>Shop</h2>
+
+    <p style="font-size:13px; color:#aaa; text-align:center;">Auto Upgrades</p>
+
+    <div id="buyAuto" class="shop-item">
+        <span class="shop-owned" id="autoOwned">x0</span>
+        <div class="shop-title" id="autoTitle">Auto-Clicker</div>
+        <div class="shop-cost">Cost: <span id="autoCost">50</span> pts</div>
+        <small id="autoDesc">+1 pt/sec</small>
+    </div>
+    <div id="buyPurrFactory" class="shop-item">
+        <span class="shop-owned" id="purrOwned">x0</span>
+        <div class="shop-title">Purr Factory</div>
+        <div class="shop-cost">Cost: <span id="purrCost">200</span> pts</div>
+        <small>+5 pts/sec</small>
+    </div>
+    <div id="buyLucky" class="shop-item">
+        <span class="shop-owned" id="luckyOwned">x0</span>
+        <div class="shop-title">Lucky Meow</div>
+        <div class="shop-cost">Cost: <span id="luckyCost">400</span> pts</div>
+        <small>Random bonus points every few seconds (stackable)</small>
+    </div>
+    <div id="buyCatNap" class="shop-item">
+        <span class="shop-owned" id="napOwned">x0</span>
+        <div class="shop-title">Cat Nap</div>
+        <div class="shop-cost">Cost: <span id="napCost">1000</span> pts</div>
+        <small>+20 pts/sec</small>
+    </div>
+
+    <p style="font-size:13px; color:#aaa; text-align:center; margin-top:14px;">Click Upgrades</p>
+
+    <div id="buyClick" class="shop-item">
+        <span class="shop-owned" id="clickOwned">x0</span>
+        <div class="shop-title" id="clickTitle">Stronger Paws</div>
+        <div class="shop-cost">Cost: <span id="clickCost">30</span> pts</div>
+        <small id="clickDesc">+1 pt/click</small>
+    </div>
+    <div id="buyMegaPaw" class="shop-item">
+        <span class="shop-owned" id="megaOwned">x0</span>
+        <div class="shop-title">Mega Paw</div>
+        <div class="shop-cost">Cost: <span id="megaCost">250</span> pts</div>
+        <small>+5 pts/click</small>
+    </div>
+    <div id="buyGoldenPaw" class="shop-item">
+        <span class="shop-owned" id="goldenOwned">x0</span>
+        <div class="shop-title">Golden Paw</div>
+        <div class="shop-cost">Cost: <span id="goldenCost">1500</span> pts</div>
+        <small>x2 multiplier on all clicks</small>
+    </div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div id="achPanel" class="panel">
+    <h2>Achievements</h2>
+    <div id="achContent"></div>
+</div>
+
+<!-- SETTINGS -->
+<div id="settings" class="panel">
+    <h2>Settings</h2>
+    <label>
+        <input type="checkbox" id="darkModeToggle"> Dark Mode
+    </label><br><br>
+    <label>
+        <!-- <input type="checkbox" id="teacherModeToggle"> Teacher Mode - Ms S -->
+    </label>
+    <hr style="margin: 10px 0;">
+    <label>
+        <input type="checkbox" id="autoSaveToggle" checked> Auto Save (every 30s)
+    </label><br><br>
+    <button id="removeStyleBtn" class="toggle-btn" style="width:100%; margin:4px 0;">Remove Styling</button>
+    <button id="resetGame"      class="toggle-btn" style="width:100%; margin:4px 0;">Delete Game Save</button>
+</div>
+
+<script>
+    // ── STATE ──────────────────────────────────────────────────────────────
+    let blehPoints      = 0;
+    let totalEarned     = 0;
+    let pointsPerClick  = 1;
+    let autoPointsPS    = 0;
+    let sillyActive     = false;
+    let autoSaveEnabled = true;
+    let unstyled        = false;
+
+    // Rebirth
+    let rebirthCount    = 0;
+    let rebirthMulti    = 1;       // permanent multiplier from rebirths
+    const REBIRTH_COSTS = [10000, 40000, 120000, 350000, 1000000, 3000000];
+    // Each rebirth reward label
+    const REBIRTH_REWARDS = [
+        "+15% to all production",
+        "+20% to all production",
+        "+25% to all production",
+        "+30% to all production",
+        "+40% to all production",
+        "+50% to all production"
+    ];
+
+    let ownedAuto = 0, ownedPurr = 0, ownedLucky = 0, ownedNap = 0;
+    let ownedClick = 0, ownedMega = 0, ownedGolden = 0;
+
+    let autoClickCost    = 50;
+    let purrCost         = 200;
+    let luckyCost        = 400;
+    let napCost          = 1000;
+    let clickUpgradeCost = 30;
+    let megaCost         = 250;
+    let goldenCost       = 1500;
+
+    let teacherMode  = false;
+    let earnedBadges = [];
+    let earnedRBBadges = [];
+
+    const catPhrases     = [":3", "bleh", "'w'", ":P", "meow", "MEOW", "mow", "+SILLY"];
+    const teacherPhrases = ["Best teacher", "smart", "cool", "helpful"];
+    let currentPhrases   = catPhrases;
+
+    // Point milestones
+    const pointMilestones = [
+        { pts: 100,     label: "100 Points" },
+        { pts: 500,     label: "500 Points" },
+        { pts: 1000,    label: "1,000 Points" },
+        { pts: 5000,    label: "5,000 Points" },
+        { pts: 10000,   label: "10,000 Points" },
+        { pts: 50000,   label: "50,000 Points" },
+        { pts: 100000,  label: "100,000 Points" },
+        { pts: 500000,  label: "500,000 Points" },
+        { pts: 1000000, label: "1,000,000 Points" },
+    ];
+
+    // Rebirth milestones
+    const rebirthMilestones = [
+        { count: 1,  label: "First Rebirth",     desc: "Start a new life" },
+        { count: 3,  label: "Triple Reborn",      desc: "Rebirthed 3 times" },
+        { count: 5,  label: "Five Lives",         desc: "Rebirthed 5 times" },
+        { count: 10, label: "Ten Lives",          desc: "Rebirthed 10 times" },
+        { count: 25, label: "Endless Cycle",      desc: "Rebirthed 25 times" },
+        { count: 50, label: "Transcended",        desc: "Rebirthed 50 times" },
+    ];
+
+    // ── RECALC ─────────────────────────────────────────────────────────────
+    function recalcAuto() {
+        const base = (ownedAuto * 1) + (ownedPurr * 5) + (ownedNap * 20);
+        autoPointsPS = Math.floor(base * rebirthMulti * (sillyActive ? 2 : 1));
+    }
+    function recalcClick() {
+        const base = 1 + (ownedClick * 1) + (ownedMega * 5);
+        pointsPerClick = Math.max(1, Math.floor(
+            base * (ownedGolden > 0 ? 2 : 1) * rebirthMulti * (sillyActive ? 2 : 1)
+        ));
+    }
+
+    function getNextRebirthCost() {
+        const idx = Math.min(rebirthCount, REBIRTH_COSTS.length - 1);
+        if (rebirthCount >= REBIRTH_COSTS.length) {
+            // Scale beyond the table
+            return Math.floor(REBIRTH_COSTS[REBIRTH_COSTS.length - 1] * Math.pow(3, rebirthCount - REBIRTH_COSTS.length + 1));
+        }
+        return REBIRTH_COSTS[idx];
+    }
+
+    // ── DISPLAY ────────────────────────────────────────────────────────────
+    function fmt(n) {
+        if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
+        if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
+        if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+        return Math.floor(n).toString();
+    }
+
+    function updateDisplay() {
+        document.getElementById('points').textContent      = fmt(blehPoints);
+        document.getElementById('totalEarned').textContent = fmt(totalEarned);
+        document.getElementById('ppc').textContent         = fmt(pointsPerClick);
+        document.getElementById('autoPoints').textContent  = fmt(autoPointsPS);
+
+        document.getElementById('autoCost').textContent   = fmt(autoClickCost);
+        document.getElementById('purrCost').textContent   = fmt(purrCost);
+        document.getElementById('luckyCost').textContent  = fmt(luckyCost);
+        document.getElementById('napCost').textContent    = fmt(napCost);
+        document.getElementById('clickCost').textContent  = fmt(clickUpgradeCost);
+        document.getElementById('megaCost').textContent   = fmt(megaCost);
+        document.getElementById('goldenCost').textContent = fmt(goldenCost);
+
+        document.getElementById('autoOwned').textContent   = 'x' + ownedAuto;
+        document.getElementById('purrOwned').textContent   = 'x' + ownedPurr;
+        document.getElementById('luckyOwned').textContent  = 'x' + ownedLucky;
+        document.getElementById('napOwned').textContent    = 'x' + ownedNap;
+        document.getElementById('clickOwned').textContent  = 'x' + ownedClick;
+        document.getElementById('megaOwned').textContent   = 'x' + ownedMega;
+        document.getElementById('goldenOwned').textContent = 'x' + ownedGolden;
+
+        // Rebirth info
+        const cost = getNextRebirthCost();
+        const ri = document.getElementById('rebirthInfo');
+        const rb = document.getElementById('rebirthBtn');
+        const label = document.getElementById('rebirthCostLabel');
+        if (rebirthCount > 0) {
+            ri.textContent = 'Rebirths: ' + rebirthCount + '  |  Rebirth Bonus: x' + rebirthMulti.toFixed(2);
+        } else {
+            ri.textContent = '';
+        }
+        label.textContent = fmt(cost) + ' total pts';
+        if (totalEarned >= cost) {
+            rb.style.display = 'inline-block';
+        } else {
+            rb.style.display = 'none';
+        }
+
+        checkMilestones();
+        checkRebirthMilestones();
+    }
+
+    // ── MILESTONES ─────────────────────────────────────────────────────────
+    function checkMilestones() {
+        pointMilestones.forEach(m => {
+            if (totalEarned >= m.pts && !earnedBadges.includes(m.label)) {
+                earnedBadges.push(m.label);
+                const badge = document.createElement('span');
+                badge.className = 'milestone-badge';
+                badge.textContent = m.label;
+                document.getElementById('badges').appendChild(badge);
+            }
+        });
+    }
+
+    function checkRebirthMilestones() {
+        rebirthMilestones.forEach(m => {
+            if (rebirthCount >= m.count && !earnedRBBadges.includes(m.label)) {
+                earnedRBBadges.push(m.label);
+                notify('Achievement: ' + m.label + '!', 'rebirth');
+            }
+        });
+    }
+
+    // ── ACHIEVEMENTS PANEL ─────────────────────────────────────────────────
+    function renderAchievements() {
+        const div = document.getElementById('achContent');
+        div.innerHTML = '';
+
+        // Points section
+        const pt = document.createElement('div');
+        pt.className = 'ach-section-title';
+        pt.textContent = 'Points Milestones';
+        div.appendChild(pt);
+
+        pointMilestones.forEach(m => {
+            const earned = earnedBadges.includes(m.label);
+            const row = document.createElement('div');
+            row.className = 'ach-item';
+            row.innerHTML = `
+                <div class="ach-dot ${earned ? 'earned' : ''}"></div>
+                <span class="ach-name">${m.label}</span>
+                <span class="${earned ? 'ach-check' : 'ach-lock'}">${earned ? 'Done' : fmt(m.pts) + ' total pts'}</span>
+            `;
+            div.appendChild(row);
+        });
+
+        // Rebirth section
+        const rt = document.createElement('div');
+        rt.className = 'ach-section-title';
+        rt.textContent = 'Rebirth Milestones';
+        div.appendChild(rt);
+
+        rebirthMilestones.forEach(m => {
+            const earned = rebirthCount >= m.count;
+            const row = document.createElement('div');
+            row.className = 'ach-item';
+            row.innerHTML = `
+                <div class="ach-dot ${earned ? 'rebirth-earned' : ''}"></div>
+                <span class="ach-name">${m.label} <span style="font-size:12px;color:#aaa;">${m.desc}</span></span>
+                <span class="${earned ? 'ach-check rb' : 'ach-lock'}">${earned ? 'Done' : m.count + ' rebirths'}</span>
+            `;
+            div.appendChild(row);
+        });
+    }
+
+    // ── NOTIFICATIONS ──────────────────────────────────────────────────────
+    function notify(text, type) {
+        const container = document.getElementById('notifContainer');
+        const n = document.createElement('div');
+        n.className = 'notif' + (type ? ' ' + type : '');
+        n.textContent = text;
+        container.appendChild(n);
+        setTimeout(() => n.remove(), 3100);
+    }
+
+    // ── FLOATING TEXT ──────────────────────────────────────────────────────
+    function spawnFloating(x, y) {
+        const item = document.createElement("div");
+        item.textContent = currentPhrases[Math.floor(Math.random() * currentPhrases.length)];
+        item.className = "floating";
+        item.style.left = (x + Math.random() * 60 - 30) + "px";
+        item.style.top  = (y + Math.random() * 60 - 30) + "px";
+        document.body.appendChild(item);
+        setTimeout(() => item.remove(), 1200);
+    }
+
+    // ── CLICK ──────────────────────────────────────────────────────────────
+    document.getElementById('blehCat').addEventListener('click', (e) => {
+        blehPoints  += pointsPerClick;
+        totalEarned += pointsPerClick;
+        updateDisplay();
+        spawnFloating(e.clientX, e.clientY);
+    });
+
+    // ── SHOP ───────────────────────────────────────────────────────────────
+    function tryBuy(getCost, setCost, mult, onBuy) {
+        const cost = getCost();
+        if (blehPoints >= cost) {
+            blehPoints -= cost;
+            onBuy();
+            setCost(Math.floor(cost * mult));
+            recalcAuto(); recalcClick(); updateDisplay();
+        } else {
+            alert("Not enough points!");
+        }
+    }
+
+    document.getElementById('buyAuto').addEventListener('click', () =>
+        tryBuy(() => autoClickCost, v => autoClickCost = v, 1.5, () => ownedAuto++));
+    document.getElementById('buyPurrFactory').addEventListener('click', () =>
+        tryBuy(() => purrCost, v => purrCost = v, 1.6, () => ownedPurr++));
+    document.getElementById('buyLucky').addEventListener('click', () =>
+        tryBuy(() => luckyCost, v => luckyCost = v, 1.8, () => ownedLucky++));
+    document.getElementById('buyCatNap').addEventListener('click', () =>
+        tryBuy(() => napCost, v => napCost = v, 1.7, () => ownedNap++));
+    document.getElementById('buyClick').addEventListener('click', () =>
+        tryBuy(() => clickUpgradeCost, v => clickUpgradeCost = v, 1.7, () => ownedClick++));
+    document.getElementById('buyMegaPaw').addEventListener('click', () =>
+        tryBuy(() => megaCost, v => megaCost = v, 1.8, () => ownedMega++));
+    document.getElementById('buyGoldenPaw').addEventListener('click', () =>
+        tryBuy(() => goldenCost, v => goldenCost = v, 2.0, () => ownedGolden++));
+
+    // ── REBIRTH ────────────────────────────────────────────────────────────
+    document.getElementById('rebirthBtn').addEventListener('click', () => {
+        const nextIdx = Math.min(rebirthCount, REBIRTH_REWARDS.length - 1);
+        document.getElementById('rbRewardText').textContent =
+            'Reward: ' + REBIRTH_REWARDS[nextIdx] + ' (permanent, stacks each rebirth)';
+        document.getElementById('rebirthOverlay').classList.add('show');
+    });
+
+    document.getElementById('rbNo').addEventListener('click', () => {
+        document.getElementById('rebirthOverlay').classList.remove('show');
+    });
+
+    document.getElementById('rbYes').addEventListener('click', () => {
+        document.getElementById('rebirthOverlay').classList.remove('show');
+        doRebirth();
+    });
+
+    function doRebirth() {
+        rebirthCount++;
+        // Stacking 15% per rebirth (first rebirth reward), scaling slightly per tier
+        const bonuses = [0.15, 0.20, 0.25, 0.30, 0.40, 0.50];
+        const gain = bonuses[Math.min(rebirthCount - 1, bonuses.length - 1)];
+        rebirthMulti = parseFloat((rebirthMulti + gain).toFixed(2));
+
+        // Reset run state
+        blehPoints = 0;
+        ownedAuto = ownedPurr = ownedLucky = ownedNap = ownedClick = ownedMega = ownedGolden = 0;
+        autoClickCost = 50; purrCost = 200; luckyCost = 400; napCost = 1000;
+        clickUpgradeCost = 30; megaCost = 250; goldenCost = 1500;
+
+        recalcAuto(); recalcClick(); updateDisplay();
+        notify('Rebirthed! You now have a x' + rebirthMulti.toFixed(2) + ' permanent bonus.', 'rebirth');
+        renderAchievements();
+        saveGame(true);
+    }
+
+    // ── SILLY MODE ─────────────────────────────────────────────────────────
+    function activateSilly() {
+        if (sillyActive) return;
+        sillyActive = true;
+        document.getElementById('sillyBanner').style.display = 'block';
+        notify("SILLY MODE is active for 30 seconds!", "silly");
+        recalcAuto(); recalcClick(); updateDisplay();
+        setTimeout(() => {
+            sillyActive = false;
+            document.getElementById('sillyBanner').style.display = 'none';
+            notify("Silly mode ended.", "silly");
+            recalcAuto(); recalcClick(); updateDisplay();
+        }, 30000);
+    }
+
+    setInterval(activateSilly, 110000);
+
+    // ── AUTO TICK ──────────────────────────────────────────────────────────
+    setInterval(() => {
+        if (autoPointsPS > 0) {
+            blehPoints  += autoPointsPS;
+            totalEarned += autoPointsPS;
+            updateDisplay();
+        }
+    }, 1000);
+
+    // ── LUCKY MEOW ─────────────────────────────────────────────────────────
+    setInterval(() => {
+        if (ownedLucky > 0 && Math.random() < ownedLucky * 0.08) {
+            const bonus = Math.floor((1 + ownedLucky) * (Math.random() * 30 + 10) * rebirthMulti);
+            blehPoints  += bonus;
+            totalEarned += bonus;
+            notify("Lucky Meow! +" + fmt(bonus) + " bonus points!");
+            updateDisplay();
+        }
+    }, 2000);
+
+    // ── SAVE / LOAD ────────────────────────────────────────────────────────
+    const SAVE_KEY = 'millyclicker_save';
+
+    function saveGame(silent) {
+        const data = {
+            blehPoints, totalEarned,
+            ownedAuto, ownedPurr, ownedLucky, ownedNap,
+            ownedClick, ownedMega, ownedGolden,
+            autoClickCost, purrCost, luckyCost, napCost,
+            clickUpgradeCost, megaCost, goldenCost,
+            earnedBadges, earnedRBBadges,
+            rebirthCount, rebirthMulti,
+            darkMode: document.body.classList.contains('dark'),
+            savedAt: Date.now()
+        };
+        try {
+            localStorage.setItem(SAVE_KEY, JSON.stringify(data));
+            if (silent) notify("Auto saved.", "save");
+            else        notify("Game saved!", "save");
+        } catch(e) {
+            notify("Save failed.");
+        }
+    }
+
+    function loadGame() {
+        try {
+            const raw = localStorage.getItem(SAVE_KEY);
+            if (!raw) return;
+            const d = JSON.parse(raw);
+
+            blehPoints       = d.blehPoints       || 0;
+            totalEarned      = d.totalEarned      || 0;
+            ownedAuto        = d.ownedAuto        || 0;
+            ownedPurr        = d.ownedPurr        || 0;
+            ownedLucky       = d.ownedLucky       || 0;
+            ownedNap         = d.ownedNap         || 0;
+            ownedClick       = d.ownedClick        || 0;
+            ownedMega        = d.ownedMega        || 0;
+            ownedGolden      = d.ownedGolden      || 0;
+            autoClickCost    = d.autoClickCost    || 50;
+            purrCost         = d.purrCost         || 200;
+            luckyCost        = d.luckyCost        || 400;
+            napCost          = d.napCost          || 1000;
+            clickUpgradeCost = d.clickUpgradeCost || 30;
+            megaCost         = d.megaCost         || 250;
+            goldenCost       = d.goldenCost       || 1500;
+            earnedBadges     = d.earnedBadges     || [];
+            earnedRBBadges   = d.earnedRBBadges   || [];
+            rebirthCount     = d.rebirthCount     || 0;
+            rebirthMulti     = d.rebirthMulti     || 1;
+
+            if (d.darkMode) {
+                document.body.classList.add('dark');
+                document.getElementById('darkModeToggle').checked = true;
+            }
+
+            const badgesDiv = document.getElementById('badges');
+            badgesDiv.innerHTML = '';
+            earnedBadges.forEach(label => {
+                const badge = document.createElement('span');
+                badge.className = 'milestone-badge';
+                badge.textContent = label;
+                badgesDiv.appendChild(badge);
+            });
+
+            recalcAuto(); recalcClick(); updateDisplay();
+            renderAchievements();
+        } catch(e) {
+            notify("Load failed.");
+        }
+    }
+
+    setInterval(() => { if (autoSaveEnabled) saveGame(true); }, 30000);
+
+    document.getElementById('saveBtn').addEventListener('click', () => saveGame(false));
+
+    document.getElementById('autoSaveToggle').addEventListener('change', (e) => {
+        autoSaveEnabled = e.target.checked;
+        notify(autoSaveEnabled ? "Auto save enabled." : "Auto save disabled.");
+    });
+
+    document.getElementById('resetGame').addEventListener('click', () => {
+        if (!confirm("Delete your save? This cannot be undone!")) return;
+        localStorage.removeItem(SAVE_KEY);
+        blehPoints = totalEarned = ownedAuto = ownedPurr = ownedLucky = ownedNap
+                   = ownedClick = ownedMega = ownedGolden = rebirthCount = 0;
+        rebirthMulti = 1;
+        autoClickCost = 50; purrCost = 200; luckyCost = 400; napCost = 1000;
+        clickUpgradeCost = 30; megaCost = 250; goldenCost = 1500;
+        earnedBadges = []; earnedRBBadges = [];
+        document.getElementById('badges').innerHTML = '';
+        recalcAuto(); recalcClick(); updateDisplay();
+        renderAchievements();
+        notify("Save deleted. Fresh start!");
+    });
+
+    // ── REMOVE STYLING ─────────────────────────────────────────────────────
+    document.getElementById('removeStyleBtn').addEventListener('click', () => {
+        unstyled = !unstyled;
+        document.getElementById('mainStyle').disabled = unstyled;
+        document.getElementById('removeStyleBtn').textContent = unstyled ? "Restore Styling" : "Remove Styling";
+    });
+
+    // ── UI TOGGLES ─────────────────────────────────────────────────────────
+    document.getElementById('toggleShop').addEventListener('click', () => {
+        const p = document.getElementById('shop');
+        p.style.display = p.style.display === "block" ? "none" : "block";
+    });
+    document.getElementById('toggleSettings').addEventListener('click', () => {
+        const p = document.getElementById('settings');
+        p.style.display = p.style.display === "block" ? "none" : "block";
+    });
+    document.getElementById('toggleAch').addEventListener('click', () => {
+        const p = document.getElementById('achPanel');
+        const open = p.style.display === "block";
+        p.style.display = open ? "none" : "block";
+        if (!open) renderAchievements();
+    });
+    document.getElementById('darkModeToggle').addEventListener('change', (e) => {
+        document.body.classList.toggle("dark", e.target.checked);
+    });
+
+    // ── TEACHER MODE ───────────────────────────────────────────────────────
+    const readMsSBtn        = document.getElementById('readMsS');
+    const teacherMessage    = document.getElementById('teacherMessage');
+    const blehCat           = document.getElementById('blehCat');
+    const teacherModeToggle = document.getElementById('teacherModeToggle');
+
+    if (teacherModeToggle) {
+        teacherModeToggle.addEventListener('change', () => {
+            teacherMode = teacherModeToggle.checked;
+            const title = document.getElementById('mainTitle');
+            if (teacherMode) {
+                document.body.classList.add("teacher");
+                blehCat.src = "https://www.bhbint.school.nz/wp-content/uploads/2021/09/alison-strother-300x300-1.png";
+                currentPhrases = teacherPhrases;
+                document.getElementById('autoTitle').textContent  = "Helpful Notes";
+                document.getElementById('autoDesc').textContent   = "Adds +1 point per second (like reminders)";
+                document.getElementById('clickTitle').textContent = "Knowledge Boost";
+                document.getElementById('clickDesc').textContent  = "+1 point per click (smarter every time)";
+                title.textContent = "Best Teacher Clicker!";
+                readMsSBtn.style.display = "inline-block";
+            } else {
+                document.body.classList.remove("teacher");
+                blehCat.src = "https://i.ibb.co/gZ0Mw644/Bleh-cad.jpg";
+                currentPhrases = catPhrases;
+                document.getElementById('autoTitle').textContent  = "Auto-Clicker";
+                document.getElementById('autoDesc').textContent   = "+1 pt/sec";
+                document.getElementById('clickTitle').textContent = "Stronger Paws";
+                document.getElementById('clickDesc').textContent  = "+1 pt/click";
+                title.textContent = "Silly Milly Clicker!";
+                readMsSBtn.style.display     = "none";
+                teacherMessage.style.display = "none";
+            }
+        });
+    }
+
+    readMsSBtn.addEventListener('click', () => {
+        teacherMessage.style.display = "block";
+        teacherMessage.innerHTML = `<h2>Dear Miss Alison Strother</h2>
+        <p>Thank you so, so, so much for being our teacher for 2 terms. I/the whole class couldn't repay you. Thank you so much!</p>
+        <p>— Our Class</p>`;
+    });
+
+    // ── INIT ───────────────────────────────────────────────────────────────
+    recalcAuto();
+    recalcClick();
+    loadGame();
+    updateDisplay();
+    renderAchievements();
+</script>
+</body>
+</html>

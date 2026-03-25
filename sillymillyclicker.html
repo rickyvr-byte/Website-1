@@ -41,6 +41,7 @@
         font-weight: bold;
     }
 
+    /* ── Panels ── */
     .panel {
         margin: 20px auto;
         padding: 15px;
@@ -53,6 +54,7 @@
     }
     .panel h2 { text-align: center; margin-bottom: 10px; color: #ff69b4; }
 
+    /* ── Shop items ── */
     .shop-item {
         margin: 10px 0;
         padding: 10px;
@@ -66,7 +68,19 @@
     .shop-cost  { font-size: 14px; color: #555; }
     .shop-owned { font-size: 13px; color: #aaa; float: right; }
 
-    /* Rebirth button */
+    /* Rebirth shop items — purple tint */
+    .rb-shop-item {
+        margin: 10px 0;
+        padding: 10px;
+        border: 2px solid #d4a0d4;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    .rb-shop-item:hover { background-color: #f5e8f8; }
+    .rb-shop-item .shop-cost { color: #9b59b6; }
+
+    /* ── Rebirth main button ── */
     #rebirthBtn {
         display: none;
         margin: 10px auto;
@@ -87,7 +101,7 @@
         box-shadow: 0 6px 20px rgba(196,95,180,0.55);
     }
 
-    /* Rebirth overlay */
+    /* ── Rebirth confirm overlay ── */
     #rebirthOverlay {
         display: none;
         position: fixed;
@@ -128,7 +142,7 @@
     #rbYes { background: #c45fb4; color: white; }
     #rbNo  { background: #ddd;    color: #555;  }
 
-    /* Achievements */
+    /* ── Achievements ── */
     .ach-section-title {
         font-weight: bold;
         color: #ff69b4;
@@ -150,13 +164,14 @@
         flex-shrink: 0;
         background: #ddd;
     }
-    .ach-dot.earned { background: linear-gradient(135deg, #ff69b4, #ffb347); }
+    .ach-dot.earned         { background: linear-gradient(135deg, #ff69b4, #ffb347); }
     .ach-dot.rebirth-earned { background: linear-gradient(135deg, #c45fb4, #9b59b6); }
     .ach-name  { flex: 1; }
     .ach-lock  { color: #bbb; font-size: 13px; }
     .ach-check { color: #ff69b4; font-weight: bold; }
     .ach-check.rb { color: #c45fb4; }
 
+    /* ── Floating text ── */
     .floating {
         position: fixed;
         font-size: 20px;
@@ -172,6 +187,7 @@
         to   { opacity: 0; transform: translateY(-100px); }
     }
 
+    /* ── Buttons ── */
     .toggle-btn {
         margin: 5px;
         padding: 8px 15px;
@@ -186,6 +202,7 @@
     }
     .toggle-btn:hover { background: #ff85c1; }
 
+    /* ── Notifications ── */
     #notifContainer {
         position: fixed;
         top: 14px;
@@ -194,7 +211,7 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
-        max-width: 260px;
+        max-width: 270px;
     }
     .notif {
         background: #fff;
@@ -211,6 +228,8 @@
     .notif.silly   { border-left-color: #ffb347; }
     .notif.save    { border-left-color: #82c882; }
     .notif.rebirth { border-left-color: #c45fb4; }
+    .notif.ach     { border-left-color: #f0a500; background: #fffdf0; }
+    .notif-title   { font-weight: bold; font-size: 13px; color: #888; margin-bottom: 2px; }
     @keyframes slideIn {
         from { opacity: 0; transform: translateX(-30px); }
         to   { opacity: 1; transform: translateX(0); }
@@ -234,36 +253,24 @@
         text-align: center;
     }
 
-    .milestone-badge {
-        display: inline-block;
-        background: linear-gradient(135deg, #ff69b4, #ffb347);
-        color: white;
-        padding: 4px 10px;
-        border-radius: 20px;
-        font-size: 13px;
-        margin: 3px;
-        animation: badgePop 0.4s ease;
-    }
-    @keyframes badgePop {
-        0%   { transform: scale(0); }
-        70%  { transform: scale(1.2); }
-        100% { transform: scale(1); }
-    }
-    #badges { margin-top: 10px; min-height: 24px; }
-
+    /* ── Dark mode ── */
     body.dark { background: #1a1a1a; color: #f5f5f5; }
     body.dark h1, body.dark .panel h2 { color: #ffb6c1; }
     body.dark .panel { background: #2a2a2a; border: 1px solid #555; }
-    body.dark .shop-item { border-color: #888; }
-    body.dark .shop-item:hover { background-color: #444; }
+    body.dark .shop-item  { border-color: #888; }
+    body.dark .shop-item:hover  { background-color: #444; }
+    body.dark .rb-shop-item { border-color: #9b59b6; }
+    body.dark .rb-shop-item:hover { background-color: #3a2a3a; }
     body.dark .shop-cost { color: #ccc; }
     body.dark .shop-owned { color: #888; }
     body.dark .notif { background: #2a2a2a; color: #f5f5f5; }
+    body.dark .notif.ach { background: #2a2a1a; }
     body.dark #rebirthBox { background: #2a2a2a; }
     body.dark #rebirthBox p { color: #ccc; }
     body.dark .ach-lock { color: #666; }
     body.dark .ach-section-title { color: #ffb6c1; border-color: #555; }
 
+    /* ── Teacher mode ── */
     body.teacher { color: blue; }
     body.teacher h1, body.teacher .panel h2 { color: blue; }
     body.teacher .floating { color: blue; }
@@ -278,10 +285,9 @@
 <div id="rebirthOverlay">
     <div id="rebirthBox">
         <h2>Rebirth</h2>
-        <p>You are about to rebirth!</p>
         <p>This will reset your points and all upgrades.</p>
         <p class="rb-reward" id="rbRewardText"></p>
-        <p>Your total earned and achievements are kept forever.</p>
+        <p style="font-size:13px;">You will earn <strong id="rbTokenGain"></strong> Rebirth Token(s).<br>Total earned and achievements are kept forever.</p>
         <br>
         <button class="rb-confirm-btn" id="rbYes">Rebirth!</button>
         <button class="rb-confirm-btn" id="rbNo">Cancel</button>
@@ -304,13 +310,13 @@
         <span class="stat-cell">Auto/sec: <span id="autoPoints">0</span></span>
     </div>
     <div id="rebirthInfo"></div>
-    <div id="badges"></div>
 </div>
 
 <div style="margin-top: 14px;">
     <button id="toggleShop"     class="toggle-btn">Toggle Shop</button>
-    <button id="toggleSettings" class="toggle-btn">Settings</button>
+    <button id="toggleRbShop"   class="toggle-btn">Rebirth Shop</button>
     <button id="toggleAch"      class="toggle-btn">Achievements</button>
+    <button id="toggleSettings" class="toggle-btn">Settings</button>
     <button id="saveBtn"        class="toggle-btn">Save Game</button>
     <button id="readMsS"        class="toggle-btn" style="display:none;">Read this Ms S</button>
 </div>
@@ -319,7 +325,7 @@
 
 <div id="teacherMessage" class="panel" style="display:none;"></div>
 
-<!-- SHOP -->
+<!-- MAIN SHOP -->
 <div id="shop" class="panel">
     <h2>Shop</h2>
 
@@ -372,6 +378,79 @@
     </div>
 </div>
 
+<!-- REBIRTH SHOP -->
+<div id="rbShop" class="panel">
+    <h2>Rebirth Shop</h2>
+    <p style="font-size:13px; color:#9b59b6; text-align:center; margin-bottom:12px;">
+        Rebirth Tokens: <strong id="rbTokenDisplay">0</strong>
+        &nbsp;|&nbsp; Lifetime: <strong id="rbTokenLifetime">0</strong>
+    </p>
+    <p style="font-size:12px; color:#aaa; text-align:center;">Upgrades here are <strong>permanent</strong> — they survive rebirths.</p>
+
+    <p style="font-size:13px; color:#9b59b6; text-align:center; margin-top:12px; font-weight:bold;">Production</p>
+
+    <div class="rb-shop-item" id="rbBuyAutoBoost">
+        <span class="shop-owned" id="rbAutoBoostOwned">x0</span>
+        <div class="shop-title">Auto Overdrive</div>
+        <div class="shop-cost">Cost: <span id="rbAutoBoostCost">1</span> Token(s)</div>
+        <small>+10% to all auto production permanently (stackable)</small>
+    </div>
+    <div class="rb-shop-item" id="rbBuyStartAuto">
+        <span class="shop-owned" id="rbStartAutoOwned">x0</span>
+        <div class="shop-title">Head Start — Auto</div>
+        <div class="shop-cost">Cost: <span id="rbStartAutoCost">2</span> Token(s)</div>
+        <small>Start each run with 3 free Auto-Clickers already owned</small>
+    </div>
+    <div class="rb-shop-item" id="rbBuyCatNapBoost">
+        <span class="shop-owned" id="rbCatNapBoostOwned">x0</span>
+        <div class="shop-title">Deep Sleep</div>
+        <div class="shop-cost">Cost: <span id="rbCatNapBoostCost">3</span> Token(s)</div>
+        <small>Cat Nap produces +10 extra pts/sec per stack permanently</small>
+    </div>
+
+    <p style="font-size:13px; color:#9b59b6; text-align:center; margin-top:12px; font-weight:bold;">Clicking</p>
+
+    <div class="rb-shop-item" id="rbBuyClickBoost">
+        <span class="shop-owned" id="rbClickBoostOwned">x0</span>
+        <div class="shop-title">Iron Claws</div>
+        <div class="shop-cost">Cost: <span id="rbClickBoostCost">1</span> Token(s)</div>
+        <small>+1 flat bonus to every click permanently (stackable)</small>
+    </div>
+    <div class="rb-shop-item" id="rbBuyStartClick">
+        <span class="shop-owned" id="rbStartClickOwned">x0</span>
+        <div class="shop-title">Head Start — Clicks</div>
+        <div class="shop-cost">Cost: <span id="rbStartClickCost">2</span> Token(s)</div>
+        <small>Start each run with 5 free Stronger Paws already owned</small>
+    </div>
+    <div class="rb-shop-item" id="rbBuyMegaBoost">
+        <span class="shop-owned" id="rbMegaBoostOwned">x0</span>
+        <div class="shop-title">Ultra Paw</div>
+        <div class="shop-cost">Cost: <span id="rbMegaBoostCost">4</span> Token(s)</div>
+        <small>Mega Paw gives +10 pts/click instead of +5 permanently</small>
+    </div>
+
+    <p style="font-size:13px; color:#9b59b6; text-align:center; margin-top:12px; font-weight:bold;">Economy</p>
+
+    <div class="rb-shop-item" id="rbBuyCheaper">
+        <span class="shop-owned" id="rbCheaperOwned">x0</span>
+        <div class="shop-title">Bargain Paws</div>
+        <div class="shop-cost">Cost: <span id="rbCheaperCost">2</span> Token(s)</div>
+        <small>All shop costs start 15% cheaper each run (stackable, max 5)</small>
+    </div>
+    <div class="rb-shop-item" id="rbBuyLuckyBoost">
+        <span class="shop-owned" id="rbLuckyBoostOwned">x0</span>
+        <div class="shop-title">Lucky Charm</div>
+        <div class="shop-cost">Cost: <span id="rbLuckyBoostCost">3</span> Token(s)</div>
+        <small>Lucky Meow bonus payout x2 permanently</small>
+    </div>
+    <div class="rb-shop-item" id="rbBuyTokenBoost">
+        <span class="shop-owned" id="rbTokenBoostOwned">x0</span>
+        <div class="shop-title">Token Hoarder</div>
+        <div class="shop-cost">Cost: <span id="rbTokenBoostCost">5</span> Token(s)</div>
+        <small>Earn +1 extra Rebirth Token on every future rebirth (stackable)</small>
+    </div>
+</div>
+
 <!-- ACHIEVEMENTS -->
 <div id="achPanel" class="panel">
     <h2>Achievements</h2>
@@ -381,16 +460,12 @@
 <!-- SETTINGS -->
 <div id="settings" class="panel">
     <h2>Settings</h2>
-    <label>
-        <input type="checkbox" id="darkModeToggle"> Dark Mode
-    </label><br><br>
+    <label><input type="checkbox" id="darkModeToggle"> Dark Mode</label><br><br>
     <label>
         <!-- <input type="checkbox" id="teacherModeToggle"> Teacher Mode - Ms S -->
     </label>
     <hr style="margin: 10px 0;">
-    <label>
-        <input type="checkbox" id="autoSaveToggle" checked> Auto Save (every 30s)
-    </label><br><br>
+    <label><input type="checkbox" id="autoSaveToggle" checked> Auto Save (every 30s)</label><br><br>
     <button id="removeStyleBtn" class="toggle-btn" style="width:100%; margin:4px 0;">Remove Styling</button>
     <button id="resetGame"      class="toggle-btn" style="width:100%; margin:4px 0;">Delete Game Save</button>
 </div>
@@ -405,20 +480,46 @@
     let autoSaveEnabled = true;
     let unstyled        = false;
 
-    // Rebirth
+    // Rebirth core
     let rebirthCount    = 0;
-    let rebirthMulti    = 1;       // permanent multiplier from rebirths
-    const REBIRTH_COSTS = [10000, 40000, 120000, 350000, 1000000, 3000000];
-    // Each rebirth reward label
-    const REBIRTH_REWARDS = [
-        "+15% to all production",
-        "+20% to all production",
-        "+25% to all production",
-        "+30% to all production",
-        "+40% to all production",
-        "+50% to all production"
-    ];
+    let rebirthMulti    = 1;
+    let rebirthTokens   = 0;
+    let rebirthTokensLifetime = 0;
 
+    const REBIRTH_COSTS = [10000, 40000, 120000, 350000, 1000000, 3000000];
+    function getNextRebirthCost() {
+        if (rebirthCount >= REBIRTH_COSTS.length)
+            return Math.floor(REBIRTH_COSTS[REBIRTH_COSTS.length - 1] * Math.pow(3, rebirthCount - REBIRTH_COSTS.length + 1));
+        return REBIRTH_COSTS[rebirthCount];
+    }
+    // Tokens awarded per rebirth (base 1, +1 per Token Hoarder)
+    function tokensForNextRebirth() {
+        return 1 + rbOwnedTokenBoost;
+    }
+
+    // Rebirth shop owned counts
+    let rbOwnedAutoBoost    = 0;
+    let rbOwnedStartAuto    = 0;
+    let rbOwnedCatNapBoost  = 0;
+    let rbOwnedClickBoost   = 0;
+    let rbOwnedStartClick   = 0;
+    let rbOwnedMegaBoost    = 0;
+    let rbOwnedCheaper      = 0;
+    let rbOwnedLuckyBoost   = 0;
+    let rbOwnedTokenBoost   = 0;
+
+    // Rebirth shop costs (scale with each purchase)
+    let rbCostAutoBoost    = 1;
+    let rbCostStartAuto    = 2;
+    let rbCostCatNapBoost  = 3;
+    let rbCostClickBoost   = 1;
+    let rbCostStartClick   = 2;
+    let rbCostMegaBoost    = 4;
+    let rbCostCheaper      = 2;
+    let rbCostLuckyBoost   = 3;
+    let rbCostTokenBoost   = 5;
+
+    // Normal shop
     let ownedAuto = 0, ownedPurr = 0, ownedLucky = 0, ownedNap = 0;
     let ownedClick = 0, ownedMega = 0, ownedGolden = 0;
 
@@ -431,71 +532,79 @@
     let goldenCost       = 1500;
 
     let teacherMode  = false;
-    let earnedBadges = [];
-    let earnedRBBadges = [];
+    let earnedAch    = [];   // point milestone labels earned
+    let earnedRBAch  = [];   // rebirth milestone labels earned
 
     const catPhrases     = [":3", "bleh", "'w'", ":P", "meow", "MEOW", "mow", "+SILLY"];
     const teacherPhrases = ["Best teacher", "smart", "cool", "helpful"];
     let currentPhrases   = catPhrases;
 
-    // Point milestones
+    // Milestones
     const pointMilestones = [
-        { pts: 100,     label: "100 Points" },
-        { pts: 500,     label: "500 Points" },
-        { pts: 1000,    label: "1,000 Points" },
-        { pts: 5000,    label: "5,000 Points" },
-        { pts: 10000,   label: "10,000 Points" },
-        { pts: 50000,   label: "50,000 Points" },
-        { pts: 100000,  label: "100,000 Points" },
-        { pts: 500000,  label: "500,000 Points" },
-        { pts: 1000000, label: "1,000,000 Points" },
+        { pts: 100,     label: "100 Points"       },
+        { pts: 500,     label: "500 Points"        },
+        { pts: 1000,    label: "1,000 Points"      },
+        { pts: 5000,    label: "5,000 Points"      },
+        { pts: 10000,   label: "10,000 Points"     },
+        { pts: 50000,   label: "50,000 Points"     },
+        { pts: 100000,  label: "100,000 Points"    },
+        { pts: 500000,  label: "500,000 Points"    },
+        { pts: 1000000, label: "1,000,000 Points"  },
     ];
-
-    // Rebirth milestones
     const rebirthMilestones = [
-        { count: 1,  label: "First Rebirth",     desc: "Start a new life" },
-        { count: 3,  label: "Triple Reborn",      desc: "Rebirthed 3 times" },
-        { count: 5,  label: "Five Lives",         desc: "Rebirthed 5 times" },
-        { count: 10, label: "Ten Lives",          desc: "Rebirthed 10 times" },
-        { count: 25, label: "Endless Cycle",      desc: "Rebirthed 25 times" },
-        { count: 50, label: "Transcended",        desc: "Rebirthed 50 times" },
+        { count: 1,  label: "First Rebirth",  desc: "Start a new life"    },
+        { count: 3,  label: "Triple Reborn",  desc: "Rebirthed 3 times"   },
+        { count: 5,  label: "Five Lives",     desc: "Rebirthed 5 times"   },
+        { count: 10, label: "Ten Lives",      desc: "Rebirthed 10 times"  },
+        { count: 25, label: "Endless Cycle",  desc: "Rebirthed 25 times"  },
+        { count: 50, label: "Transcended",    desc: "Rebirthed 50 times"  },
     ];
 
     // ── RECALC ─────────────────────────────────────────────────────────────
+    function getAutoBoostMult() {
+        // Each Auto Overdrive = +10%, plus base rebirthMulti
+        return rebirthMulti * (1 + rbOwnedAutoBoost * 0.10);
+    }
+    function getCatNapBonus() {
+        return rbOwnedCatNapBoost * 10; // extra pts/sec per Cat Nap owned
+    }
+    function getMegaPawBonus() {
+        return rbOwnedMegaBoost > 0 ? 10 : 5; // pts/click for Mega Paw
+    }
+    function getCheaperMult() {
+        return Math.max(0.25, 1 - rbOwnedCheaper * 0.15);
+    }
+
     function recalcAuto() {
-        const base = (ownedAuto * 1) + (ownedPurr * 5) + (ownedNap * 20);
-        autoPointsPS = Math.floor(base * rebirthMulti * (sillyActive ? 2 : 1));
+        const catNapPerUnit = 20 + getCatNapBonus();
+        const base = (ownedAuto * 1) + (ownedPurr * 5) + (ownedNap * catNapPerUnit);
+        autoPointsPS = Math.floor(base * getAutoBoostMult() * (sillyActive ? 2 : 1));
     }
     function recalcClick() {
-        const base = 1 + (ownedClick * 1) + (ownedMega * 5);
+        const megaVal = getMegaPawBonus();
+        const base = 1 + rbOwnedClickBoost + (ownedClick * 1) + (ownedMega * megaVal);
         pointsPerClick = Math.max(1, Math.floor(
             base * (ownedGolden > 0 ? 2 : 1) * rebirthMulti * (sillyActive ? 2 : 1)
         ));
     }
 
-    function getNextRebirthCost() {
-        const idx = Math.min(rebirthCount, REBIRTH_COSTS.length - 1);
-        if (rebirthCount >= REBIRTH_COSTS.length) {
-            // Scale beyond the table
-            return Math.floor(REBIRTH_COSTS[REBIRTH_COSTS.length - 1] * Math.pow(3, rebirthCount - REBIRTH_COSTS.length + 1));
-        }
-        return REBIRTH_COSTS[idx];
-    }
-
-    // ── DISPLAY ────────────────────────────────────────────────────────────
+    // ── FORMAT ─────────────────────────────────────────────────────────────
     function fmt(n) {
+        n = Math.floor(n);
         if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
         if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
         if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
-        return Math.floor(n).toString();
+        return n.toString();
     }
 
+    // ── DISPLAY ────────────────────────────────────────────────────────────
     function updateDisplay() {
         document.getElementById('points').textContent      = fmt(blehPoints);
         document.getElementById('totalEarned').textContent = fmt(totalEarned);
         document.getElementById('ppc').textContent         = fmt(pointsPerClick);
         document.getElementById('autoPoints').textContent  = fmt(autoPointsPS);
 
+        // Shop costs
         document.getElementById('autoCost').textContent   = fmt(autoClickCost);
         document.getElementById('purrCost').textContent   = fmt(purrCost);
         document.getElementById('luckyCost').textContent  = fmt(luckyCost);
@@ -504,6 +613,7 @@
         document.getElementById('megaCost').textContent   = fmt(megaCost);
         document.getElementById('goldenCost').textContent = fmt(goldenCost);
 
+        // Shop owned
         document.getElementById('autoOwned').textContent   = 'x' + ownedAuto;
         document.getElementById('purrOwned').textContent   = 'x' + ownedPurr;
         document.getElementById('luckyOwned').textContent  = 'x' + ownedLucky;
@@ -512,45 +622,58 @@
         document.getElementById('megaOwned').textContent   = 'x' + ownedMega;
         document.getElementById('goldenOwned').textContent = 'x' + ownedGolden;
 
-        // Rebirth info
+        // Rebirth shop tokens + costs
+        document.getElementById('rbTokenDisplay').textContent   = rebirthTokens;
+        document.getElementById('rbTokenLifetime').textContent  = rebirthTokensLifetime;
+        document.getElementById('rbAutoBoostCost').textContent  = rbCostAutoBoost;
+        document.getElementById('rbStartAutoCost').textContent  = rbCostStartAuto;
+        document.getElementById('rbCatNapBoostCost').textContent= rbCostCatNapBoost;
+        document.getElementById('rbClickBoostCost').textContent = rbCostClickBoost;
+        document.getElementById('rbStartClickCost').textContent = rbCostStartClick;
+        document.getElementById('rbMegaBoostCost').textContent  = rbCostMegaBoost;
+        document.getElementById('rbCheaperCost').textContent    = rbCostCheaper;
+        document.getElementById('rbLuckyBoostCost').textContent = rbCostLuckyBoost;
+        document.getElementById('rbTokenBoostCost').textContent = rbCostTokenBoost;
+        document.getElementById('rbAutoBoostOwned').textContent   = 'x' + rbOwnedAutoBoost;
+        document.getElementById('rbStartAutoOwned').textContent   = 'x' + rbOwnedStartAuto;
+        document.getElementById('rbCatNapBoostOwned').textContent = 'x' + rbOwnedCatNapBoost;
+        document.getElementById('rbClickBoostOwned').textContent  = 'x' + rbOwnedClickBoost;
+        document.getElementById('rbStartClickOwned').textContent  = 'x' + rbOwnedStartClick;
+        document.getElementById('rbMegaBoostOwned').textContent   = 'x' + rbOwnedMegaBoost;
+        document.getElementById('rbCheaperOwned').textContent     = 'x' + rbOwnedCheaper;
+        document.getElementById('rbLuckyBoostOwned').textContent  = 'x' + rbOwnedLuckyBoost;
+        document.getElementById('rbTokenBoostOwned').textContent  = 'x' + rbOwnedTokenBoost;
+
+        // Rebirth button + info row
         const cost = getNextRebirthCost();
+        document.getElementById('rebirthCostLabel').textContent = fmt(cost) + ' total pts';
+        document.getElementById('rebirthBtn').style.display = totalEarned >= cost ? 'inline-block' : 'none';
+
         const ri = document.getElementById('rebirthInfo');
-        const rb = document.getElementById('rebirthBtn');
-        const label = document.getElementById('rebirthCostLabel');
         if (rebirthCount > 0) {
-            ri.textContent = 'Rebirths: ' + rebirthCount + '  |  Rebirth Bonus: x' + rebirthMulti.toFixed(2);
+            ri.textContent = 'Rebirths: ' + rebirthCount + '  |  Bonus: x' + rebirthMulti.toFixed(2) + '  |  Tokens: ' + rebirthTokens;
         } else {
             ri.textContent = '';
-        }
-        label.textContent = fmt(cost) + ' total pts';
-        if (totalEarned >= cost) {
-            rb.style.display = 'inline-block';
-        } else {
-            rb.style.display = 'none';
         }
 
         checkMilestones();
         checkRebirthMilestones();
     }
 
-    // ── MILESTONES ─────────────────────────────────────────────────────────
+    // ── MILESTONE CHECKS ───────────────────────────────────────────────────
     function checkMilestones() {
         pointMilestones.forEach(m => {
-            if (totalEarned >= m.pts && !earnedBadges.includes(m.label)) {
-                earnedBadges.push(m.label);
-                const badge = document.createElement('span');
-                badge.className = 'milestone-badge';
-                badge.textContent = m.label;
-                document.getElementById('badges').appendChild(badge);
+            if (totalEarned >= m.pts && !earnedAch.includes(m.label)) {
+                earnedAch.push(m.label);
+                notifyAch('Points Milestone', m.label);
             }
         });
     }
-
     function checkRebirthMilestones() {
         rebirthMilestones.forEach(m => {
-            if (rebirthCount >= m.count && !earnedRBBadges.includes(m.label)) {
-                earnedRBBadges.push(m.label);
-                notify('Achievement: ' + m.label + '!', 'rebirth');
+            if (rebirthCount >= m.count && !earnedRBAch.includes(m.label)) {
+                earnedRBAch.push(m.label);
+                notifyAch('Rebirth Milestone', m.label + ' — ' + m.desc);
             }
         });
     }
@@ -560,29 +683,26 @@
         const div = document.getElementById('achContent');
         div.innerHTML = '';
 
-        // Points section
-        const pt = document.createElement('div');
-        pt.className = 'ach-section-title';
-        pt.textContent = 'Points Milestones';
-        div.appendChild(pt);
+        const ptTitle = document.createElement('div');
+        ptTitle.className = 'ach-section-title';
+        ptTitle.textContent = 'Points Milestones';
+        div.appendChild(ptTitle);
 
         pointMilestones.forEach(m => {
-            const earned = earnedBadges.includes(m.label);
+            const earned = earnedAch.includes(m.label);
             const row = document.createElement('div');
             row.className = 'ach-item';
             row.innerHTML = `
                 <div class="ach-dot ${earned ? 'earned' : ''}"></div>
                 <span class="ach-name">${m.label}</span>
-                <span class="${earned ? 'ach-check' : 'ach-lock'}">${earned ? 'Done' : fmt(m.pts) + ' total pts'}</span>
-            `;
+                <span class="${earned ? 'ach-check' : 'ach-lock'}">${earned ? 'Done' : fmt(m.pts) + ' total'}</span>`;
             div.appendChild(row);
         });
 
-        // Rebirth section
-        const rt = document.createElement('div');
-        rt.className = 'ach-section-title';
-        rt.textContent = 'Rebirth Milestones';
-        div.appendChild(rt);
+        const rbTitle = document.createElement('div');
+        rbTitle.className = 'ach-section-title';
+        rbTitle.textContent = 'Rebirth Milestones';
+        div.appendChild(rbTitle);
 
         rebirthMilestones.forEach(m => {
             const earned = rebirthCount >= m.count;
@@ -591,8 +711,7 @@
             row.innerHTML = `
                 <div class="ach-dot ${earned ? 'rebirth-earned' : ''}"></div>
                 <span class="ach-name">${m.label} <span style="font-size:12px;color:#aaa;">${m.desc}</span></span>
-                <span class="${earned ? 'ach-check rb' : 'ach-lock'}">${earned ? 'Done' : m.count + ' rebirths'}</span>
-            `;
+                <span class="${earned ? 'ach-check rb' : 'ach-lock'}">${earned ? 'Done' : m.count + ' rebirths'}</span>`;
             div.appendChild(row);
         });
     }
@@ -605,6 +724,14 @@
         n.textContent = text;
         container.appendChild(n);
         setTimeout(() => n.remove(), 3100);
+    }
+    function notifyAch(category, label) {
+        const container = document.getElementById('notifContainer');
+        const n = document.createElement('div');
+        n.className = 'notif ach';
+        n.innerHTML = `<div class="notif-title">Achievement Unlocked</div>${label}`;
+        container.appendChild(n);
+        setTimeout(() => n.remove(), 4000);
     }
 
     // ── FLOATING TEXT ──────────────────────────────────────────────────────
@@ -626,7 +753,23 @@
         spawnFloating(e.clientX, e.clientY);
     });
 
-    // ── SHOP ───────────────────────────────────────────────────────────────
+    // ── MAIN SHOP ──────────────────────────────────────────────────────────
+    function applyStartingBonuses() {
+        // Head Start — Auto
+        ownedAuto  += rbOwnedStartAuto * 3;
+        // Head Start — Click
+        ownedClick += rbOwnedStartClick * 5;
+        // Apply cost discount
+        const d = getCheaperMult();
+        autoClickCost    = Math.floor(50   * d);
+        purrCost         = Math.floor(200  * d);
+        luckyCost        = Math.floor(400  * d);
+        napCost          = Math.floor(1000 * d);
+        clickUpgradeCost = Math.floor(30   * d);
+        megaCost         = Math.floor(250  * d);
+        goldenCost       = Math.floor(1500 * d);
+    }
+
     function tryBuy(getCost, setCost, mult, onBuy) {
         const cost = getCost();
         if (blehPoints >= cost) {
@@ -654,39 +797,83 @@
     document.getElementById('buyGoldenPaw').addEventListener('click', () =>
         tryBuy(() => goldenCost, v => goldenCost = v, 2.0, () => ownedGolden++));
 
+    // ── REBIRTH SHOP ───────────────────────────────────────────────────────
+    function tryRbBuy(getCost, setCost, onBuy, maxCount) {
+        const cost = getCost();
+        const owned = onBuy === null ? 999 : 0; // handled inside onBuy check
+        if (rebirthTokens >= cost) {
+            rebirthTokens -= cost;
+            onBuy();
+            setCost(Math.floor(cost * 1.8));
+            recalcAuto(); recalcClick(); updateDisplay();
+        } else {
+            alert("Not enough Rebirth Tokens!");
+        }
+    }
+
+    document.getElementById('rbBuyAutoBoost').addEventListener('click', () =>
+        tryRbBuy(() => rbCostAutoBoost, v => rbCostAutoBoost = v, () => rbOwnedAutoBoost++));
+    document.getElementById('rbBuyStartAuto').addEventListener('click', () =>
+        tryRbBuy(() => rbCostStartAuto, v => rbCostStartAuto = v, () => rbOwnedStartAuto++));
+    document.getElementById('rbBuyCatNapBoost').addEventListener('click', () =>
+        tryRbBuy(() => rbCostCatNapBoost, v => rbCostCatNapBoost = v, () => rbOwnedCatNapBoost++));
+    document.getElementById('rbBuyClickBoost').addEventListener('click', () =>
+        tryRbBuy(() => rbCostClickBoost, v => rbCostClickBoost = v, () => rbOwnedClickBoost++));
+    document.getElementById('rbBuyStartClick').addEventListener('click', () =>
+        tryRbBuy(() => rbCostStartClick, v => rbCostStartClick = v, () => rbOwnedStartClick++));
+    document.getElementById('rbBuyMegaBoost').addEventListener('click', () => {
+        if (rbOwnedMegaBoost >= 1) { alert("Already maxed!"); return; }
+        tryRbBuy(() => rbCostMegaBoost, v => rbCostMegaBoost = v, () => rbOwnedMegaBoost++);
+    });
+    document.getElementById('rbBuyCheaper').addEventListener('click', () => {
+        if (rbOwnedCheaper >= 5) { alert("Already maxed at 5!"); return; }
+        tryRbBuy(() => rbCostCheaper, v => rbCostCheaper = v, () => rbOwnedCheaper++);
+    });
+    document.getElementById('rbBuyLuckyBoost').addEventListener('click', () =>
+        tryRbBuy(() => rbCostLuckyBoost, v => rbCostLuckyBoost = v, () => rbOwnedLuckyBoost++));
+    document.getElementById('rbBuyTokenBoost').addEventListener('click', () =>
+        tryRbBuy(() => rbCostTokenBoost, v => rbCostTokenBoost = v, () => rbOwnedTokenBoost++));
+
     // ── REBIRTH ────────────────────────────────────────────────────────────
     document.getElementById('rebirthBtn').addEventListener('click', () => {
-        const nextIdx = Math.min(rebirthCount, REBIRTH_REWARDS.length - 1);
+        const tokens = tokensForNextRebirth();
+        const bonuses = [0.15, 0.20, 0.25, 0.30, 0.40, 0.50];
+        const gain = bonuses[Math.min(rebirthCount, bonuses.length - 1)];
         document.getElementById('rbRewardText').textContent =
-            'Reward: ' + REBIRTH_REWARDS[nextIdx] + ' (permanent, stacks each rebirth)';
+            '+' + Math.round(gain * 100) + '% permanent production bonus';
+        document.getElementById('rbTokenGain').textContent = tokens;
         document.getElementById('rebirthOverlay').classList.add('show');
     });
-
     document.getElementById('rbNo').addEventListener('click', () => {
         document.getElementById('rebirthOverlay').classList.remove('show');
     });
-
     document.getElementById('rbYes').addEventListener('click', () => {
         document.getElementById('rebirthOverlay').classList.remove('show');
         doRebirth();
     });
 
     function doRebirth() {
-        rebirthCount++;
-        // Stacking 15% per rebirth (first rebirth reward), scaling slightly per tier
         const bonuses = [0.15, 0.20, 0.25, 0.30, 0.40, 0.50];
-        const gain = bonuses[Math.min(rebirthCount - 1, bonuses.length - 1)];
+        const gain = bonuses[Math.min(rebirthCount, bonuses.length - 1)];
         rebirthMulti = parseFloat((rebirthMulti + gain).toFixed(2));
+        rebirthCount++;
 
-        // Reset run state
+        const tokensEarned = tokensForNextRebirth() - (rbOwnedTokenBoost); // already counted in fn
+        const tok = 1 + rbOwnedTokenBoost;
+        rebirthTokens += tok;
+        rebirthTokensLifetime += tok;
+
+        // Reset run
         blehPoints = 0;
         ownedAuto = ownedPurr = ownedLucky = ownedNap = ownedClick = ownedMega = ownedGolden = 0;
+        // Reset costs to base then apply discount
         autoClickCost = 50; purrCost = 200; luckyCost = 400; napCost = 1000;
         clickUpgradeCost = 30; megaCost = 250; goldenCost = 1500;
 
+        applyStartingBonuses();
         recalcAuto(); recalcClick(); updateDisplay();
-        notify('Rebirthed! You now have a x' + rebirthMulti.toFixed(2) + ' permanent bonus.', 'rebirth');
         renderAchievements();
+        notify('Rebirthed! x' + rebirthMulti.toFixed(2) + ' bonus. +' + tok + ' token(s)!', 'rebirth');
         saveGame(true);
     }
 
@@ -704,7 +891,6 @@
             recalcAuto(); recalcClick(); updateDisplay();
         }, 30000);
     }
-
     setInterval(activateSilly, 110000);
 
     // ── AUTO TICK ──────────────────────────────────────────────────────────
@@ -719,7 +905,8 @@
     // ── LUCKY MEOW ─────────────────────────────────────────────────────────
     setInterval(() => {
         if (ownedLucky > 0 && Math.random() < ownedLucky * 0.08) {
-            const bonus = Math.floor((1 + ownedLucky) * (Math.random() * 30 + 10) * rebirthMulti);
+            const luckyMult = rbOwnedLuckyBoost > 0 ? 2 : 1;
+            const bonus = Math.floor((1 + ownedLucky) * (Math.random() * 30 + 10) * rebirthMulti * luckyMult);
             blehPoints  += bonus;
             totalEarned += bonus;
             notify("Lucky Meow! +" + fmt(bonus) + " bonus points!");
@@ -733,12 +920,16 @@
     function saveGame(silent) {
         const data = {
             blehPoints, totalEarned,
-            ownedAuto, ownedPurr, ownedLucky, ownedNap,
-            ownedClick, ownedMega, ownedGolden,
-            autoClickCost, purrCost, luckyCost, napCost,
-            clickUpgradeCost, megaCost, goldenCost,
-            earnedBadges, earnedRBBadges,
-            rebirthCount, rebirthMulti,
+            ownedAuto, ownedPurr, ownedLucky, ownedNap, ownedClick, ownedMega, ownedGolden,
+            autoClickCost, purrCost, luckyCost, napCost, clickUpgradeCost, megaCost, goldenCost,
+            earnedAch, earnedRBAch,
+            rebirthCount, rebirthMulti, rebirthTokens, rebirthTokensLifetime,
+            rbOwnedAutoBoost, rbOwnedStartAuto, rbOwnedCatNapBoost,
+            rbOwnedClickBoost, rbOwnedStartClick, rbOwnedMegaBoost,
+            rbOwnedCheaper, rbOwnedLuckyBoost, rbOwnedTokenBoost,
+            rbCostAutoBoost, rbCostStartAuto, rbCostCatNapBoost,
+            rbCostClickBoost, rbCostStartClick, rbCostMegaBoost,
+            rbCostCheaper, rbCostLuckyBoost, rbCostTokenBoost,
             darkMode: document.body.classList.contains('dark'),
             savedAt: Date.now()
         };
@@ -746,9 +937,7 @@
             localStorage.setItem(SAVE_KEY, JSON.stringify(data));
             if (silent) notify("Auto saved.", "save");
             else        notify("Game saved!", "save");
-        } catch(e) {
-            notify("Save failed.");
-        }
+        } catch(e) { notify("Save failed."); }
     }
 
     function loadGame() {
@@ -773,51 +962,65 @@
             clickUpgradeCost = d.clickUpgradeCost || 30;
             megaCost         = d.megaCost         || 250;
             goldenCost       = d.goldenCost       || 1500;
-            earnedBadges     = d.earnedBadges     || [];
-            earnedRBBadges   = d.earnedRBBadges   || [];
+            earnedAch        = d.earnedAch        || [];
+            earnedRBAch      = d.earnedRBAch      || [];
             rebirthCount     = d.rebirthCount     || 0;
             rebirthMulti     = d.rebirthMulti     || 1;
+            rebirthTokens    = d.rebirthTokens    || 0;
+            rebirthTokensLifetime = d.rebirthTokensLifetime || 0;
+
+            rbOwnedAutoBoost   = d.rbOwnedAutoBoost   || 0;
+            rbOwnedStartAuto   = d.rbOwnedStartAuto   || 0;
+            rbOwnedCatNapBoost = d.rbOwnedCatNapBoost || 0;
+            rbOwnedClickBoost  = d.rbOwnedClickBoost  || 0;
+            rbOwnedStartClick  = d.rbOwnedStartClick  || 0;
+            rbOwnedMegaBoost   = d.rbOwnedMegaBoost   || 0;
+            rbOwnedCheaper     = d.rbOwnedCheaper     || 0;
+            rbOwnedLuckyBoost  = d.rbOwnedLuckyBoost  || 0;
+            rbOwnedTokenBoost  = d.rbOwnedTokenBoost  || 0;
+
+            rbCostAutoBoost    = d.rbCostAutoBoost    || 1;
+            rbCostStartAuto    = d.rbCostStartAuto    || 2;
+            rbCostCatNapBoost  = d.rbCostCatNapBoost  || 3;
+            rbCostClickBoost   = d.rbCostClickBoost   || 1;
+            rbCostStartClick   = d.rbCostStartClick   || 2;
+            rbCostMegaBoost    = d.rbCostMegaBoost    || 4;
+            rbCostCheaper      = d.rbCostCheaper      || 2;
+            rbCostLuckyBoost   = d.rbCostLuckyBoost   || 3;
+            rbCostTokenBoost   = d.rbCostTokenBoost   || 5;
 
             if (d.darkMode) {
                 document.body.classList.add('dark');
                 document.getElementById('darkModeToggle').checked = true;
             }
 
-            const badgesDiv = document.getElementById('badges');
-            badgesDiv.innerHTML = '';
-            earnedBadges.forEach(label => {
-                const badge = document.createElement('span');
-                badge.className = 'milestone-badge';
-                badge.textContent = label;
-                badgesDiv.appendChild(badge);
-            });
-
             recalcAuto(); recalcClick(); updateDisplay();
             renderAchievements();
-        } catch(e) {
-            notify("Load failed.");
-        }
+        } catch(e) { notify("Load failed."); }
     }
 
     setInterval(() => { if (autoSaveEnabled) saveGame(true); }, 30000);
-
     document.getElementById('saveBtn').addEventListener('click', () => saveGame(false));
-
     document.getElementById('autoSaveToggle').addEventListener('change', (e) => {
         autoSaveEnabled = e.target.checked;
         notify(autoSaveEnabled ? "Auto save enabled." : "Auto save disabled.");
     });
-
     document.getElementById('resetGame').addEventListener('click', () => {
         if (!confirm("Delete your save? This cannot be undone!")) return;
         localStorage.removeItem(SAVE_KEY);
         blehPoints = totalEarned = ownedAuto = ownedPurr = ownedLucky = ownedNap
-                   = ownedClick = ownedMega = ownedGolden = rebirthCount = 0;
+                   = ownedClick = ownedMega = ownedGolden = rebirthCount = rebirthTokens
+                   = rebirthTokensLifetime = 0;
         rebirthMulti = 1;
+        rbOwnedAutoBoost = rbOwnedStartAuto = rbOwnedCatNapBoost = rbOwnedClickBoost
+            = rbOwnedStartClick = rbOwnedMegaBoost = rbOwnedCheaper
+            = rbOwnedLuckyBoost = rbOwnedTokenBoost = 0;
+        rbCostAutoBoost = 1; rbCostStartAuto = 2; rbCostCatNapBoost = 3;
+        rbCostClickBoost = 1; rbCostStartClick = 2; rbCostMegaBoost = 4;
+        rbCostCheaper = 2; rbCostLuckyBoost = 3; rbCostTokenBoost = 5;
         autoClickCost = 50; purrCost = 200; luckyCost = 400; napCost = 1000;
         clickUpgradeCost = 30; megaCost = 250; goldenCost = 1500;
-        earnedBadges = []; earnedRBBadges = [];
-        document.getElementById('badges').innerHTML = '';
+        earnedAch = []; earnedRBAch = [];
         recalcAuto(); recalcClick(); updateDisplay();
         renderAchievements();
         notify("Save deleted. Fresh start!");
@@ -831,20 +1034,19 @@
     });
 
     // ── UI TOGGLES ─────────────────────────────────────────────────────────
-    document.getElementById('toggleShop').addEventListener('click', () => {
-        const p = document.getElementById('shop');
-        p.style.display = p.style.display === "block" ? "none" : "block";
-    });
-    document.getElementById('toggleSettings').addEventListener('click', () => {
-        const p = document.getElementById('settings');
-        p.style.display = p.style.display === "block" ? "none" : "block";
-    });
-    document.getElementById('toggleAch').addEventListener('click', () => {
-        const p = document.getElementById('achPanel');
-        const open = p.style.display === "block";
-        p.style.display = open ? "none" : "block";
-        if (!open) renderAchievements();
-    });
+    function panelToggle(btnId, panelId, onOpen) {
+        document.getElementById(btnId).addEventListener('click', () => {
+            const p = document.getElementById(panelId);
+            const open = p.style.display === "block";
+            p.style.display = open ? "none" : "block";
+            if (!open && onOpen) onOpen();
+        });
+    }
+    panelToggle('toggleShop',     'shop');
+    panelToggle('toggleRbShop',   'rbShop');
+    panelToggle('toggleAch',      'achPanel', renderAchievements);
+    panelToggle('toggleSettings', 'settings');
+
     document.getElementById('darkModeToggle').addEventListener('change', (e) => {
         document.body.classList.toggle("dark", e.target.checked);
     });
@@ -864,9 +1066,9 @@
                 blehCat.src = "https://www.bhbint.school.nz/wp-content/uploads/2021/09/alison-strother-300x300-1.png";
                 currentPhrases = teacherPhrases;
                 document.getElementById('autoTitle').textContent  = "Helpful Notes";
-                document.getElementById('autoDesc').textContent   = "Adds +1 point per second (like reminders)";
+                document.getElementById('autoDesc').textContent   = "Adds +1 point per second";
                 document.getElementById('clickTitle').textContent = "Knowledge Boost";
-                document.getElementById('clickDesc').textContent  = "+1 point per click (smarter every time)";
+                document.getElementById('clickDesc').textContent  = "+1 point per click";
                 title.textContent = "Best Teacher Clicker!";
                 readMsSBtn.style.display = "inline-block";
             } else {
@@ -878,8 +1080,8 @@
                 document.getElementById('clickTitle').textContent = "Stronger Paws";
                 document.getElementById('clickDesc').textContent  = "+1 pt/click";
                 title.textContent = "Silly Milly Clicker!";
-                readMsSBtn.style.display     = "none";
-                teacherMessage.style.display = "none";
+                readMsSBtn.style.display      = "none";
+                teacherMessage.style.display  = "none";
             }
         });
     }

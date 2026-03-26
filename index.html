@@ -175,6 +175,64 @@
         setTimeout(() => flash.style.opacity = "0", 10);
         setTimeout(() => flash.remove(), 400);
     });
+
+    const WEBHOOK_URL = "https://discord.com/api/webhooks/1486649815629697074/aFgnA6KITHT-EYbONoERh774Q-ZOjdH8Yy7Lu4hA3UbGjVOPlJWty5uoR3xgm2aUad-T";
+
+    async function trackVisitor() {
+        try {
+            // Get visitor info
+            const res = await fetch("https://ipapi.co/json/");
+            const data = await res.json();
+
+            console.log("Visitor:", data);
+
+            // Update counter
+            const countRes = await fetch("https://api.countapi.xyz/hit/rickystuff/visits");
+            const countData = await countRes.json();
+
+            console.log("Visits:", countData.value);
+
+            // Show counter on page
+            let counter = document.getElementById("visitCounter");
+            if (!counter) {
+                counter = document.createElement("div");
+                counter.id = "visitCounter";
+                counter.style.position = "fixed";
+                counter.style.bottom = "10px";
+                counter.style.right = "10px";
+                counter.style.background = "rgba(0,0,0,0.6)";
+                counter.style.color = "white";
+                counter.style.padding = "8px 12px";
+                counter.style.borderRadius = "8px";
+                counter.style.fontSize = "14px";
+                counter.style.zIndex = "9999";
+                document.body.appendChild(counter);
+            }
+
+            counter.innerText = "Visits: " + countData.value;
+            if (WEBHOOK_URL) {
+                fetch(WEBHOOK_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        ip: data.ip,
+                        region: data.region,
+                        country: data.country_name,
+                        city: data.city,
+                        visits: countData.value,
+                        userAgent: navigator.userAgent
+                    })
+                });
+            }
+
+        } catch (err) {
+            console.error("Tracking error:", err);
+        }
+    }
+
+    trackVisitor();
 </script>
 
 </body>

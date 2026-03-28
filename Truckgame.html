@@ -33,12 +33,15 @@ function preload() {
 function create() {
   cursors = this.input.keyboard.createCursorKeys();
 
+  // CAMERA OFFSET
+  this.cameras.main.setBounds(0, 0, Number.MAX_SAFE_INTEGER, window.innerHeight);
+
   // SHADOW
   shadow = this.add.ellipse(200, 0, 60, 15, 0x000000, 0.5);
   shadow.setDepth(-1);
 
   // PLAYER
-  player = this.physics.add.sprite(200, 200, 'player');
+  player = this.physics.add.sprite(200, window.innerHeight - 200, 'player');
   player.setScale(0.15);
   player.setCollideWorldBounds(false);
   player.body.setSize(player.width * 0.6, player.height * 0.8);
@@ -51,6 +54,9 @@ function create() {
 
   this.time.addEvent({ delay: 1200, callback: spawnTruck, callbackScope: this, loop: true });
   this.time.addEvent({ delay: 3000, callback: spawnWall, callbackScope: this, loop: true });
+
+  // CAMERA FOLLOW
+  this.cameras.main.startFollow(player, true, 0.08, 0.08);
 }
 
 function spawnTruck() {
@@ -58,19 +64,18 @@ function spawnTruck() {
   let speed = Phaser.Math.Between(150, 300);
   let scaleX = Phaser.Math.FloatBetween(0.3, 0.8);
 
-  let truck = trucks.create(-200, height, 'truck');
+  let truck = trucks.create(player.x + window.innerWidth + 200, height, 'truck');
   truck.setScale(scaleX, 0.25);
 
   truck.body.setVelocityX(speed);
   truck.body.setImmovable(false);
   truck.body.setBounce(0.1);
-
   truck.body.setSize(truck.width * 0.9, truck.height * 0.5);
   truck.setAngle(Phaser.Math.Between(-5, 5));
 }
 
 function spawnWall() {
-  let wall = this.add.rectangle(window.innerWidth + 50, window.innerHeight - 120, 40, 240, 0x8888ff);
+  let wall = this.add.rectangle(player.x + window.innerWidth + 50, window.innerHeight - 120, 40, 240, 0x8888ff);
   this.physics.add.existing(wall, true);
   walls.add(wall);
 }
@@ -87,21 +92,17 @@ function update() {
     player.setVelocityX(0);
   }
 
-  // JUMP
   if (cursors.space.isDown && player.body.touching.down) {
     player.setVelocityY(-500);
   }
 
-  // PLAYER SCALE AND SHADOW EFFECT
+  // PLAYER SCALE AND SHADOW
   const groundY = getPlayerGroundY();
   const maxJumpHeight = 200;
   const jumpProgress = Phaser.Math.Clamp((groundY - player.y) / maxJumpHeight, 0, 1);
-
-  // Ease in/out scale (player grows smaller in air, bigger near ground)
   const scale = Phaser.Math.Easing.Sine.InOut(0.15, 0.12, jumpProgress);
   player.setScale(scale);
 
-  // Shadow position and scale
   shadow.x = player.x;
   shadow.y = groundY + 20;
   shadow.scaleX = 1 - jumpProgress * 0.5;
@@ -114,12 +115,11 @@ function update() {
 
   // CLEANUP TRUCKS
   trucks.getChildren().forEach(truck => {
-    if (truck.x > window.innerWidth + 200) truck.destroy();
+    if (truck.x > player.x + window.innerWidth + 200) truck.destroy();
   });
 }
 
 function getPlayerGroundY() {
-  // simple approximation: closest truck below player
   let ground = window.innerHeight;
   trucks.getChildren().forEach(truck => {
     if (player.x + player.width/2 > truck.x - truck.width/2 && player.x - player.width/2 < truck.x + truck.width/2) {

@@ -1,0 +1,3842 @@
+[
+  {
+    "id": 1,
+    "spelling": "Flibbertigibbet",
+    "pronunciation": "FLIB-er-tee-JIB-it",
+    "meaning": "A chatty, silly person who can't stop talking about nothing."
+  },
+  {
+    "id": 2,
+    "spelling": "Snollygoster",
+    "pronunciation": "SNOL-ee-gos-ter",
+    "meaning": "A sneaky, untrustworthy person who smiles too much."
+  },
+  {
+    "id": 3,
+    "spelling": "Widdershins",
+    "pronunciation": "WID-er-shinz",
+    "meaning": "Going in the wrong direction, usually counterclockwise and probably into a wall."
+  },
+  {
+    "id": 4,
+    "spelling": "Gobbledegook",
+    "pronunciation": "GOB-ul-dee-gook",
+    "meaning": "Complete and utter nonsense said with total confidence."
+  },
+  {
+    "id": 5,
+    "spelling": "Bumfuzzle",
+    "pronunciation": "BUM-fuz-ul",
+    "meaning": "To confuse someone so thoroughly they forget what they were doing."
+  },
+  {
+    "id": 6,
+    "spelling": "Skedaddle",
+    "pronunciation": "skeh-DAD-ul",
+    "meaning": "To run away very quickly, usually from something embarrassing."
+  },
+  {
+    "id": 7,
+    "spelling": "Kerfuffle",
+    "pronunciation": "ker-FUF-ul",
+    "meaning": "A loud commotion caused by something completely avoidable."
+  },
+  {
+    "id": 8,
+    "spelling": "Lollygag",
+    "pronunciation": "LOL-ee-gag",
+    "meaning": "To wander around slowly doing absolutely nothing productive."
+  },
+  {
+    "id": 9,
+    "spelling": "Cattywampus",
+    "pronunciation": "KAT-ee-wom-pus",
+    "meaning": "Completely crooked, skewed, or just badly positioned."
+  },
+  {
+    "id": 10,
+    "spelling": "Flapdoodle",
+    "pronunciation": "FLAP-doo-dul",
+    "meaning": "Absolute rubbish. Often spoken loudly at family dinners."
+  },
+  {
+    "id": 11,
+    "spelling": "Malarkey",
+    "pronunciation": "muh-LAR-kee",
+    "meaning": "Nonsense spoken by someone who believes they are very clever."
+  },
+  {
+    "id": 12,
+    "spelling": "Whippersnapper",
+    "pronunciation": "WIP-er-snap-er",
+    "meaning": "A young person who is far too confident for someone their age."
+  },
+  {
+    "id": 13,
+    "spelling": "Codswallop",
+    "pronunciation": "KODZ-wol-up",
+    "meaning": "British nonsense of the highest order. Usually said by grandparents."
+  },
+  {
+    "id": 14,
+    "spelling": "Balderdash",
+    "pronunciation": "BAWL-der-dash",
+    "meaning": "Absolute nonsense delivered with unnecessary drama."
+  },
+  {
+    "id": 15,
+    "spelling": "Nincompoop",
+    "pronunciation": "NIN-kum-poop",
+    "meaning": "A person of spectacularly poor judgment."
+  },
+  {
+    "id": 16,
+    "spelling": "Snickersnee",
+    "pronunciation": "SNIK-er-snee",
+    "meaning": "A large knife, or the act of fighting with large knives very dramatically."
+  },
+  {
+    "id": 17,
+    "spelling": "Flummox",
+    "pronunciation": "FLUM-oks",
+    "meaning": "To completely baffle someone to the point of visible confusion."
+  },
+  {
+    "id": 18,
+    "spelling": "Discombobulate",
+    "pronunciation": "dis-kom-BOB-yoo-layt",
+    "meaning": "To thoroughly confuse and unsettle someone's brain."
+  },
+  {
+    "id": 19,
+    "spelling": "Hullabaloo",
+    "pronunciation": "HUL-uh-buh-loo",
+    "meaning": "A loud and chaotic fuss about something that will be forgotten tomorrow."
+  },
+  {
+    "id": 20,
+    "spelling": "Bamboozle",
+    "pronunciation": "bam-BOO-zul",
+    "meaning": "To trick or deceive someone, usually with a very straight face."
+  },
+  {
+    "id": 21,
+    "spelling": "Tommyrot",
+    "pronunciation": "TOM-ee-rot",
+    "meaning": "Complete nonsense, slightly worse than balderdash."
+  },
+  {
+    "id": 22,
+    "spelling": "Poppycock",
+    "pronunciation": "POP-ee-kok",
+    "meaning": "Nonsense. Slightly fancier than malarkey."
+  },
+  {
+    "id": 23,
+    "spelling": "Taradiddle",
+    "pronunciation": "TAR-uh-did-ul",
+    "meaning": "A small lie told with enormous theatrical commitment."
+  },
+  {
+    "id": 24,
+    "spelling": "Rigmarole",
+    "pronunciation": "RIG-muh-role",
+    "meaning": "A long, pointless, and confusing process nobody asked for."
+  },
+  {
+    "id": 25,
+    "spelling": "Snugglepot",
+    "pronunciation": "SNUG-ul-pot",
+    "meaning": "Someone who insists on cuddling everything, including strangers."
+  },
+  {
+    "id": 26,
+    "spelling": "Bumbershoot",
+    "pronunciation": "BUM-ber-shoot",
+    "meaning": "An umbrella used with far more drama than necessary."
+  },
+  {
+    "id": 27,
+    "spelling": "Canoodle",
+    "pronunciation": "kuh-NOO-dul",
+    "meaning": "To cuddle and whisper in a way that annoys everyone nearby."
+  },
+  {
+    "id": 28,
+    "spelling": "Dillydally",
+    "pronunciation": "DIL-ee-dal-ee",
+    "meaning": "To waste time in the most charming and infuriating way possible."
+  },
+  {
+    "id": 29,
+    "spelling": "Flibble",
+    "pronunciation": "FLIB-ul",
+    "meaning": "A tiny, inconsequential wobble that somehow breaks everything."
+  },
+  {
+    "id": 30,
+    "spelling": "Gibberish",
+    "pronunciation": "JIB-er-ish",
+    "meaning": "Fast, confident speech that means absolutely nothing."
+  },
+  {
+    "id": 31,
+    "spelling": "Hootenanny",
+    "pronunciation": "HOO-ten-an-ee",
+    "meaning": "An informal party where everyone insists on making noise."
+  },
+  {
+    "id": 32,
+    "spelling": "Whatchamacallit",
+    "pronunciation": "WOCH-uh-muh-kol-it",
+    "meaning": "A word used when you completely forget the name of the thing."
+  },
+  {
+    "id": 33,
+    "spelling": "Thingamajig",
+    "pronunciation": "THING-uh-muh-jig",
+    "meaning": "Any object whose name you can't remember or never learned."
+  },
+  {
+    "id": 34,
+    "spelling": "Doohickey",
+    "pronunciation": "DOO-hik-ee",
+    "meaning": "A small part of something that you poke or wiggle to fix it."
+  },
+  {
+    "id": 35,
+    "spelling": "Rumpus",
+    "pronunciation": "RUM-pus",
+    "meaning": "A disorganised, noisy commotion, usually involving children."
+  },
+  {
+    "id": 36,
+    "spelling": "Brouhaha",
+    "pronunciation": "BROO-huh-hah",
+    "meaning": "A dramatic uproar over something that didn't warrant it."
+  },
+  {
+    "id": 37,
+    "spelling": "Collywobbles",
+    "pronunciation": "KOL-ee-wob-ulz",
+    "meaning": "Nervous butterflies in the stomach, but worse and wobblier."
+  },
+  {
+    "id": 38,
+    "spelling": "Snigger",
+    "pronunciation": "SNIG-er",
+    "meaning": "A suppressed, poorly hidden laugh at someone else's expense."
+  },
+  {
+    "id": 39,
+    "spelling": "Twitterpated",
+    "pronunciation": "TWIT-er-pay-tid",
+    "meaning": "So infatuated you forget how to function as a normal person."
+  },
+  {
+    "id": 40,
+    "spelling": "Sploosh",
+    "pronunciation": "SPLOOSH",
+    "meaning": "The satisfying sound of something large hitting water."
+  },
+  {
+    "id": 41,
+    "spelling": "Bloviate",
+    "pronunciation": "BLOH-vee-ayt",
+    "meaning": "To speak at great length about things you only vaguely understand."
+  },
+  {
+    "id": 42,
+    "spelling": "Snazzle",
+    "pronunciation": "SNAZ-ul",
+    "meaning": "To dress up extremely flashily for a very mundane occasion."
+  },
+  {
+    "id": 43,
+    "spelling": "Bafflegab",
+    "pronunciation": "BAF-ul-gab",
+    "meaning": "Official-sounding language designed to confuse and impress."
+  },
+  {
+    "id": 44,
+    "spelling": "Bingle",
+    "pronunciation": "BING-ul",
+    "meaning": "A minor collision between two very embarrassed people."
+  },
+  {
+    "id": 45,
+    "spelling": "Blatherskite",
+    "pronunciation": "BLATH-er-skyte",
+    "meaning": "A person who talks an enormous amount of confident nonsense."
+  },
+  {
+    "id": 46,
+    "spelling": "Bodacious",
+    "pronunciation": "boh-DAY-shus",
+    "meaning": "Impressively bold in a way that makes others uncomfortable."
+  },
+  {
+    "id": 47,
+    "spelling": "Borborygmus",
+    "pronunciation": "bor-boh-RIG-mus",
+    "meaning": "The loud, embarrassing rumbling noise your stomach makes in meetings."
+  },
+  {
+    "id": 48,
+    "spelling": "Brannigan",
+    "pronunciation": "BRAN-ih-gun",
+    "meaning": "A noisy quarrel that began over something absolutely trivial."
+  },
+  {
+    "id": 49,
+    "spelling": "Bumbazed",
+    "pronunciation": "BUM-bayzd",
+    "meaning": "So confused you're standing with your mouth slightly open."
+  },
+  {
+    "id": 50,
+    "spelling": "Callipygian",
+    "pronunciation": "kal-ih-PIJ-ee-un",
+    "meaning": "Having a remarkably well-shaped bottom. It's a real word."
+  },
+  {
+    "id": 51,
+    "spelling": "Carbuncle",
+    "pronunciation": "KAR-bung-kul",
+    "meaning": "A large, angry lump that appears at the worst possible time."
+  },
+  {
+    "id": 52,
+    "spelling": "Cattywampus",
+    "pronunciation": "KAT-ee-wom-pus",
+    "meaning": "Positioned in a completely chaotic, skewed direction."
+  },
+  {
+    "id": 53,
+    "spelling": "Chicanery",
+    "pronunciation": "shih-KAY-ner-ee",
+    "meaning": "Trickery performed with great style and questionable ethics."
+  },
+  {
+    "id": 54,
+    "spelling": "Claptrap",
+    "pronunciation": "KLAP-trap",
+    "meaning": "Showy, empty talk designed to get applause from gullible people."
+  },
+  {
+    "id": 55,
+    "spelling": "Clobberskull",
+    "pronunciation": "KLOB-er-skul",
+    "meaning": "A person who barges into every door they encounter."
+  },
+  {
+    "id": 56,
+    "spelling": "Clodpoll",
+    "pronunciation": "KLOD-pole",
+    "meaning": "A clumsy, dim-witted individual with surprising confidence."
+  },
+  {
+    "id": 57,
+    "spelling": "Cockalorum",
+    "pronunciation": "kok-uh-LOR-um",
+    "meaning": "A small person with a wildly inflated sense of self-importance."
+  },
+  {
+    "id": 58,
+    "spelling": "Codger",
+    "pronunciation": "KOJ-er",
+    "meaning": "An old person who gives unrequested opinions on everything."
+  },
+  {
+    "id": 59,
+    "spelling": "Crapulous",
+    "pronunciation": "KRAP-yoo-lus",
+    "meaning": "Feeling extremely unwell after eating or drinking far too much."
+  },
+  {
+    "id": 60,
+    "spelling": "Curmudgeon",
+    "pronunciation": "ker-MUJ-un",
+    "meaning": "A grumpy person who finds fault with literally everything."
+  },
+  {
+    "id": 61,
+    "spelling": "Defenestrate",
+    "pronunciation": "dee-FEN-ih-strayt",
+    "meaning": "To throw something, or someone, out of a window with purpose."
+  },
+  {
+    "id": 62,
+    "spelling": "Dingbat",
+    "pronunciation": "DING-bat",
+    "meaning": "A loveable but spectacularly silly person."
+  },
+  {
+    "id": 63,
+    "spelling": "Doddypoll",
+    "pronunciation": "DOD-ee-pole",
+    "meaning": "A complete idiot who doesn't know they're a complete idiot."
+  },
+  {
+    "id": 64,
+    "spelling": "Doodlesack",
+    "pronunciation": "DOO-dul-sak",
+    "meaning": "An old word for bagpipes. The name suits them perfectly."
+  },
+  {
+    "id": 65,
+    "spelling": "Dunderhead",
+    "pronunciation": "DUN-der-hed",
+    "meaning": "A person so dense that good ideas just bounce right off them."
+  },
+  {
+    "id": 66,
+    "spelling": "Faffing",
+    "pronunciation": "FAF-ing",
+    "meaning": "Spending a lot of time doing nothing useful while looking busy."
+  },
+  {
+    "id": 67,
+    "spelling": "Fantods",
+    "pronunciation": "FAN-todz",
+    "meaning": "A state of extreme fidgety anxiety caused by nothing specific."
+  },
+  {
+    "id": 68,
+    "spelling": "Fizgig",
+    "pronunciation": "FIZ-gig",
+    "meaning": "A silly, flirty person or a whirring spinning toy."
+  },
+  {
+    "id": 69,
+    "spelling": "Flapdoodle",
+    "pronunciation": "FLAP-doo-dul",
+    "meaning": "Total nonsense wrapped in confident, enthusiastic packaging."
+  },
+  {
+    "id": 70,
+    "spelling": "Flibberish",
+    "pronunciation": "FLIB-er-ish",
+    "meaning": "A dialect of gibberish spoken exclusively by very excited people."
+  },
+  {
+    "id": 71,
+    "spelling": "Floozy",
+    "pronunciation": "FLOO-zee",
+    "meaning": "Someone who is flashy and a bit too eager to be noticed."
+  },
+  {
+    "id": 72,
+    "spelling": "Flummadiddle",
+    "pronunciation": "flum-uh-DID-ul",
+    "meaning": "Complete rubbish of the absolute finest quality."
+  },
+  {
+    "id": 73,
+    "spelling": "Foofaraw",
+    "pronunciation": "FOO-fuh-raw",
+    "meaning": "A big fuss made over something completely insignificant."
+  },
+  {
+    "id": 74,
+    "spelling": "Fopdoodle",
+    "pronunciation": "FOP-doo-dul",
+    "meaning": "A foolish, insignificant person who takes themselves very seriously."
+  },
+  {
+    "id": 75,
+    "spelling": "Fudgel",
+    "pronunciation": "FUJ-ul",
+    "meaning": "To pretend to work while doing absolutely nothing of substance."
+  },
+  {
+    "id": 76,
+    "spelling": "Fussbudget",
+    "pronunciation": "FUS-buj-it",
+    "meaning": "A person who worries excessively about small, unimportant things."
+  },
+  {
+    "id": 77,
+    "spelling": "Gallivant",
+    "pronunciation": "GAL-ih-vant",
+    "meaning": "To wander around enjoying yourself when you should be responsible."
+  },
+  {
+    "id": 78,
+    "spelling": "Gibface",
+    "pronunciation": "GIB-fays",
+    "meaning": "Someone with a memorably odd and punchable-looking face."
+  },
+  {
+    "id": 79,
+    "spelling": "Giddyhead",
+    "pronunciation": "GID-ee-hed",
+    "meaning": "A dizzy, scatterbrained person who loses their train of thought mid-sen..."
+  },
+  {
+    "id": 80,
+    "spelling": "Gobemouche",
+    "pronunciation": "GOB-moo-sh",
+    "meaning": "A gullible person who believes every single thing they are told."
+  },
+  {
+    "id": 81,
+    "spelling": "Gonzo",
+    "pronunciation": "GON-zoh",
+    "meaning": "Bizarre, extreme, and completely detached from conventional reality."
+  },
+  {
+    "id": 82,
+    "spelling": "Goofus",
+    "pronunciation": "GOO-fus",
+    "meaning": "A well-meaning person who manages to mess up the simplest tasks."
+  },
+  {
+    "id": 83,
+    "spelling": "Gorblimey",
+    "pronunciation": "gor-BLY-mee",
+    "meaning": "A British exclamation of shock said when something is ridiculous."
+  },
+  {
+    "id": 84,
+    "spelling": "Grumblefart",
+    "pronunciation": "GRUM-ul-fart",
+    "meaning": "A grumpy person who mutters complaints under their breath constantly."
+  },
+  {
+    "id": 85,
+    "spelling": "Gubbins",
+    "pronunciation": "GUB-inz",
+    "meaning": "Miscellaneous junk or an informal term for a foolish person."
+  },
+  {
+    "id": 86,
+    "spelling": "Haberdasher",
+    "pronunciation": "HAB-er-dash-er",
+    "meaning": "A seller of small sewing items with an unnecessarily fancy title."
+  },
+  {
+    "id": 87,
+    "spelling": "Halfwit",
+    "pronunciation": "HAHF-wit",
+    "meaning": "Someone operating at approximately 50% of expected intelligence."
+  },
+  {
+    "id": 88,
+    "spelling": "Hapless",
+    "pronunciation": "HAP-lis",
+    "meaning": "Hopelessly unlucky in a way that is almost impressive."
+  },
+  {
+    "id": 89,
+    "spelling": "Higgledy-piggledy",
+    "pronunciation": "HIG-ul-dee-PIG-ul-dee",
+    "meaning": "In a completely disorganised, chaotic jumble."
+  },
+  {
+    "id": 90,
+    "spelling": "Hobbledehoy",
+    "pronunciation": "HOB-ul-dee-hoy",
+    "meaning": "An awkward, gangly young person who hasn't grown into themselves yet."
+  },
+  {
+    "id": 91,
+    "spelling": "Hodgepodge",
+    "pronunciation": "HOJ-poj",
+    "meaning": "A random, messy mixture of things thrown together without thought."
+  },
+  {
+    "id": 92,
+    "spelling": "Hoity-toity",
+    "pronunciation": "HOY-tee-TOY-tee",
+    "meaning": "Acting superior and snobbish for absolutely no good reason."
+  },
+  {
+    "id": 93,
+    "spelling": "Hornswoggle",
+    "pronunciation": "HORN-swog-ul",
+    "meaning": "To cheat or trick someone with impressive levels of audacity."
+  },
+  {
+    "id": 94,
+    "spelling": "Hubbub",
+    "pronunciation": "HUB-ub",
+    "meaning": "A noisy confusion of voices, usually in a crowded small room."
+  },
+  {
+    "id": 95,
+    "spelling": "Humbuggery",
+    "pronunciation": "HUM-bug-er-ee",
+    "meaning": "The practice of deliberate deception carried out with great flair."
+  },
+  {
+    "id": 96,
+    "spelling": "Jackanapes",
+    "pronunciation": "JAK-uh-nayps",
+    "meaning": "A cheeky, impudent person who needs to be taken down a peg."
+  },
+  {
+    "id": 97,
+    "spelling": "Jiggery-pokery",
+    "pronunciation": "JIG-er-ee-POH-ker-ee",
+    "meaning": "Sneaky, dishonest behaviour disguised as completely normal activity."
+  },
+  {
+    "id": 98,
+    "spelling": "Klutz",
+    "pronunciation": "KLUTS",
+    "meaning": "Someone who falls over things that weren't even in their way."
+  },
+  {
+    "id": 99,
+    "spelling": "Knucklehead",
+    "pronunciation": "NUK-ul-hed",
+    "meaning": "A person whose best ideas are consistently terrible."
+  },
+  {
+    "id": 100,
+    "spelling": "Lollop",
+    "pronunciation": "LOL-up",
+    "meaning": "To move in a bouncy, floppy, deeply undignified manner."
+  },
+  {
+    "id": 101,
+    "spelling": "Lubberwort",
+    "pronunciation": "LUB-er-wort",
+    "meaning": "A lazy, lethargic person who moves like they're underwater."
+  },
+  {
+    "id": 102,
+    "spelling": "Lummox",
+    "pronunciation": "LUM-oks",
+    "meaning": "A big, clumsy person who apologises after every collision."
+  },
+  {
+    "id": 103,
+    "spelling": "Maggotpie",
+    "pronunciation": "MAG-ut-pye",
+    "meaning": "A magpie, but called this when it has stolen something important."
+  },
+  {
+    "id": 104,
+    "spelling": "Maundering",
+    "pronunciation": "MAWN-der-ing",
+    "meaning": "Talking in a rambling, confused way that goes absolutely nowhere."
+  },
+  {
+    "id": 105,
+    "spelling": "Mealy-mouthed",
+    "pronunciation": "MEE-lee-MOWTHD",
+    "meaning": "Being indirect and overly cautious when you just need to say the thing."
+  },
+  {
+    "id": 106,
+    "spelling": "Milksop",
+    "pronunciation": "MILK-sop",
+    "meaning": "A person who is timid and weak in every imaginable situation."
+  },
+  {
+    "id": 107,
+    "spelling": "Mooncalf",
+    "pronunciation": "MOON-kahf",
+    "meaning": "A foolish daydreamer who trips over things while staring at clouds."
+  },
+  {
+    "id": 108,
+    "spelling": "Mugwump",
+    "pronunciation": "MUG-wump",
+    "meaning": "Someone who sits on the fence and refuses to commit to any opinion."
+  },
+  {
+    "id": 109,
+    "spelling": "Mumpsimus",
+    "pronunciation": "MUMP-sih-mus",
+    "meaning": "Stubbornly holding onto a wrong belief even after being corrected."
+  },
+  {
+    "id": 110,
+    "spelling": "Namby-pamby",
+    "pronunciation": "NAM-bee-PAM-bee",
+    "meaning": "Weak, overly sentimental, and completely lacking in decisiveness."
+  },
+  {
+    "id": 111,
+    "spelling": "Ninnyhammer",
+    "pronunciation": "NIN-ee-ham-er",
+    "meaning": "A particularly advanced level of nincompoop."
+  },
+  {
+    "id": 112,
+    "spelling": "Nitwit",
+    "pronunciation": "NIT-wit",
+    "meaning": "Someone whose brain is present but not entirely participating."
+  },
+  {
+    "id": 113,
+    "spelling": "Noodle",
+    "pronunciation": "NOO-dul",
+    "meaning": "To poke around aimlessly, or an affectionate word for a silly head."
+  },
+  {
+    "id": 114,
+    "spelling": "Numbskull",
+    "pronunciation": "NUM-skul",
+    "meaning": "A person whose skull appears to contain very little of consequence."
+  },
+  {
+    "id": 115,
+    "spelling": "Oaf",
+    "pronunciation": "OHF",
+    "meaning": "A large, clumsy person with very little social awareness."
+  },
+  {
+    "id": 116,
+    "spelling": "Oojimaflip",
+    "pronunciation": "OO-jih-muh-flip",
+    "meaning": "Any object you can't name but need urgently."
+  },
+  {
+    "id": 117,
+    "spelling": "Palaver",
+    "pronunciation": "puh-LAV-er",
+    "meaning": "A long, complicated, unnecessary conversation about a simple thing."
+  },
+  {
+    "id": 118,
+    "spelling": "Pantaloon",
+    "pronunciation": "pan-tuh-LOON",
+    "meaning": "A foolish old man or a very strange pair of trousers."
+  },
+  {
+    "id": 119,
+    "spelling": "Pediwonk",
+    "pronunciation": "PED-ee-wonk",
+    "meaning": "The wiggling of toes when someone is nervous or excited."
+  },
+  {
+    "id": 120,
+    "spelling": "Persnickety",
+    "pronunciation": "per-SNIK-it-ee",
+    "meaning": "Excessively fussy about completely unimportant details."
+  },
+  {
+    "id": 121,
+    "spelling": "Pettifoggery",
+    "pronunciation": "PET-ee-fog-er-ee",
+    "meaning": "The practice of arguing about tiny points while missing the big ones."
+  },
+  {
+    "id": 122,
+    "spelling": "Piffle",
+    "pronunciation": "PIF-ul",
+    "meaning": "Nonsense of a light, fluffy, completely harmless variety."
+  },
+  {
+    "id": 123,
+    "spelling": "Piffling",
+    "pronunciation": "PIF-ling",
+    "meaning": "Trivially small and utterly beneath anyone's attention."
+  },
+  {
+    "id": 124,
+    "spelling": "Pillock",
+    "pronunciation": "PIL-uk",
+    "meaning": "A British word for a complete and utter foolish person."
+  },
+  {
+    "id": 125,
+    "spelling": "Pipsqueak",
+    "pronunciation": "PIP-skweek",
+    "meaning": "An insignificant, unimpressive person with an outsized opinion."
+  },
+  {
+    "id": 126,
+    "spelling": "Plonker",
+    "pronunciation": "PLON-ker",
+    "meaning": "A British term for someone who does something spectacularly daft."
+  },
+  {
+    "id": 127,
+    "spelling": "Poltroon",
+    "pronunciation": "pol-TROON",
+    "meaning": "A complete and utter coward of the most dramatic variety."
+  },
+  {
+    "id": 128,
+    "spelling": "Pompous",
+    "pronunciation": "POM-pus",
+    "meaning": "Self-important in a way that everyone around you finds exhausting."
+  },
+  {
+    "id": 129,
+    "spelling": "Pettifog",
+    "pronunciation": "PET-ee-fog",
+    "meaning": "To quibble over minor details in the most annoying way possible."
+  },
+  {
+    "id": 130,
+    "spelling": "Pratfall",
+    "pronunciation": "PRAT-fawl",
+    "meaning": "A fall directly onto your bottom, usually in front of people."
+  },
+  {
+    "id": 131,
+    "spelling": "Puckish",
+    "pronunciation": "PUK-ish",
+    "meaning": "Playfully mischievous in a way that's hard to stay mad about."
+  },
+  {
+    "id": 132,
+    "spelling": "Pugnacious",
+    "pronunciation": "pug-NAY-shus",
+    "meaning": "Eager to argue or fight over absolutely anything at all."
+  },
+  {
+    "id": 133,
+    "spelling": "Quacksalver",
+    "pronunciation": "KWAK-sal-ver",
+    "meaning": "A person who sells fake cures with enormous enthusiasm."
+  },
+  {
+    "id": 134,
+    "spelling": "Quibble",
+    "pronunciation": "KWIB-ul",
+    "meaning": "To argue about something so small it barely exists."
+  },
+  {
+    "id": 135,
+    "spelling": "Ragamuffin",
+    "pronunciation": "RAG-uh-muf-in",
+    "meaning": "A scruffy, dishevelled person who looks charming despite it."
+  },
+  {
+    "id": 136,
+    "spelling": "Rambunctious",
+    "pronunciation": "ram-BUNK-shus",
+    "meaning": "Uncontrollably boisterous in an exhausting but endearing way."
+  },
+  {
+    "id": 137,
+    "spelling": "Rapscallion",
+    "pronunciation": "rap-SKAL-yun",
+    "meaning": "A mischievous rogue who you can't help but like a little."
+  },
+  {
+    "id": 138,
+    "spelling": "Raucous",
+    "pronunciation": "RAW-kus",
+    "meaning": "Disturbingly loud and disorderly in a joyful way."
+  },
+  {
+    "id": 139,
+    "spelling": "Razzmatazz",
+    "pronunciation": "RAZ-muh-taz",
+    "meaning": "Showy, exciting activity designed to dazzle and distract."
+  },
+  {
+    "id": 140,
+    "spelling": "Riffraff",
+    "pronunciation": "RIF-raf",
+    "meaning": "People considered undesirable by someone who also probably is."
+  },
+  {
+    "id": 141,
+    "spelling": "Rigamarole",
+    "pronunciation": "RIG-uh-muh-role",
+    "meaning": "A long, drawn out, utterly pointless procedure."
+  },
+  {
+    "id": 142,
+    "spelling": "Rip-roaring",
+    "pronunciation": "RIP-ror-ing",
+    "meaning": "Wildly exciting and probably slightly dangerous."
+  },
+  {
+    "id": 143,
+    "spelling": "Rotgut",
+    "pronunciation": "ROT-gut",
+    "meaning": "Low-quality drink that probably shouldn't be consumed."
+  },
+  {
+    "id": 144,
+    "spelling": "Rubbernecker",
+    "pronunciation": "RUB-er-nek-er",
+    "meaning": "Someone who stares at accidents while pretending they aren't."
+  },
+  {
+    "id": 145,
+    "spelling": "Ruckus",
+    "pronunciation": "RUK-us",
+    "meaning": "A noisy, chaotic disturbance caused by too many opinions."
+  },
+  {
+    "id": 146,
+    "spelling": "Ruffian",
+    "pronunciation": "RUF-ee-un",
+    "meaning": "A rough, rowdy person who enjoys a bit of casual mayhem."
+  },
+  {
+    "id": 147,
+    "spelling": "Scalawag",
+    "pronunciation": "SKAL-uh-wag",
+    "meaning": "A mischievous rascal who always has a suspicious smile."
+  },
+  {
+    "id": 148,
+    "spelling": "Scallywag",
+    "pronunciation": "SKAL-ee-wag",
+    "meaning": "A charming troublemaker who never quite learns their lesson."
+  },
+  {
+    "id": 149,
+    "spelling": "Scatterbrain",
+    "pronunciation": "SKAT-er-brayn",
+    "meaning": "A person whose thoughts fly in seventeen directions simultaneously."
+  },
+  {
+    "id": 150,
+    "spelling": "Scofflaw",
+    "pronunciation": "SKOF-law",
+    "meaning": "Someone who casually ignores rules they find personally inconvenient."
+  },
+  {
+    "id": 151,
+    "spelling": "Scoundrel",
+    "pronunciation": "SKOWN-drul",
+    "meaning": "A dishonest person who somehow remains likeable."
+  },
+  {
+    "id": 152,
+    "spelling": "Screwball",
+    "pronunciation": "SKROO-bawl",
+    "meaning": "An eccentric person whose ideas arrive from unexpected angles."
+  },
+  {
+    "id": 153,
+    "spelling": "Scruffy",
+    "pronunciation": "SKRUF-ee",
+    "meaning": "Untidy in a way that suggests a complete lack of mirrors at home."
+  },
+  {
+    "id": 154,
+    "spelling": "Shenanigan",
+    "pronunciation": "shuh-NAN-ih-gun",
+    "meaning": "A single unit of mischievous or silly behaviour."
+  },
+  {
+    "id": 155,
+    "spelling": "Sillybilly",
+    "pronunciation": "SIL-ee-BIL-ee",
+    "meaning": "A loveable fool who is silly in an entirely harmless way."
+  },
+  {
+    "id": 156,
+    "spelling": "Skullduggery",
+    "pronunciation": "skul-DUG-er-ee",
+    "meaning": "Sneaky, underhanded behaviour carried out behind closed doors."
+  },
+  {
+    "id": 157,
+    "spelling": "Slacker",
+    "pronunciation": "SLAK-er",
+    "meaning": "Someone who avoids work with an almost professional dedication."
+  },
+  {
+    "id": 158,
+    "spelling": "Slapdash",
+    "pronunciation": "SLAP-dash",
+    "meaning": "Done quickly and carelessly with zero attention to detail."
+  },
+  {
+    "id": 159,
+    "spelling": "Slapstick",
+    "pronunciation": "SLAP-stik",
+    "meaning": "Comedy involving falling over, being hit, and general chaos."
+  },
+  {
+    "id": 160,
+    "spelling": "Slatternly",
+    "pronunciation": "SLAT-ern-lee",
+    "meaning": "Carelessly untidy in a way that implies it is very much a choice."
+  },
+  {
+    "id": 161,
+    "spelling": "Slipshod",
+    "pronunciation": "SLIP-shod",
+    "meaning": "Done in a messy, careless way with no pride whatsoever."
+  },
+  {
+    "id": 162,
+    "spelling": "Sloppy",
+    "pronunciation": "SLOP-ee",
+    "meaning": "Messy, careless, and probably a little damp."
+  },
+  {
+    "id": 163,
+    "spelling": "Slothful",
+    "pronunciation": "SLOTH-ful",
+    "meaning": "Extremely lazy in a way that requires actual effort to achieve."
+  },
+  {
+    "id": 164,
+    "spelling": "Slugabed",
+    "pronunciation": "SLUG-uh-bed",
+    "meaning": "Someone who stays in bed long after any reasonable hour."
+  },
+  {
+    "id": 165,
+    "spelling": "Smellfungus",
+    "pronunciation": "SMEL-fun-gus",
+    "meaning": "A person who finds fault with everything and complains constantly."
+  },
+  {
+    "id": 166,
+    "spelling": "Sneak",
+    "pronunciation": "SNEEK",
+    "meaning": "A person who creeps around doing things they shouldn't."
+  },
+  {
+    "id": 167,
+    "spelling": "Snob",
+    "pronunciation": "SNOB",
+    "meaning": "Someone who thinks they're better than you for reasons that aren't real."
+  },
+  {
+    "id": 168,
+    "spelling": "Snobbish",
+    "pronunciation": "SNOB-ish",
+    "meaning": "Behaving in a manner suggesting superiority that nobody else agrees with."
+  },
+  {
+    "id": 169,
+    "spelling": "Snoozle",
+    "pronunciation": "SNOO-zul",
+    "meaning": "To nap in a particularly contented, curled-up manner."
+  },
+  {
+    "id": 170,
+    "spelling": "Snuffle",
+    "pronunciation": "SNUF-ul",
+    "meaning": "To breathe noisily through a blocked nose, usually in a meeting."
+  },
+  {
+    "id": 171,
+    "spelling": "Softheaded",
+    "pronunciation": "SOFT-hed-id",
+    "meaning": "Not very bright, but usually very pleasant about it."
+  },
+  {
+    "id": 172,
+    "spelling": "Spiffing",
+    "pronunciation": "SPIF-ing",
+    "meaning": "British slang for excellent. Mostly used by people over 80."
+  },
+  {
+    "id": 173,
+    "spelling": "Sponger",
+    "pronunciation": "SPON-jer",
+    "meaning": "Someone who borrows things and mysteriously never returns them."
+  },
+  {
+    "id": 174,
+    "spelling": "Spoonerism",
+    "pronunciation": "SPOO-ner-iz-um",
+    "meaning": "Accidentally swapping sounds in words, like 'blushing crow' for 'crushing blow'."
+  },
+  {
+    "id": 175,
+    "spelling": "Squelch",
+    "pronunciation": "SKWELCH",
+    "meaning": "The gloriously disgusting sound of stepping in something wet."
+  },
+  {
+    "id": 176,
+    "spelling": "Squiffy",
+    "pronunciation": "SKWIF-ee",
+    "meaning": "Slightly drunk, slightly skewed, or slightly confused."
+  },
+  {
+    "id": 177,
+    "spelling": "Squirrely",
+    "pronunciation": "SKWIR-lee",
+    "meaning": "Acting nervous and erratic in a way that makes others uneasy."
+  },
+  {
+    "id": 178,
+    "spelling": "Stumblebum",
+    "pronunciation": "STUM-bul-bum",
+    "meaning": "Someone who trips, bumbles, and stumbles through every situation."
+  },
+  {
+    "id": 179,
+    "spelling": "Supercilious",
+    "pronunciation": "soo-per-SIL-ee-us",
+    "meaning": "Behaving as though everyone around you is slightly beneath you."
+  },
+  {
+    "id": 180,
+    "spelling": "Sycophant",
+    "pronunciation": "SIK-uh-fant",
+    "meaning": "A person who flatters others constantly for personal benefit."
+  },
+  {
+    "id": 181,
+    "spelling": "Taffy",
+    "pronunciation": "TAF-ee",
+    "meaning": "A sticky sweet, or a crafty flatterer who can't be trusted."
+  },
+  {
+    "id": 182,
+    "spelling": "Tarradiddle",
+    "pronunciation": "TAR-uh-did-ul",
+    "meaning": "A small, harmless lie told with a completely straight face."
+  },
+  {
+    "id": 183,
+    "spelling": "Tatterdemalion",
+    "pronunciation": "tat-er-duh-MAY-lee-un",
+    "meaning": "A person dressed in tattered, ragged clothing."
+  },
+  {
+    "id": 184,
+    "spelling": "Tiddlywinks",
+    "pronunciation": "TID-lee-winks",
+    "meaning": "A game of flicking small discs, or slang for something trivial."
+  },
+  {
+    "id": 185,
+    "spelling": "Tomfoolery",
+    "pronunciation": "tom-FOO-ler-ee",
+    "meaning": "Silly, playful behaviour that entertains some and annoys others."
+  },
+  {
+    "id": 186,
+    "spelling": "Tootle",
+    "pronunciation": "TOO-tul",
+    "meaning": "To play a wind instrument badly, or to wander about aimlessly."
+  },
+  {
+    "id": 187,
+    "spelling": "Twaddle",
+    "pronunciation": "TWOD-ul",
+    "meaning": "Silly, trivial talk or writing of the most pointless variety."
+  },
+  {
+    "id": 188,
+    "spelling": "Twerp",
+    "pronunciation": "TWIRP",
+    "meaning": "A small, annoying, and rather insignificant silly person."
+  },
+  {
+    "id": 189,
+    "spelling": "Twit",
+    "pronunciation": "TWIT",
+    "meaning": "A foolish, inept person who means well but achieves little."
+  },
+  {
+    "id": 190,
+    "spelling": "Uproar",
+    "pronunciation": "UP-ror",
+    "meaning": "A state of noisy confusion where nobody agrees on anything."
+  },
+  {
+    "id": 191,
+    "spelling": "Vagabond",
+    "pronunciation": "VAG-uh-bond",
+    "meaning": "A wandering person with no fixed home and plenty of stories."
+  },
+  {
+    "id": 192,
+    "spelling": "Vainglorious",
+    "pronunciation": "vayn-GLOR-ee-us",
+    "meaning": "Excessively proud of yourself for reasons nobody else can identify."
+  },
+  {
+    "id": 193,
+    "spelling": "Vapid",
+    "pronunciation": "VAP-id",
+    "meaning": "Offering nothing of interest or substance whatsoever."
+  },
+  {
+    "id": 194,
+    "spelling": "Waffle",
+    "pronunciation": "WOF-ul",
+    "meaning": "To talk at length without actually saying anything meaningful."
+  },
+  {
+    "id": 195,
+    "spelling": "Wally",
+    "pronunciation": "WAL-ee",
+    "meaning": "A British term for a foolish, clumsy, or inept person."
+  },
+  {
+    "id": 196,
+    "spelling": "Weasel",
+    "pronunciation": "WEE-zul",
+    "meaning": "Someone sneaky who slides around the edges of every situation."
+  },
+  {
+    "id": 197,
+    "spelling": "Wheedler",
+    "pronunciation": "WEED-ler",
+    "meaning": "Someone who gets what they want through flattery and pleading."
+  },
+  {
+    "id": 198,
+    "spelling": "Whiffler",
+    "pronunciation": "WIF-ler",
+    "meaning": "A person who constantly changes their opinion to match the room."
+  },
+  {
+    "id": 199,
+    "spelling": "Wiffle",
+    "pronunciation": "WIF-ul",
+    "meaning": "To move in a light, uncertain, fluttery way like a lost leaf."
+  },
+  {
+    "id": 200,
+    "spelling": "Wiggle",
+    "pronunciation": "WIG-ul",
+    "meaning": "To move back and forth in short, jerky, undignified movements."
+  },
+  {
+    "id": 201,
+    "spelling": "Windbag",
+    "pronunciation": "WIND-bag",
+    "meaning": "A person who talks endlessly without ever reaching a point."
+  },
+  {
+    "id": 202,
+    "spelling": "Wishy-washy",
+    "pronunciation": "WISH-ee-WOH-shee",
+    "meaning": "Lacking decisiveness or strength of character in every situation."
+  },
+  {
+    "id": 203,
+    "spelling": "Witling",
+    "pronunciation": "WIT-ling",
+    "meaning": "Someone who thinks they're funny but very much isn't."
+  },
+  {
+    "id": 204,
+    "spelling": "Wobble",
+    "pronunciation": "WOB-ul",
+    "meaning": "To move unsteadily, usually right before falling over completely."
+  },
+  {
+    "id": 205,
+    "spelling": "Worrywart",
+    "pronunciation": "WOR-ee-wort",
+    "meaning": "A person who worries excessively about things that won't happen."
+  },
+  {
+    "id": 206,
+    "spelling": "Yabbering",
+    "pronunciation": "YAB-er-ing",
+    "meaning": "Talking loudly and rapidly about absolutely nothing important."
+  },
+  {
+    "id": 207,
+    "spelling": "Yakker",
+    "pronunciation": "YAK-er",
+    "meaning": "Someone who talks constantly and doesn't notice your glazed eyes."
+  },
+  {
+    "id": 208,
+    "spelling": "Yobbish",
+    "pronunciation": "YOB-ish",
+    "meaning": "Rude and rowdy in a way that suggests no upbringing whatsoever."
+  },
+  {
+    "id": 209,
+    "spelling": "Zany",
+    "pronunciation": "ZAY-nee",
+    "meaning": "Amusingly unusual in a slightly unhinged but harmless way."
+  },
+  {
+    "id": 210,
+    "spelling": "Zigzag",
+    "pronunciation": "ZIG-zag",
+    "meaning": "Moving in an alternating diagonal pattern, usually to avoid something."
+  },
+  {
+    "id": 211,
+    "spelling": "Blunderbuss",
+    "pronunciation": "BLUN-der-bus",
+    "meaning": "An old wide-mouthed gun, or a clumsy blundering person."
+  },
+  {
+    "id": 212,
+    "spelling": "Boffin",
+    "pronunciation": "BOF-in",
+    "meaning": "A nerdy expert who knows far too much about one specific thing."
+  },
+  {
+    "id": 213,
+    "spelling": "Boondoggle",
+    "pronunciation": "BOON-dog-ul",
+    "meaning": "A project that wastes time and money while appearing important."
+  },
+  {
+    "id": 214,
+    "spelling": "Bozo",
+    "pronunciation": "BOH-zoh",
+    "meaning": "A stupid, incompetent person with unearned self-confidence."
+  },
+  {
+    "id": 215,
+    "spelling": "Bumble",
+    "pronunciation": "BUM-bul",
+    "meaning": "To move clumsily and confusedly through a situation."
+  },
+  {
+    "id": 216,
+    "spelling": "Bunk",
+    "pronunciation": "BUNK",
+    "meaning": "Nonsense, or to escape from somewhere hurriedly."
+  },
+  {
+    "id": 217,
+    "spelling": "Blathering",
+    "pronunciation": "BLATH-er-ing",
+    "meaning": "Talking at length and at speed without any discernible meaning."
+  },
+  {
+    "id": 218,
+    "spelling": "Blooey",
+    "pronunciation": "BLOO-ee",
+    "meaning": "Completely broken, ruined, or gone entirely wrong."
+  },
+  {
+    "id": 219,
+    "spelling": "Blotto",
+    "pronunciation": "BLOT-oh",
+    "meaning": "So thoroughly confused or drunk that normal function is impossible."
+  },
+  {
+    "id": 220,
+    "spelling": "Bloviator",
+    "pronunciation": "BLOH-vee-ay-ter",
+    "meaning": "A person who speaks at length, loudly, and without real content."
+  },
+  {
+    "id": 221,
+    "spelling": "Scuttlebutt",
+    "pronunciation": "SKUT-ul-but",
+    "meaning": "Gossip, rumour, and hearsay whispered in hallways."
+  },
+  {
+    "id": 222,
+    "spelling": "Snollygob",
+    "pronunciation": "SNOL-ee-gob",
+    "meaning": "A face that looks permanently ready to say something unpleasant."
+  },
+  {
+    "id": 223,
+    "spelling": "Flibbet",
+    "pronunciation": "FLIB-it",
+    "meaning": "A tiny piece of nonsense that's broken off from a larger piece."
+  },
+  {
+    "id": 224,
+    "spelling": "Whomblyjob",
+    "pronunciation": "WOM-blee-job",
+    "meaning": "Any task that sounds official but achieves absolutely nothing."
+  },
+  {
+    "id": 225,
+    "spelling": "Snorfle",
+    "pronunciation": "SNOR-ful",
+    "meaning": "A snort and a chuckle combined into one undignified sound."
+  },
+  {
+    "id": 226,
+    "spelling": "Wumble",
+    "pronunciation": "WUM-bul",
+    "meaning": "To walk in a bumbling, stumbling manner with zero urgency."
+  },
+  {
+    "id": 227,
+    "spelling": "Glibber",
+    "pronunciation": "GLIB-er",
+    "meaning": "More slippery and smooth-talking than is strictly reasonable."
+  },
+  {
+    "id": 228,
+    "spelling": "Niffnaffery",
+    "pronunciation": "NIF-naf-er-ee",
+    "meaning": "Meaningless fussing over the tiniest of unimportant details."
+  },
+  {
+    "id": 229,
+    "spelling": "Plonkwhistle",
+    "pronunciation": "PLONK-wis-ul",
+    "meaning": "The odd noise a badly tuned instrument makes at a school concert."
+  },
+  {
+    "id": 230,
+    "spelling": "Frumple",
+    "pronunciation": "FRUM-pul",
+    "meaning": "To crumple someone's carefully arranged things without noticing."
+  },
+  {
+    "id": 231,
+    "spelling": "Squabble",
+    "pronunciation": "SKWOB-ul",
+    "meaning": "A petty, trivial argument that solves absolutely nothing."
+  },
+  {
+    "id": 232,
+    "spelling": "Grumblesnore",
+    "pronunciation": "GRUM-bul-snor",
+    "meaning": "The sound a person makes when annoyed and asleep simultaneously."
+  },
+  {
+    "id": 233,
+    "spelling": "Bumbletwig",
+    "pronunciation": "BUM-bul-twig",
+    "meaning": "A small, useless stick found at the bottom of every bag."
+  },
+  {
+    "id": 234,
+    "spelling": "Flopplewort",
+    "pronunciation": "FLOP-ul-wort",
+    "meaning": "A plant that droops dramatically despite being perfectly healthy."
+  },
+  {
+    "id": 235,
+    "spelling": "Gobsmacked",
+    "pronunciation": "GOB-smakt",
+    "meaning": "So surprised your mouth falls open and stays there."
+  },
+  {
+    "id": 236,
+    "spelling": "Jibberjabber",
+    "pronunciation": "JIB-er-JAB-er",
+    "meaning": "Fast, enthusiastic speech that contains no recognisable information."
+  },
+  {
+    "id": 237,
+    "spelling": "Knickknack",
+    "pronunciation": "NIK-nak",
+    "meaning": "A tiny decorative object with no purpose except to collect dust."
+  },
+  {
+    "id": 238,
+    "spelling": "Lollygagger",
+    "pronunciation": "LOL-ee-gag-er",
+    "meaning": "A person who wanders and wastes time with impressive consistency."
+  },
+  {
+    "id": 239,
+    "spelling": "Mumblecrust",
+    "pronunciation": "MUM-bul-krust",
+    "meaning": "A toothless old person who mutters and chews simultaneously."
+  },
+  {
+    "id": 240,
+    "spelling": "Noodlehead",
+    "pronunciation": "NOO-dul-hed",
+    "meaning": "A person whose head appears to contain only soft, floppy thoughts."
+  },
+  {
+    "id": 241,
+    "spelling": "Oojah",
+    "pronunciation": "OO-jah",
+    "meaning": "A word used for any object you cannot or will not name properly."
+  },
+  {
+    "id": 242,
+    "spelling": "Piffler",
+    "pronunciation": "PIF-ler",
+    "meaning": "A person who talks trivialities with enormous enthusiasm."
+  },
+  {
+    "id": 243,
+    "spelling": "Quizzical",
+    "pronunciation": "KWIZ-ih-kul",
+    "meaning": "Looking puzzled and faintly amused at the same time."
+  },
+  {
+    "id": 244,
+    "spelling": "Rumpledump",
+    "pronunciation": "RUM-pul-dump",
+    "meaning": "A very untidy pile of things that used to be organised."
+  },
+  {
+    "id": 245,
+    "spelling": "Snortle",
+    "pronunciation": "SNOR-tul",
+    "meaning": "A laugh that accidentally comes out as a snort."
+  },
+  {
+    "id": 246,
+    "spelling": "Twiddle",
+    "pronunciation": "TWID-ul",
+    "meaning": "To idly twist or turn something small between your fingers."
+  },
+  {
+    "id": 247,
+    "spelling": "Umptious",
+    "pronunciation": "UMP-shus",
+    "meaning": "Behaving in a pompous and self-satisfied manner all day."
+  },
+  {
+    "id": 248,
+    "spelling": "Vellichor",
+    "pronunciation": "VEL-ih-kor",
+    "meaning": "The strange wistfulness of a second-hand bookshop."
+  },
+  {
+    "id": 249,
+    "spelling": "Wumpadoodle",
+    "pronunciation": "WUM-puh-doo-dul",
+    "meaning": "Something that works but nobody can explain how or why."
+  },
+  {
+    "id": 250,
+    "spelling": "Xertz",
+    "pronunciation": "ZURTS",
+    "meaning": "To gulp something down quickly and greedily."
+  },
+  {
+    "id": 251,
+    "spelling": "Yapster",
+    "pronunciation": "YAP-ster",
+    "meaning": "A small, loud person or animal who won't stop making noise."
+  },
+  {
+    "id": 252,
+    "spelling": "Zaftig",
+    "pronunciation": "ZAF-tig",
+    "meaning": "Pleasantly plump in a way considered attractive."
+  },
+  {
+    "id": 253,
+    "spelling": "Absquatulate",
+    "pronunciation": "ab-SKWOCH-yoo-layt",
+    "meaning": "To leave somewhere quickly without saying goodbye to anyone."
+  },
+  {
+    "id": 254,
+    "spelling": "Argle-bargle",
+    "pronunciation": "AR-gul-BAR-gul",
+    "meaning": "A verbal argument full of noise and very little logic."
+  },
+  {
+    "id": 255,
+    "spelling": "Barmecide",
+    "pronunciation": "BAR-muh-syd",
+    "meaning": "Giving someone an imaginary feast and expecting gratitude."
+  },
+  {
+    "id": 256,
+    "spelling": "Bibble",
+    "pronunciation": "BIB-ul",
+    "meaning": "To drink frequently in small sips, or eat noisily like a duck."
+  },
+  {
+    "id": 257,
+    "spelling": "Bloviation",
+    "pronunciation": "bloh-vee-AY-shun",
+    "meaning": "The act of speaking at length about things you barely understand."
+  },
+  {
+    "id": 258,
+    "spelling": "Bobbery",
+    "pronunciation": "BOB-er-ee",
+    "meaning": "A noisy disturbance created by people who refuse to settle down."
+  },
+  {
+    "id": 259,
+    "spelling": "Brabble",
+    "pronunciation": "BRAB-ul",
+    "meaning": "To argue noisily about something entirely worthless."
+  },
+  {
+    "id": 260,
+    "spelling": "Brimborion",
+    "pronunciation": "brim-BOR-ee-un",
+    "meaning": "A completely worthless thing kept for no sensible reason."
+  },
+  {
+    "id": 261,
+    "spelling": "Cachinnate",
+    "pronunciation": "KAK-ih-nayt",
+    "meaning": "To laugh very loudly and in an uncontrolled, cackling manner."
+  },
+  {
+    "id": 262,
+    "spelling": "Cacoethes",
+    "pronunciation": "kak-oh-EE-theez",
+    "meaning": "An irresistible urge to do something that is clearly unwise."
+  },
+  {
+    "id": 263,
+    "spelling": "Cagey",
+    "pronunciation": "KAY-jee",
+    "meaning": "Reluctant to give information while looking extremely suspicious."
+  },
+  {
+    "id": 264,
+    "spelling": "Callosity",
+    "pronunciation": "kuh-LOS-ih-tee",
+    "meaning": "Emotional hardness, or a patch of very tough skin."
+  },
+  {
+    "id": 265,
+    "spelling": "Canard",
+    "pronunciation": "kuh-NARD",
+    "meaning": "A false or unfounded rumour spread with total confidence."
+  },
+  {
+    "id": 266,
+    "spelling": "Cankered",
+    "pronunciation": "KANG-kerd",
+    "meaning": "Bad-tempered and bitter in a deeply ingrained way."
+  },
+  {
+    "id": 267,
+    "spelling": "Capybara",
+    "pronunciation": "kap-ih-BAR-uh",
+    "meaning": "A massive semi-aquatic rodent that is bizarrely calm about everything."
+  },
+  {
+    "id": 268,
+    "spelling": "Catawampus",
+    "pronunciation": "kat-uh-WOM-pus",
+    "meaning": "Askew, crooked, or positioned in a completely chaotic manner."
+  },
+  {
+    "id": 269,
+    "spelling": "Chucklehead",
+    "pronunciation": "CHUK-ul-hed",
+    "meaning": "A foolish person whose thinking is reliably unreliable."
+  },
+  {
+    "id": 270,
+    "spelling": "Circumlocution",
+    "pronunciation": "ser-kum-loh-KYOO-shun",
+    "meaning": "Using many words to say something that requires far fewer."
+  },
+  {
+    "id": 271,
+    "spelling": "Clumble",
+    "pronunciation": "KLUM-bul",
+    "meaning": "To drop things while trying very carefully not to drop things."
+  },
+  {
+    "id": 272,
+    "spelling": "Codpiece",
+    "pronunciation": "KOD-pees",
+    "meaning": "A padded pouch once worn on the front of men's trousers. Proudly."
+  },
+  {
+    "id": 273,
+    "spelling": "Coot",
+    "pronunciation": "KOOT",
+    "meaning": "An elderly eccentric, or a bald water bird with a comical beak."
+  },
+  {
+    "id": 274,
+    "spelling": "Cornfuddled",
+    "pronunciation": "korn-FUD-uld",
+    "meaning": "Thoroughly confused to the point of immobility."
+  },
+  {
+    "id": 275,
+    "spelling": "Crapulence",
+    "pronunciation": "KRAP-yoo-lens",
+    "meaning": "Sickness resulting from excessive eating or drinking."
+  },
+  {
+    "id": 276,
+    "spelling": "Crinkum-crankum",
+    "pronunciation": "KRIN-kum-KRAN-kum",
+    "meaning": "Something full of complicated twists, turns, and unnecessary details."
+  },
+  {
+    "id": 277,
+    "spelling": "Crotchety",
+    "pronunciation": "KROCH-it-ee",
+    "meaning": "Irritable and difficult for absolutely no clear reason."
+  },
+  {
+    "id": 278,
+    "spelling": "Cullion",
+    "pronunciation": "KUL-yun",
+    "meaning": "A base, despicable person who probably trips people on staircases."
+  },
+  {
+    "id": 279,
+    "spelling": "Daffodillian",
+    "pronunciation": "daf-uh-DIL-ee-un",
+    "meaning": "Cheerfully yellow and slightly wobbling in the breeze."
+  },
+  {
+    "id": 280,
+    "spelling": "Dalliance",
+    "pronunciation": "DAL-ee-uns",
+    "meaning": "A brief, casual, and entirely frivolous romantic involvement."
+  },
+  {
+    "id": 281,
+    "spelling": "Dandiprat",
+    "pronunciation": "DAN-dee-prat",
+    "meaning": "A small, insignificant, or impudent young person."
+  },
+  {
+    "id": 282,
+    "spelling": "Dastardly",
+    "pronunciation": "DAS-terd-lee",
+    "meaning": "Wickedly sneaky in a theatrical, cartoonish sort of way."
+  },
+  {
+    "id": 283,
+    "spelling": "Dawdle",
+    "pronunciation": "DAW-dul",
+    "meaning": "To take far longer than necessary to do a simple thing."
+  },
+  {
+    "id": 284,
+    "spelling": "Deadpan",
+    "pronunciation": "DED-pan",
+    "meaning": "Expressing absurdity with a completely straight and serious face."
+  },
+  {
+    "id": 285,
+    "spelling": "Decumbiture",
+    "pronunciation": "deh-KUM-bih-cher",
+    "meaning": "Lying down because you are sick or simply cannot be bothered."
+  },
+  {
+    "id": 286,
+    "spelling": "Degringolade",
+    "pronunciation": "deh-GRAN-goh-lahd",
+    "meaning": "A sudden, rapid decline from success into complete chaos."
+  },
+  {
+    "id": 287,
+    "spelling": "Delirious",
+    "pronunciation": "deh-LIR-ee-us",
+    "meaning": "Wildly excited or confused, usually both at the same time."
+  },
+  {
+    "id": 288,
+    "spelling": "Desipience",
+    "pronunciation": "deh-SIP-ee-uns",
+    "meaning": "Deliberately being silly for the pure joy of it."
+  },
+  {
+    "id": 289,
+    "spelling": "Dipstick",
+    "pronunciation": "DIP-stik",
+    "meaning": "A foolish or inept person, or a stick used to measure oil."
+  },
+  {
+    "id": 290,
+    "spelling": "Divagate",
+    "pronunciation": "DYE-vuh-gayt",
+    "meaning": "To wander off topic in a conversation and never quite return."
+  },
+  {
+    "id": 291,
+    "spelling": "Dizzy",
+    "pronunciation": "DIZ-ee",
+    "meaning": "Feeling like the world is spinning, usually after being silly."
+  },
+  {
+    "id": 292,
+    "spelling": "Dodder",
+    "pronunciation": "DOD-er",
+    "meaning": "To tremble or move weakly, often associated with very old age."
+  },
+  {
+    "id": 293,
+    "spelling": "Doddery",
+    "pronunciation": "DOD-er-ee",
+    "meaning": "Shaky and slow in movement, especially of elderly people."
+  },
+  {
+    "id": 294,
+    "spelling": "Dolt",
+    "pronunciation": "DOHLT",
+    "meaning": "A slow, stupid person with an unfortunately confident manner."
+  },
+  {
+    "id": 295,
+    "spelling": "Doolally",
+    "pronunciation": "doo-LAL-ee",
+    "meaning": "Slightly crazy, particularly from boredom or heat."
+  },
+  {
+    "id": 296,
+    "spelling": "Dope",
+    "pronunciation": "DOHP",
+    "meaning": "A silly, gullible person who believes most things they're told."
+  },
+  {
+    "id": 297,
+    "spelling": "Dotty",
+    "pronunciation": "DOT-ee",
+    "meaning": "Slightly eccentric and confused, but in a loveable way."
+  },
+  {
+    "id": 298,
+    "spelling": "Dribble",
+    "pronunciation": "DRIB-ul",
+    "meaning": "To let liquid fall from the mouth in an undignified manner."
+  },
+  {
+    "id": 299,
+    "spelling": "Drivel",
+    "pronunciation": "DRIV-ul",
+    "meaning": "Nonsensical speech or writing of an embarrassingly low quality."
+  },
+  {
+    "id": 300,
+    "spelling": "Dullard",
+    "pronunciation": "DUL-erd",
+    "meaning": "A person who is thoroughly, spectacularly, and completely boring."
+  },
+  {
+    "id": 301,
+    "spelling": "Dumbledore",
+    "pronunciation": "DUM-bul-dor",
+    "meaning": "An old English word for a bumblebee. Nothing more, nothing less."
+  },
+  {
+    "id": 302,
+    "spelling": "Dunce",
+    "pronunciation": "DUNTS",
+    "meaning": "A person considered too dim to learn, usually made to wear a cone."
+  },
+  {
+    "id": 303,
+    "spelling": "Dyspeptic",
+    "pronunciation": "dis-PEP-tik",
+    "meaning": "Irritable and bad-tempered, often from poor digestion."
+  },
+  {
+    "id": 304,
+    "spelling": "Eejit",
+    "pronunciation": "EE-jit",
+    "meaning": "Irish and Scottish pronunciation of idiot, said with great feeling."
+  },
+  {
+    "id": 305,
+    "spelling": "Egad",
+    "pronunciation": "ee-GAD",
+    "meaning": "An old-fashioned exclamation of surprise or outrage."
+  },
+  {
+    "id": 306,
+    "spelling": "Ejaculate",
+    "pronunciation": "ee-JAK-yoo-layt",
+    "meaning": "To say something suddenly and exclamatorily. That's all. Stop laughing."
+  },
+  {
+    "id": 307,
+    "spelling": "Embonpoint",
+    "pronunciation": "om-bon-PWAN",
+    "meaning": "The pleasant plumpness of a well-fed, comfortable person."
+  },
+  {
+    "id": 308,
+    "spelling": "Embrangle",
+    "pronunciation": "em-BRANG-gul",
+    "meaning": "To perplex, entangle, and confuse someone completely."
+  },
+  {
+    "id": 309,
+    "spelling": "Enfant terrible",
+    "pronunciation": "on-fon teh-REE-bluh",
+    "meaning": "A person who shocks others with unconventional, disruptive behaviour."
+  },
+  {
+    "id": 310,
+    "spelling": "Ennui",
+    "pronunciation": "on-WEE",
+    "meaning": "A deep, fashionable boredom with the entire concept of things."
+  },
+  {
+    "id": 311,
+    "spelling": "Erumpent",
+    "pronunciation": "eh-RUM-pent",
+    "meaning": "Bursting out suddenly, often in an explosive and startling manner."
+  },
+  {
+    "id": 312,
+    "spelling": "Facepalm",
+    "pronunciation": "FAYS-palm",
+    "meaning": "Pressing your face into your palm in response to absurd behaviour."
+  },
+  {
+    "id": 313,
+    "spelling": "Fadoodle",
+    "pronunciation": "fuh-DOO-dul",
+    "meaning": "A person who faddles about doing nothing important."
+  },
+  {
+    "id": 314,
+    "spelling": "Faffle",
+    "pronunciation": "FAF-ul",
+    "meaning": "To flap about uselessly without achieving any discernible goal."
+  },
+  {
+    "id": 315,
+    "spelling": "Fandangle",
+    "pronunciation": "fan-DANG-gul",
+    "meaning": "An elaborate ornament or a showy, useless contrivance."
+  },
+  {
+    "id": 316,
+    "spelling": "Fankle",
+    "pronunciation": "FANG-kul",
+    "meaning": "To tangle something into a complete and confusing mess."
+  },
+  {
+    "id": 317,
+    "spelling": "Fantoosh",
+    "pronunciation": "fan-TOOSH",
+    "meaning": "Scottish for showy or fancy in an over-the-top manner."
+  },
+  {
+    "id": 318,
+    "spelling": "Farnarkling",
+    "pronunciation": "far-NAR-kling",
+    "meaning": "Wasting time on trivial distractions instead of doing anything useful."
+  },
+  {
+    "id": 319,
+    "spelling": "Feckless",
+    "pronunciation": "FEK-lis",
+    "meaning": "Lacking purpose, direction, or the ability to achieve anything."
+  },
+  {
+    "id": 320,
+    "spelling": "Feisty",
+    "pronunciation": "FYE-stee",
+    "meaning": "Aggressively energetic in a way that surprises people by your size."
+  },
+  {
+    "id": 321,
+    "spelling": "Fenks",
+    "pronunciation": "FENKS",
+    "meaning": "Rubbish, nonsense, or the squeezings of whale blubber."
+  },
+  {
+    "id": 322,
+    "spelling": "Ferdle",
+    "pronunciation": "FER-dul",
+    "meaning": "To rummage through something without knowing what you want."
+  },
+  {
+    "id": 323,
+    "spelling": "Fiddlesticks",
+    "pronunciation": "FID-ul-stiks",
+    "meaning": "An exclamation of mild annoyance or complete disbelief."
+  },
+  {
+    "id": 324,
+    "spelling": "Fidget",
+    "pronunciation": "FIJ-it",
+    "meaning": "To move about restlessly in a way that irritates everyone nearby."
+  },
+  {
+    "id": 325,
+    "spelling": "Finagle",
+    "pronunciation": "fih-NAY-gul",
+    "meaning": "To obtain something by trickery or clever manipulation."
+  },
+  {
+    "id": 326,
+    "spelling": "Fipple",
+    "pronunciation": "FIP-ul",
+    "meaning": "The mouthpiece of a flute, or any small protruding plug."
+  },
+  {
+    "id": 327,
+    "spelling": "Firkytoodle",
+    "pronunciation": "FER-kee-TOO-dul",
+    "meaning": "To engage in frivolous, playful nonsense with no purpose."
+  },
+  {
+    "id": 328,
+    "spelling": "Fizgig",
+    "pronunciation": "FIZ-gig",
+    "meaning": "A gadget that spins and whirs, or a silly, flirtatious person."
+  },
+  {
+    "id": 329,
+    "spelling": "Flabbergast",
+    "pronunciation": "FLAB-er-gast",
+    "meaning": "To astonish someone so completely they momentarily stop existing."
+  },
+  {
+    "id": 330,
+    "spelling": "Flagitious",
+    "pronunciation": "fluh-JISH-us",
+    "meaning": "Shockingly wicked, criminal, or just spectacularly bad."
+  },
+  {
+    "id": 331,
+    "spelling": "Flimflam",
+    "pronunciation": "FLIM-flam",
+    "meaning": "A trick or swindle carried out with charm and confidence."
+  },
+  {
+    "id": 332,
+    "spelling": "Flip-flop",
+    "pronunciation": "FLIP-flop",
+    "meaning": "To keep changing your mind with exhausting frequency."
+  },
+  {
+    "id": 333,
+    "spelling": "Flob",
+    "pronunciation": "FLOB",
+    "meaning": "To fall over heavily, or to spit in a casual, careless manner."
+  },
+  {
+    "id": 334,
+    "spelling": "Floodle",
+    "pronunciation": "FLOO-dul",
+    "meaning": "To flood an area with an unreasonable number of opinions."
+  },
+  {
+    "id": 335,
+    "spelling": "Flurble",
+    "pronunciation": "FLER-bul",
+    "meaning": "To make a low, bubbling sound of confusion or dissatisfaction."
+  },
+  {
+    "id": 336,
+    "spelling": "Flutterbrained",
+    "pronunciation": "FLUT-er-braynd",
+    "meaning": "Having thoughts that flutter away before they can be caught."
+  },
+  {
+    "id": 337,
+    "spelling": "Fone-fone",
+    "pronunciation": "FOHN-fohn",
+    "meaning": "To repeatedly call someone until they give you what you want."
+  },
+  {
+    "id": 338,
+    "spelling": "Footle",
+    "pronunciation": "FOO-tul",
+    "meaning": "To waste time on something trivially stupid and inconsequential."
+  },
+  {
+    "id": 339,
+    "spelling": "Foppling",
+    "pronunciation": "FOP-ling",
+    "meaning": "A very young, very small fop with enormous self-importance."
+  },
+  {
+    "id": 340,
+    "spelling": "Fribble",
+    "pronunciation": "FRIB-ul",
+    "meaning": "A frivolous, silly person, or to waste time on nothing."
+  },
+  {
+    "id": 341,
+    "spelling": "Froward",
+    "pronunciation": "FROH-werd",
+    "meaning": "Habitually difficult and contrary, refusing all reasonable requests."
+  },
+  {
+    "id": 342,
+    "spelling": "Fuddled",
+    "pronunciation": "FUD-uld",
+    "meaning": "Confused and muddled, often from too much thinking or drinking."
+  },
+  {
+    "id": 343,
+    "spelling": "Funambulist",
+    "pronunciation": "fyoo-NAM-byoo-list",
+    "meaning": "A tightrope walker. The word is funnier than it has any right to be."
+  },
+  {
+    "id": 344,
+    "spelling": "Funicular",
+    "pronunciation": "fyoo-NIK-yoo-ler",
+    "meaning": "A steep cable railway. Also the funniest serious word in geography."
+  },
+  {
+    "id": 345,
+    "spelling": "Furbelow",
+    "pronunciation": "FER-buh-loh",
+    "meaning": "An elaborate, unnecessary ruffle or frill on a garment."
+  },
+  {
+    "id": 346,
+    "spelling": "Fustian",
+    "pronunciation": "FUS-tee-un",
+    "meaning": "Pompous, inflated language that says very little importantly."
+  },
+  {
+    "id": 347,
+    "spelling": "Fussock",
+    "pronunciation": "FUS-uk",
+    "meaning": "A fat, lazy woman, according to people who were very rude in 1700."
+  },
+  {
+    "id": 348,
+    "spelling": "Gabble",
+    "pronunciation": "GAB-ul",
+    "meaning": "To talk rapidly and unintelligibly like an excited goose."
+  },
+  {
+    "id": 349,
+    "spelling": "Gaffer",
+    "pronunciation": "GAF-er",
+    "meaning": "An old man, a boss, or someone who carries a very long stick."
+  },
+  {
+    "id": 350,
+    "spelling": "Garrulous",
+    "pronunciation": "GAR-uh-lus",
+    "meaning": "Excessively talkative, especially about trivial matters."
+  },
+  {
+    "id": 351,
+    "spelling": "Gawk",
+    "pronunciation": "GAWK",
+    "meaning": "To stare openly and rudely at something or someone."
+  },
+  {
+    "id": 352,
+    "spelling": "Giddy",
+    "pronunciation": "GID-ee",
+    "meaning": "Dizzy with happiness, excitement, or very fast spinning."
+  },
+  {
+    "id": 353,
+    "spelling": "Gigglesome",
+    "pronunciation": "GIG-ul-sum",
+    "meaning": "Prone to fits of giggling at entirely inappropriate moments."
+  },
+  {
+    "id": 354,
+    "spelling": "Gimbals",
+    "pronunciation": "GIM-bulz",
+    "meaning": "Rings for suspending things, or a word that sounds like it should mean something else."
+  },
+  {
+    "id": 355,
+    "spelling": "Gink",
+    "pronunciation": "GINK",
+    "meaning": "A foolish, stupid person. Short, sharp, and devastating."
+  },
+  {
+    "id": 356,
+    "spelling": "Gloaming",
+    "pronunciation": "GLOH-ming",
+    "meaning": "The atmospheric period of twilight just after sunset."
+  },
+  {
+    "id": 357,
+    "spelling": "Glop",
+    "pronunciation": "GLOP",
+    "meaning": "Any unpleasant, sticky, shapeless mess of unknown origin."
+  },
+  {
+    "id": 358,
+    "spelling": "Glumly",
+    "pronunciation": "GLUM-lee",
+    "meaning": "In a quietly miserable manner, staring at nothing in particular."
+  },
+  {
+    "id": 359,
+    "spelling": "Gnarly",
+    "pronunciation": "NAR-lee",
+    "meaning": "Gnarled and twisted, or extremely impressive in a dangerous way."
+  },
+  {
+    "id": 360,
+    "spelling": "Gob",
+    "pronunciation": "GOB",
+    "meaning": "The mouth, especially when talking too much from it."
+  },
+  {
+    "id": 361,
+    "spelling": "Gobbledygoo",
+    "pronunciation": "GOB-ul-dee-goo",
+    "meaning": "Slippery nonsense that gets everywhere and is impossible to clean up."
+  },
+  {
+    "id": 362,
+    "spelling": "Gobsnorter",
+    "pronunciation": "GOB-snor-ter",
+    "meaning": "Something utterly astounding that makes your gob fall open."
+  },
+  {
+    "id": 363,
+    "spelling": "Gollywobbles",
+    "pronunciation": "GOL-ee-wob-ulz",
+    "meaning": "Stomach upset caused entirely by nerves and bad decisions."
+  },
+  {
+    "id": 364,
+    "spelling": "Goof",
+    "pronunciation": "GOOF",
+    "meaning": "A silly mistake or a loveable, dopey person."
+  },
+  {
+    "id": 365,
+    "spelling": "Goofball",
+    "pronunciation": "GOOF-bawl",
+    "meaning": "A person who is endearingly silly in every situation."
+  },
+  {
+    "id": 366,
+    "spelling": "Gormless",
+    "pronunciation": "GORM-lis",
+    "meaning": "Lacking sense and intelligence in a vacant, open-mouthed way."
+  },
+  {
+    "id": 367,
+    "spelling": "Gossoon",
+    "pronunciation": "guh-SOON",
+    "meaning": "An Irish word for a young boy with muddy knees and no idea."
+  },
+  {
+    "id": 368,
+    "spelling": "Grimalkin",
+    "pronunciation": "grih-MAL-kin",
+    "meaning": "An old female cat, or a spiteful, sharp-tongued old woman."
+  },
+  {
+    "id": 369,
+    "spelling": "Grody",
+    "pronunciation": "GROH-dee",
+    "meaning": "Disgustingly filthy in a way that makes you step back."
+  },
+  {
+    "id": 370,
+    "spelling": "Groke",
+    "pronunciation": "GROHK",
+    "meaning": "To stare at someone eating in hopes of receiving some food."
+  },
+  {
+    "id": 371,
+    "spelling": "Grommet",
+    "pronunciation": "GROM-it",
+    "meaning": "A small ring of rubber or metal, or a young surfer."
+  },
+  {
+    "id": 372,
+    "spelling": "Grouse",
+    "pronunciation": "GROWSS",
+    "meaning": "To complain persistently about petty matters. Also a bird."
+  },
+  {
+    "id": 373,
+    "spelling": "Grumble",
+    "pronunciation": "GRUM-bul",
+    "meaning": "To complain in a low murmur that's just loud enough to be heard."
+  },
+  {
+    "id": 374,
+    "spelling": "Gruntled",
+    "pronunciation": "GRUN-tuld",
+    "meaning": "Pleased and satisfied. The positive form of disgruntled."
+  },
+  {
+    "id": 375,
+    "spelling": "Gudgeon",
+    "pronunciation": "GUJ-un",
+    "meaning": "A small, easily caught fish, or a gullible, easily fooled person."
+  },
+  {
+    "id": 376,
+    "spelling": "Gulch",
+    "pronunciation": "GULCH",
+    "meaning": "A narrow valley, or the sound of something being swallowed."
+  },
+  {
+    "id": 377,
+    "spelling": "Gullible",
+    "pronunciation": "GUL-ih-bul",
+    "meaning": "Easily deceived and willing to believe almost anything told to them."
+  },
+  {
+    "id": 378,
+    "spelling": "Gullyfluff",
+    "pronunciation": "GUL-ee-fluf",
+    "meaning": "The dust, fluff, and mysterious debris at the bottom of a pocket."
+  },
+  {
+    "id": 379,
+    "spelling": "Gumption",
+    "pronunciation": "GUMP-shun",
+    "meaning": "Bold initiative and resourcefulness in getting things done."
+  },
+  {
+    "id": 380,
+    "spelling": "Guttersnipe",
+    "pronunciation": "GUT-er-snype",
+    "meaning": "A dirty, poorly dressed child who lives on the streets."
+  },
+  {
+    "id": 381,
+    "spelling": "Haggard",
+    "pronunciation": "HAG-erd",
+    "meaning": "Looking exhausted and drawn, usually from worrying too much."
+  },
+  {
+    "id": 382,
+    "spelling": "Haggis",
+    "pronunciation": "HAG-is",
+    "meaning": "A Scottish dish made from things nobody agrees on."
+  },
+  {
+    "id": 383,
+    "spelling": "Hagridden",
+    "pronunciation": "HAG-rid-en",
+    "meaning": "Troubled by anxiety, nightmares, or imaginary problems."
+  },
+  {
+    "id": 384,
+    "spelling": "Harebrained",
+    "pronunciation": "HAIR-braynd",
+    "meaning": "Reckless and badly thought-out, like a hare crossing a motorway."
+  },
+  {
+    "id": 385,
+    "spelling": "Hatchet-faced",
+    "pronunciation": "HACH-it-FAYST",
+    "meaning": "Having a thin, sharp-featured face of the unfriendly variety."
+  },
+  {
+    "id": 386,
+    "spelling": "Havoc",
+    "pronunciation": "HAV-uk",
+    "meaning": "Widespread chaos caused by someone who didn't read the instructions."
+  },
+  {
+    "id": 387,
+    "spelling": "Hawbuck",
+    "pronunciation": "HAW-buk",
+    "meaning": "An ill-bred, clumsy oaf who knocks things off shelves."
+  },
+  {
+    "id": 388,
+    "spelling": "Hebetudinous",
+    "pronunciation": "heb-ih-TYOO-din-us",
+    "meaning": "Mentally dull and lethargic in an almost impressive way."
+  },
+  {
+    "id": 389,
+    "spelling": "Hocus-pocus",
+    "pronunciation": "HOH-kus-POH-kus",
+    "meaning": "Meaningless talk used to create an air of false mystery."
+  },
+  {
+    "id": 390,
+    "spelling": "Hoodoo",
+    "pronunciation": "HOO-doo",
+    "meaning": "Bad luck, or a practitioner of a folk magic tradition."
+  },
+  {
+    "id": 391,
+    "spelling": "Hooligan",
+    "pronunciation": "HOO-lih-gun",
+    "meaning": "A young rowdy person who enjoys causing minor chaos."
+  },
+  {
+    "id": 392,
+    "spelling": "Hornswoggled",
+    "pronunciation": "HORN-swog-uld",
+    "meaning": "Having been thoroughly cheated or tricked."
+  },
+  {
+    "id": 393,
+    "spelling": "Horsefeathers",
+    "pronunciation": "HORSS-feth-erz",
+    "meaning": "American slang for complete and utter nonsense."
+  },
+  {
+    "id": 394,
+    "spelling": "Hotchpotch",
+    "pronunciation": "HOCH-poch",
+    "meaning": "A confused mixture of various things thrown together."
+  },
+  {
+    "id": 395,
+    "spelling": "Humbug",
+    "pronunciation": "HUM-bug",
+    "meaning": "Deceptive nonsense, or a hard striped peppermint sweet."
+  },
+  {
+    "id": 396,
+    "spelling": "Humdrumming",
+    "pronunciation": "HUM-drum-ing",
+    "meaning": "Being monotonously dull in a way that drains all nearby energy."
+  },
+  {
+    "id": 397,
+    "spelling": "Hyperbole",
+    "pronunciation": "hye-PER-buh-lee",
+    "meaning": "An extreme exaggeration used for emphasis or comic effect."
+  },
+  {
+    "id": 398,
+    "spelling": "Ignoramus",
+    "pronunciation": "ig-nuh-RAY-mus",
+    "meaning": "A person who is deeply and thoroughly ignorant of many things."
+  },
+  {
+    "id": 399,
+    "spelling": "Imbecile",
+    "pronunciation": "IM-buh-sul",
+    "meaning": "A foolish person, technically a historical medical classification."
+  },
+  {
+    "id": 400,
+    "spelling": "Impudent",
+    "pronunciation": "IM-pyoo-dent",
+    "meaning": "Disrespectfully bold in a way that leaves adults speechless."
+  },
+  {
+    "id": 401,
+    "spelling": "Inept",
+    "pronunciation": "ih-NEPT",
+    "meaning": "Lacking skill or ability, usually across all relevant areas."
+  },
+  {
+    "id": 402,
+    "spelling": "Inkle",
+    "pronunciation": "INK-ul",
+    "meaning": "A type of linen tape, or to have a vague, fuzzy suspicion."
+  },
+  {
+    "id": 403,
+    "spelling": "Insouciant",
+    "pronunciation": "in-SOO-see-unt",
+    "meaning": "Casually unconcerned with things that probably warrant concern."
+  },
+  {
+    "id": 404,
+    "spelling": "Interrobang",
+    "pronunciation": "in-TER-oh-bang",
+    "meaning": "The punctuation mark ?! used when you're shocked AND asking a question."
+  },
+  {
+    "id": 405,
+    "spelling": "Irate",
+    "pronunciation": "eye-RAYT",
+    "meaning": "Furiously angry in a way that involves a lot of arm movement."
+  },
+  {
+    "id": 406,
+    "spelling": "Jabberknowl",
+    "pronunciation": "JAB-er-nole",
+    "meaning": "A person who talks incessantly about things they know nothing about."
+  },
+  {
+    "id": 407,
+    "spelling": "Jackass",
+    "pronunciation": "JAK-ass",
+    "meaning": "A male donkey, or a person behaving like one."
+  },
+  {
+    "id": 408,
+    "spelling": "Jabberwocky",
+    "pronunciation": "JAB-er-wok-ee",
+    "meaning": "Invented language or meaningless nonsense, from Lewis Carroll."
+  },
+  {
+    "id": 409,
+    "spelling": "Jamboree",
+    "pronunciation": "jam-buh-REE",
+    "meaning": "A large, joyful, noisy gathering of people for fun."
+  },
+  {
+    "id": 410,
+    "spelling": "Jawboning",
+    "pronunciation": "JAW-bohn-ing",
+    "meaning": "Using persuasion through endless talking rather than actual authority."
+  },
+  {
+    "id": 411,
+    "spelling": "Jink",
+    "pronunciation": "JINK",
+    "meaning": "To move quickly and unpredictably to avoid something."
+  },
+  {
+    "id": 412,
+    "spelling": "Jobberknowle",
+    "pronunciation": "JOB-er-nole",
+    "meaning": "A stupid, blockheaded person with a head full of nonsense."
+  },
+  {
+    "id": 413,
+    "spelling": "Jobbernowl",
+    "pronunciation": "JOB-er-nole",
+    "meaning": "Alternative spelling of a blockheaded fool. Still accurate."
+  },
+  {
+    "id": 414,
+    "spelling": "Jocular",
+    "pronunciation": "JOK-yoo-ler",
+    "meaning": "Given to joking, especially in slightly inappropriate moments."
+  },
+  {
+    "id": 415,
+    "spelling": "Jollification",
+    "pronunciation": "jol-ih-fih-KAY-shun",
+    "meaning": "The process of having a very good time with a lot of noise."
+  },
+  {
+    "id": 416,
+    "spelling": "Jostle",
+    "pronunciation": "JOS-ul",
+    "meaning": "To push and shove someone in a crowd, usually by accident."
+  },
+  {
+    "id": 417,
+    "spelling": "Jumble",
+    "pronunciation": "JUM-bul",
+    "meaning": "A confused mixture of things thrown together without thought."
+  },
+  {
+    "id": 418,
+    "spelling": "Kafuffle",
+    "pronunciation": "kuh-FUF-ul",
+    "meaning": "A variant of kerfuffle. Still chaotic."
+  },
+  {
+    "id": 419,
+    "spelling": "Katzenjammer",
+    "pronunciation": "KAT-zen-jam-er",
+    "meaning": "A state of depression or unease, or a discordant noise."
+  },
+  {
+    "id": 420,
+    "spelling": "Kibosh",
+    "pronunciation": "KYE-bosh",
+    "meaning": "To put an end to something with decisive, final force."
+  },
+  {
+    "id": 421,
+    "spelling": "Kickshaw",
+    "pronunciation": "KIK-shaw",
+    "meaning": "A fancy but worthless thing, or an elaborate little dish of food."
+  },
+  {
+    "id": 422,
+    "spelling": "Kludge",
+    "pronunciation": "KLOOJ",
+    "meaning": "A clumsy, hacky solution to a problem that creates more problems."
+  },
+  {
+    "id": 423,
+    "spelling": "Knave",
+    "pronunciation": "NAYV",
+    "meaning": "A dishonest, unscrupulous rogue of the old-fashioned variety."
+  },
+  {
+    "id": 424,
+    "spelling": "Knuckleball",
+    "pronunciation": "NUK-ul-bawl",
+    "meaning": "A baseball pitch that moves unpredictably like a confused bee."
+  },
+  {
+    "id": 425,
+    "spelling": "Lallygag",
+    "pronunciation": "LAL-ee-gag",
+    "meaning": "A variant of lollygag. Equally lazy."
+  },
+  {
+    "id": 426,
+    "spelling": "Lambaste",
+    "pronunciation": "lam-BAYST",
+    "meaning": "To criticise someone harshly and at considerable length."
+  },
+  {
+    "id": 427,
+    "spelling": "Lampoon",
+    "pronunciation": "lam-POON",
+    "meaning": "A sharp satire or ridicule of a person or institution."
+  },
+  {
+    "id": 428,
+    "spelling": "Lassitude",
+    "pronunciation": "LAS-ih-tyood",
+    "meaning": "Physical or mental weariness that makes effort feel impossible."
+  },
+  {
+    "id": 429,
+    "spelling": "Lickspittle",
+    "pronunciation": "LIK-spit-ul",
+    "meaning": "A grovelling, servile person who flatters those in power."
+  },
+  {
+    "id": 430,
+    "spelling": "Limber",
+    "pronunciation": "LIM-ber",
+    "meaning": "Flexible and able to move easily, often embarrassingly so."
+  },
+  {
+    "id": 431,
+    "spelling": "Loggerheads",
+    "pronunciation": "LOG-er-hedz",
+    "meaning": "At loggerheads means in strong disagreement with someone."
+  },
+  {
+    "id": 432,
+    "spelling": "Lollapalooza",
+    "pronunciation": "lol-uh-puh-LOO-zuh",
+    "meaning": "Something exceptionally impressive or an outstanding example."
+  },
+  {
+    "id": 433,
+    "spelling": "Lollygaggery",
+    "pronunciation": "LOL-ee-gag-er-ee",
+    "meaning": "The art and practice of wasting time in a leisurely manner."
+  },
+  {
+    "id": 434,
+    "spelling": "Looby",
+    "pronunciation": "LOO-bee",
+    "meaning": "A slow, stupid, awkward person who means well."
+  },
+  {
+    "id": 435,
+    "spelling": "Loquacious",
+    "pronunciation": "loh-KWAY-shus",
+    "meaning": "Tending to talk a great deal, enthusiastically and at all times."
+  },
+  {
+    "id": 436,
+    "spelling": "Ludicrous",
+    "pronunciation": "LOO-dih-krus",
+    "meaning": "So absurd as to be amusing in an exasperating way."
+  },
+  {
+    "id": 437,
+    "spelling": "Lunkhead",
+    "pronunciation": "LUNK-hed",
+    "meaning": "An especially dim and blockheaded individual."
+  },
+  {
+    "id": 438,
+    "spelling": "Macaroon",
+    "pronunciation": "mak-uh-ROON",
+    "meaning": "A sweet coconut biscuit, or an old-fashioned term for a fool."
+  },
+  {
+    "id": 439,
+    "spelling": "Maggoty",
+    "pronunciation": "MAG-ut-ee",
+    "meaning": "Full of maggots, or grumpy and disagreeable in temperament."
+  },
+  {
+    "id": 440,
+    "spelling": "Malodorous",
+    "pronunciation": "mal-OH-der-us",
+    "meaning": "Having an extremely unpleasant smell that clears rooms."
+  },
+  {
+    "id": 441,
+    "spelling": "Malefactor",
+    "pronunciation": "MAL-ih-fak-ter",
+    "meaning": "A person who commits crimes or does evil deeds enthusiastically."
+  },
+  {
+    "id": 442,
+    "spelling": "Manifold",
+    "pronunciation": "MAN-ih-fohld",
+    "meaning": "Many and various kinds. Also part of a car engine. Useful word."
+  },
+  {
+    "id": 443,
+    "spelling": "Maunder",
+    "pronunciation": "MAWN-der",
+    "meaning": "To talk in a rambling, vague way without reaching any conclusion."
+  },
+  {
+    "id": 444,
+    "spelling": "Mazarine",
+    "pronunciation": "maz-uh-REEN",
+    "meaning": "A deep, rich blue colour, or an old plate used at dinner."
+  },
+  {
+    "id": 445,
+    "spelling": "Merriment",
+    "pronunciation": "MER-ih-ment",
+    "meaning": "Cheerful, lively enjoyment, often involving laughter and noise."
+  },
+  {
+    "id": 446,
+    "spelling": "Miffed",
+    "pronunciation": "MIFT",
+    "meaning": "Slightly offended and quietly annoyed about something minor."
+  },
+  {
+    "id": 447,
+    "spelling": "Miscreant",
+    "pronunciation": "MIS-kree-unt",
+    "meaning": "A person who behaves badly and with no remorse."
+  },
+  {
+    "id": 448,
+    "spelling": "Mizzle",
+    "pronunciation": "MIZ-ul",
+    "meaning": "Extremely light drizzle, or to run away without explanation."
+  },
+  {
+    "id": 449,
+    "spelling": "Mooncalf",
+    "pronunciation": "MOON-kahf",
+    "meaning": "A congenitally foolish person who drifts through life daydreaming."
+  },
+  {
+    "id": 450,
+    "spelling": "Mooter",
+    "pronunciation": "MOO-ter",
+    "meaning": "Someone who raises pointless questions about things already decided."
+  },
+  {
+    "id": 451,
+    "spelling": "Mopish",
+    "pronunciation": "MOH-pish",
+    "meaning": "Inclined to mope around in a dejected and listless manner."
+  },
+  {
+    "id": 452,
+    "spelling": "Mopsy",
+    "pronunciation": "MOP-see",
+    "meaning": "An untidy, dishevelled person, or an affectionate term for a mess."
+  },
+  {
+    "id": 453,
+    "spelling": "Moue",
+    "pronunciation": "MOO",
+    "meaning": "A pouting expression of displeasure requiring minimal effort."
+  },
+  {
+    "id": 454,
+    "spelling": "Muddle",
+    "pronunciation": "MUD-ul",
+    "meaning": "A state of confusion where nothing quite goes where it should."
+  },
+  {
+    "id": 455,
+    "spelling": "Muffin",
+    "pronunciation": "MUF-in",
+    "meaning": "A small cake, or a mildly insulting term for a foolish person."
+  },
+  {
+    "id": 456,
+    "spelling": "Muggins",
+    "pronunciation": "MUG-inz",
+    "meaning": "A foolish person, often used to refer to yourself after doing something daft."
+  },
+  {
+    "id": 457,
+    "spelling": "Mullock",
+    "pronunciation": "MUL-uk",
+    "meaning": "Rubbish, nonsense, or rock from which no ore can be extracted."
+  },
+  {
+    "id": 458,
+    "spelling": "Mumblety-peg",
+    "pronunciation": "MUM-bul-tee-peg",
+    "meaning": "A dangerous game involving a knife thrown at the ground near feet."
+  },
+  {
+    "id": 459,
+    "spelling": "Mumbojumbo",
+    "pronunciation": "MUM-boh-JUM-boh",
+    "meaning": "Confusing, meaningless ritual or language designed to mystify."
+  },
+  {
+    "id": 460,
+    "spelling": "Mutton-headed",
+    "pronunciation": "MUT-un-HED-id",
+    "meaning": "Having the mental capacity of a large, passive sheep."
+  },
+  {
+    "id": 461,
+    "spelling": "Natter",
+    "pronunciation": "NAT-er",
+    "meaning": "To chat casually for an extended period about nothing important."
+  },
+  {
+    "id": 462,
+    "spelling": "Navel-gazer",
+    "pronunciation": "NAY-vul-GAY-zer",
+    "meaning": "A person excessively focused on their own thoughts and feelings."
+  },
+  {
+    "id": 463,
+    "spelling": "Nebbish",
+    "pronunciation": "NEB-ish",
+    "meaning": "A timid, ineffectual, pitifully meek person."
+  },
+  {
+    "id": 464,
+    "spelling": "Nettle",
+    "pronunciation": "NET-ul",
+    "meaning": "To irritate and annoy someone in a persistent, poking way."
+  },
+  {
+    "id": 465,
+    "spelling": "Nidget",
+    "pronunciation": "NIJ-it",
+    "meaning": "An old word for an idiot or coward. Nicely efficient insult."
+  },
+  {
+    "id": 466,
+    "spelling": "Niffnaff",
+    "pronunciation": "NIF-naf",
+    "meaning": "A small, unimportant thing that nobody should have bothered with."
+  },
+  {
+    "id": 467,
+    "spelling": "Niggardly",
+    "pronunciation": "NIG-erd-lee",
+    "meaning": "Ungenerous to an extreme and rather embarrassing degree."
+  },
+  {
+    "id": 468,
+    "spelling": "Nim",
+    "pronunciation": "NIM",
+    "meaning": "To steal small, trivial items with no clear purpose."
+  },
+  {
+    "id": 469,
+    "spelling": "Nimble",
+    "pronunciation": "NIM-bul",
+    "meaning": "Quick and light in movement, often surprisingly so."
+  },
+  {
+    "id": 470,
+    "spelling": "Nipperkin",
+    "pronunciation": "NIP-er-kin",
+    "meaning": "A very small amount of liquid, barely worth measuring out."
+  },
+  {
+    "id": 471,
+    "spelling": "Nit",
+    "pronunciation": "NIT",
+    "meaning": "A louse egg, or British slang for a foolish person."
+  },
+  {
+    "id": 472,
+    "spelling": "Noodge",
+    "pronunciation": "NOOJ",
+    "meaning": "To pester and annoy someone persistently until they give in."
+  },
+  {
+    "id": 473,
+    "spelling": "Nudnik",
+    "pronunciation": "NOOD-nik",
+    "meaning": "A dreary, boring person who manages to be annoying as well."
+  },
+  {
+    "id": 474,
+    "spelling": "Numbskull",
+    "pronunciation": "NUM-skul",
+    "meaning": "A person with nothing sensible going on inside their skull."
+  },
+  {
+    "id": 475,
+    "spelling": "Oafish",
+    "pronunciation": "OH-fish",
+    "meaning": "Stupidly clumsy in a large-bodied, unapologetic manner."
+  },
+  {
+    "id": 476,
+    "spelling": "Obfuscate",
+    "pronunciation": "OB-fyoo-skayt",
+    "meaning": "To make something confusing on purpose to avoid understanding."
+  },
+  {
+    "id": 477,
+    "spelling": "Obstreperous",
+    "pronunciation": "ob-STREP-er-us",
+    "meaning": "Noisy and difficult to control, especially in public places."
+  },
+  {
+    "id": 478,
+    "spelling": "Oddball",
+    "pronunciation": "OD-bawl",
+    "meaning": "An eccentric, strange person who defies normal categorisation."
+  },
+  {
+    "id": 479,
+    "spelling": "Oodleypoop",
+    "pronunciation": "OO-dlee-poop",
+    "meaning": "A term of affection for a person who is being unintentionally silly."
+  },
+  {
+    "id": 480,
+    "spelling": "Oojah-cum-spiff",
+    "pronunciation": "OO-jah-kum-SPIF",
+    "meaning": "British slang for something that is excellent and working perfectly."
+  },
+  {
+    "id": 481,
+    "spelling": "Otiose",
+    "pronunciation": "OH-tee-ohs",
+    "meaning": "Serving no practical purpose and being quite useless."
+  },
+  {
+    "id": 482,
+    "spelling": "Outrageousness",
+    "pronunciation": "owt-RAY-jus-nes",
+    "meaning": "The quality of being shocking in a way people secretly enjoy."
+  },
+  {
+    "id": 483,
+    "spelling": "Overweening",
+    "pronunciation": "oh-ver-WEE-ning",
+    "meaning": "Showing excessive confidence in your own opinions and importance."
+  },
+  {
+    "id": 484,
+    "spelling": "Oxter",
+    "pronunciation": "OK-ster",
+    "meaning": "Scottish word for armpit. Most useful at hugging time."
+  },
+  {
+    "id": 485,
+    "spelling": "Panjandrum",
+    "pronunciation": "pan-JAN-drum",
+    "meaning": "An important official, or a mock title for a pompous person."
+  },
+  {
+    "id": 486,
+    "spelling": "Papple",
+    "pronunciation": "PAP-ul",
+    "meaning": "To flow in a bubbling, gurgling manner over and around things."
+  },
+  {
+    "id": 487,
+    "spelling": "Pattle",
+    "pronunciation": "PAT-ul",
+    "meaning": "A small spade for cleaning a plough or stirring porridge."
+  },
+  {
+    "id": 488,
+    "spelling": "Peacockery",
+    "pronunciation": "PEE-kok-er-ee",
+    "meaning": "Showy, vain behaviour aimed at attracting admiring attention."
+  },
+  {
+    "id": 489,
+    "spelling": "Peahen",
+    "pronunciation": "PEE-hen",
+    "meaning": "A female peacock who gets none of the credit or plumage."
+  },
+  {
+    "id": 490,
+    "spelling": "Pecksniffian",
+    "pronunciation": "pek-SNIF-ee-un",
+    "meaning": "Pretending to have principles you clearly don't actually possess."
+  },
+  {
+    "id": 491,
+    "spelling": "Pernickety",
+    "pronunciation": "per-NIK-it-ee",
+    "meaning": "Excessively fussy over minute, unimportant details."
+  },
+  {
+    "id": 492,
+    "spelling": "Petulant",
+    "pronunciation": "PET-yoo-lunt",
+    "meaning": "Childishly sulky when you don't get exactly what you want."
+  },
+  {
+    "id": 493,
+    "spelling": "Phlegmatic",
+    "pronunciation": "fleg-MAT-ik",
+    "meaning": "Having a slow, calm, unemotional temperament about everything."
+  },
+  {
+    "id": 494,
+    "spelling": "Piffle-merchant",
+    "pronunciation": "PIF-ul-MER-chunt",
+    "meaning": "A dealer in trivial nonsense who charges full price."
+  },
+  {
+    "id": 495,
+    "spelling": "Pigheaded",
+    "pronunciation": "PIG-hed-id",
+    "meaning": "Stubbornly refusing to change your mind regardless of evidence."
+  },
+  {
+    "id": 496,
+    "spelling": "Pillion",
+    "pronunciation": "PIL-yun",
+    "meaning": "The passenger seat on a motorcycle, or any second-rate position."
+  },
+  {
+    "id": 497,
+    "spelling": "Pillory",
+    "pronunciation": "PIL-uh-ree",
+    "meaning": "A wooden frame that locks a person's head and hands for mockery."
+  },
+  {
+    "id": 498,
+    "spelling": "Pixyish",
+    "pronunciation": "PIK-see-ish",
+    "meaning": "Mischievous and playful like a small supernatural forest creature."
+  },
+  {
+    "id": 499,
+    "spelling": "Pizzle",
+    "pronunciation": "PIZ-ul",
+    "meaning": "An archaic word for a bull's organ, later used as a whip."
+  },
+  {
+    "id": 500,
+    "spelling": "Planking",
+    "pronunciation": "PLANK-ing",
+    "meaning": "Lying face down in a random public place. A genuine trend."
+  },
+  {
+    "id": 501,
+    "spelling": "Plopping",
+    "pronunciation": "PLOP-ing",
+    "meaning": "Falling or dropping with a soft, wet, satisfying sound."
+  },
+  {
+    "id": 502,
+    "spelling": "Plumfustian",
+    "pronunciation": "plum-FUS-tee-un",
+    "meaning": "A hot drink of uncertain composition, or pompous hot air."
+  },
+  {
+    "id": 503,
+    "spelling": "Pobblenobble",
+    "pronunciation": "POB-ul-NOB-ul",
+    "meaning": "A person who talks loudly about things they heard second-hand."
+  },
+  {
+    "id": 504,
+    "spelling": "Podsnappery",
+    "pronunciation": "POD-snap-er-ee",
+    "meaning": "Smugly satisfied complacency combined with refusal to learn anything."
+  },
+  {
+    "id": 505,
+    "spelling": "Polly-wog",
+    "pronunciation": "POL-ee-wog",
+    "meaning": "A tadpole, or a sailor crossing the equator for the first time."
+  },
+  {
+    "id": 506,
+    "spelling": "Poobah",
+    "pronunciation": "POO-bah",
+    "meaning": "A pompous, self-important person with many grand-sounding titles."
+  },
+  {
+    "id": 507,
+    "spelling": "Pootle",
+    "pronunciation": "POO-tul",
+    "meaning": "To travel slowly and contentedly with no particular destination."
+  },
+  {
+    "id": 508,
+    "spelling": "Popinjay",
+    "pronunciation": "POP-in-jay",
+    "meaning": "A vain, conceited person who talks incessantly about themselves."
+  },
+  {
+    "id": 509,
+    "spelling": "Poppet",
+    "pronunciation": "POP-it",
+    "meaning": "A darling, or a small loveable person of considerable charm."
+  },
+  {
+    "id": 510,
+    "spelling": "Porker",
+    "pronunciation": "POR-ker",
+    "meaning": "A pig raised for food, or an affectionate insult for a large person."
+  },
+  {
+    "id": 511,
+    "spelling": "Portmanteau",
+    "pronunciation": "port-MAN-toh",
+    "meaning": "A large suitcase, or a word blending parts of two others."
+  },
+  {
+    "id": 512,
+    "spelling": "Potboiler",
+    "pronunciation": "POT-boy-ler",
+    "meaning": "Work produced quickly for money with no artistic ambition."
+  },
+  {
+    "id": 513,
+    "spelling": "Pottle",
+    "pronunciation": "POT-ul",
+    "meaning": "A small basket for fruit, or a half-gallon measure of liquid."
+  },
+  {
+    "id": 514,
+    "spelling": "Prat",
+    "pronunciation": "PRAT",
+    "meaning": "British slang for a stupid or silly person. Also a buttock."
+  },
+  {
+    "id": 515,
+    "spelling": "Prattle",
+    "pronunciation": "PRAT-ul",
+    "meaning": "To talk at length in a foolish, childish way about nothing."
+  },
+  {
+    "id": 516,
+    "spelling": "Prevaricate",
+    "pronunciation": "prih-VAR-ih-kayt",
+    "meaning": "To avoid telling the truth through evasive, misleading answers."
+  },
+  {
+    "id": 517,
+    "spelling": "Prickmedainty",
+    "pronunciation": "PRIK-mih-DAYN-tee",
+    "meaning": "An overly fastidious, fussy person obsessed with trivialities."
+  },
+  {
+    "id": 518,
+    "spelling": "Prink",
+    "pronunciation": "PRINK",
+    "meaning": "To dress yourself up in a fussy, overly careful manner."
+  },
+  {
+    "id": 519,
+    "spelling": "Procrastinate",
+    "pronunciation": "proh-KRAS-tin-ayt",
+    "meaning": "To delay doing something important by doing everything else first."
+  },
+  {
+    "id": 520,
+    "spelling": "Prolix",
+    "pronunciation": "PROH-liks",
+    "meaning": "Using more words than are ever necessary to say a thing."
+  },
+  {
+    "id": 521,
+    "spelling": "Puffery",
+    "pronunciation": "PUF-er-ee",
+    "meaning": "Exaggerated praise with no factual basis written to impress."
+  },
+  {
+    "id": 522,
+    "spelling": "Pugnaciousness",
+    "pronunciation": "pug-NAY-shus-nes",
+    "meaning": "The quality of being ready to fight about absolutely anything."
+  },
+  {
+    "id": 523,
+    "spelling": "Puke-stocking",
+    "pronunciation": "PYOOK-stok-ing",
+    "meaning": "A term of abuse from the 1700s. Wonderfully specific."
+  },
+  {
+    "id": 524,
+    "spelling": "Pulsate",
+    "pronunciation": "PUL-sayt",
+    "meaning": "To expand and contract rhythmically like a living, breathing thing."
+  },
+  {
+    "id": 525,
+    "spelling": "Punctilious",
+    "pronunciation": "punk-TIL-ee-us",
+    "meaning": "Excessively attentive to rules, details, and correct behaviour."
+  },
+  {
+    "id": 526,
+    "spelling": "Purblind",
+    "pronunciation": "PER-blynd",
+    "meaning": "Having poor eyesight or very limited understanding of things."
+  },
+  {
+    "id": 527,
+    "spelling": "Pushover",
+    "pronunciation": "PUSH-oh-ver",
+    "meaning": "Someone easily influenced, persuaded, or knocked over."
+  },
+  {
+    "id": 528,
+    "spelling": "Pussyfoot",
+    "pronunciation": "PUS-ee-fut",
+    "meaning": "To move cautiously or deal with something in an evasive way."
+  },
+  {
+    "id": 529,
+    "spelling": "Putrid",
+    "pronunciation": "PYOO-trid",
+    "meaning": "Decaying and smelling extremely unpleasant."
+  },
+  {
+    "id": 530,
+    "spelling": "Puzzlement",
+    "pronunciation": "PUZ-ul-ment",
+    "meaning": "The state of being completely and thoroughly confused."
+  },
+  {
+    "id": 531,
+    "spelling": "Quagmire",
+    "pronunciation": "KWAG-mire",
+    "meaning": "A boggy, sticky situation that is increasingly hard to escape."
+  },
+  {
+    "id": 532,
+    "spelling": "Qualmish",
+    "pronunciation": "KWAWL-mish",
+    "meaning": "Feeling slightly sick, uncertain, or morally uncomfortable."
+  },
+  {
+    "id": 533,
+    "spelling": "Quarrelsome",
+    "pronunciation": "KWOR-ul-sum",
+    "meaning": "Inclined to quarrel and argue about everything at all times."
+  },
+  {
+    "id": 534,
+    "spelling": "Queer fish",
+    "pronunciation": "KWEER-fish",
+    "meaning": "An odd, eccentric person who is difficult to understand."
+  },
+  {
+    "id": 535,
+    "spelling": "Querulous",
+    "pronunciation": "KWER-yoo-lus",
+    "meaning": "Complaining in a petulant, whining way all the time."
+  },
+  {
+    "id": 536,
+    "spelling": "Quibblesome",
+    "pronunciation": "KWIB-ul-sum",
+    "meaning": "Inclined to pick minor faults with everything around them."
+  },
+  {
+    "id": 537,
+    "spelling": "Quisling",
+    "pronunciation": "KWIZ-ling",
+    "meaning": "A traitor who collaborates with the enemy occupying their country."
+  },
+  {
+    "id": 538,
+    "spelling": "Quodlibet",
+    "pronunciation": "KWOD-lih-bet",
+    "meaning": "An argument made for entertainment rather than serious debate."
+  },
+  {
+    "id": 539,
+    "spelling": "Rabble-rouser",
+    "pronunciation": "RAB-ul-ROW-zer",
+    "meaning": "A person who stirs up public anger and discontent for fun."
+  },
+  {
+    "id": 540,
+    "spelling": "Rakehell",
+    "pronunciation": "RAYK-hel",
+    "meaning": "A thoroughly immoral and dissolute person living wildly."
+  },
+  {
+    "id": 541,
+    "spelling": "Rambunctionsness",
+    "pronunciation": "ram-BUNK-shus-nes",
+    "meaning": "The quality of being wildly and uncontrollably boisterous."
+  },
+  {
+    "id": 542,
+    "spelling": "Rannygahoot",
+    "pronunciation": "ran-ee-guh-HOOT",
+    "meaning": "A reckless, irresponsible person who does whatever they please."
+  },
+  {
+    "id": 543,
+    "spelling": "Rapaciousness",
+    "pronunciation": "ruh-PAY-shus-nes",
+    "meaning": "Being aggressively greedy in acquiring things for oneself."
+  },
+  {
+    "id": 544,
+    "spelling": "Rastaquouère",
+    "pronunciation": "ras-tuh-KWAIR",
+    "meaning": "An overdressed social climber from foreign parts. Very specific."
+  },
+  {
+    "id": 545,
+    "spelling": "Raucousness",
+    "pronunciation": "RAW-kus-nes",
+    "meaning": "The state of being loudly and disturbingly disorderly."
+  },
+  {
+    "id": 546,
+    "spelling": "Recalcitrant",
+    "pronunciation": "reh-KAL-sih-trant",
+    "meaning": "Obstinately defying authority in a stubborn, dug-in manner."
+  },
+  {
+    "id": 547,
+    "spelling": "Reckless",
+    "pronunciation": "REK-lis",
+    "meaning": "Acting without thought for consequences in an exciting way."
+  },
+  {
+    "id": 548,
+    "spelling": "Redolent",
+    "pronunciation": "RED-uh-lent",
+    "meaning": "Strongly smelling of something, or strongly suggestive of it."
+  },
+  {
+    "id": 549,
+    "spelling": "Ribaldry",
+    "pronunciation": "RIB-uld-ree",
+    "meaning": "Crude, irreverent humour of the deeply inappropriate variety."
+  },
+  {
+    "id": 550,
+    "spelling": "Ridiculous",
+    "pronunciation": "rih-DIK-yoo-lus",
+    "meaning": "Deserving mockery and laughter for sheer absurdity."
+  },
+  {
+    "id": 551,
+    "spelling": "Rigamarole",
+    "pronunciation": "RIG-uh-muh-role",
+    "meaning": "A long-winded, confusing, entirely unnecessary procedure."
+  },
+  {
+    "id": 552,
+    "spelling": "Ringleader",
+    "pronunciation": "RING-lee-der",
+    "meaning": "The person responsible for organising the trouble that followed."
+  },
+  {
+    "id": 553,
+    "spelling": "Riotous",
+    "pronunciation": "RYE-uh-tus",
+    "meaning": "Wild and uncontrolled, causing great disturbance and laughter."
+  },
+  {
+    "id": 554,
+    "spelling": "Rodomontade",
+    "pronunciation": "rod-uh-mon-TAYD",
+    "meaning": "Empty boasting and vainglorious bragging."
+  },
+  {
+    "id": 555,
+    "spelling": "Rofflesnork",
+    "pronunciation": "ROF-ul-snork",
+    "meaning": "The involuntary noise made when you laugh and nearly choke."
+  },
+  {
+    "id": 556,
+    "spelling": "Roistering",
+    "pronunciation": "ROY-ster-ing",
+    "meaning": "Engaging in noisy, boisterous celebrations with complete abandon."
+  },
+  {
+    "id": 557,
+    "spelling": "Rolly-polly",
+    "pronunciation": "ROH-lee-POH-lee",
+    "meaning": "Round and chubby, tending to roll rather than walk."
+  },
+  {
+    "id": 558,
+    "spelling": "Ruction",
+    "pronunciation": "RUK-shun",
+    "meaning": "A disturbance, quarrel, or noisy disagreement of some scale."
+  },
+  {
+    "id": 559,
+    "spelling": "Ruffle",
+    "pronunciation": "RUF-ul",
+    "meaning": "To disturb the smooth surface of something, or someone's calm."
+  },
+  {
+    "id": 560,
+    "spelling": "Rum",
+    "pronunciation": "RUM",
+    "meaning": "British slang for odd, strange, or rather peculiar."
+  },
+  {
+    "id": 561,
+    "spelling": "Rumbustious",
+    "pronunciation": "rum-BUS-tee-us",
+    "meaning": "Boisterous, uncontrollable, and full of rowdy energy."
+  },
+  {
+    "id": 562,
+    "spelling": "Rumpus-maker",
+    "pronunciation": "RUM-pus-MAY-ker",
+    "meaning": "A person whose presence reliably results in a rumpus."
+  },
+  {
+    "id": 563,
+    "spelling": "Ruttish",
+    "pronunciation": "RUT-ish",
+    "meaning": "Having extremely unpleasant manners and habits."
+  },
+  {
+    "id": 564,
+    "spelling": "Sapsculls",
+    "pronunciation": "SAP-skulz",
+    "meaning": "An old insult meaning someone is weak-minded and empty-headed."
+  },
+  {
+    "id": 565,
+    "spelling": "Scobberlotcher",
+    "pronunciation": "SKOB-er-loch-er",
+    "meaning": "Someone who avoids hard work with extreme skill and dedication."
+  },
+  {
+    "id": 566,
+    "spelling": "Scoffing",
+    "pronunciation": "SKOF-ing",
+    "meaning": "Treating something with contemptuous dismissal and mockery."
+  },
+  {
+    "id": 567,
+    "spelling": "Scrimshank",
+    "pronunciation": "SKIM-shank",
+    "meaning": "To shirk one's duty by inventing implausible excuses."
+  },
+  {
+    "id": 568,
+    "spelling": "Scurrilous",
+    "pronunciation": "SKUR-ih-lus",
+    "meaning": "Making false and damaging claims about someone, outrageously."
+  },
+  {
+    "id": 569,
+    "spelling": "Scuttlebutt",
+    "pronunciation": "SKUT-ul-but",
+    "meaning": "Rumour and gossip passed around in hushed, excited tones."
+  },
+  {
+    "id": 570,
+    "spelling": "Silliness",
+    "pronunciation": "SIL-ee-nes",
+    "meaning": "The quality of being pleasantly, harmlessly, and thoroughly silly."
+  },
+  {
+    "id": 571,
+    "spelling": "Skimble-skamble",
+    "pronunciation": "SKIM-bul-SKAM-bul",
+    "meaning": "Confused, muddled, or rambling speech of no clear purpose."
+  },
+  {
+    "id": 572,
+    "spelling": "Slapdashery",
+    "pronunciation": "SLAP-dash-er-ee",
+    "meaning": "The practice of doing everything quickly, badly, and without care."
+  },
+  {
+    "id": 573,
+    "spelling": "Slubber",
+    "pronunciation": "SLUB-er",
+    "meaning": "To perform work in a lazy, careless, and sloppy manner."
+  },
+  {
+    "id": 574,
+    "spelling": "Slubberdegullion",
+    "pronunciation": "slub-er-duh-GUL-yun",
+    "meaning": "A filthy, slobbering rascal of the most unpleasant variety."
+  },
+  {
+    "id": 575,
+    "spelling": "Smallminded",
+    "pronunciation": "SMAWL-mynd-id",
+    "meaning": "Excessively focused on petty, trivial concerns."
+  },
+  {
+    "id": 576,
+    "spelling": "Snaggletoothed",
+    "pronunciation": "SNAG-ul-toothed",
+    "meaning": "Having teeth that stick out at odd and unpredictable angles."
+  },
+  {
+    "id": 577,
+    "spelling": "Snallygaster",
+    "pronunciation": "SNAL-ee-gas-ter",
+    "meaning": "A mythical creature said to seize and devour the unwary."
+  },
+  {
+    "id": 578,
+    "spelling": "Snidey",
+    "pronunciation": "SNY-dee",
+    "meaning": "Sneakily unpleasant and making sly, cutting comments."
+  },
+  {
+    "id": 579,
+    "spelling": "Snollywog",
+    "pronunciation": "SNOL-ee-wog",
+    "meaning": "A deceptive, dishonest person of the smoothest variety."
+  },
+  {
+    "id": 580,
+    "spelling": "Snoozefest",
+    "pronunciation": "SNOOZ-fest",
+    "meaning": "An event or person so boring they actively cause unconsciousness."
+  },
+  {
+    "id": 581,
+    "spelling": "Snorkel",
+    "pronunciation": "SNOR-kul",
+    "meaning": "A breathing tube, or the sound made while half-asleep."
+  },
+  {
+    "id": 582,
+    "spelling": "Snot-nosed",
+    "pronunciation": "SNOT-nohzd",
+    "meaning": "Young, inexperienced, and annoyingly overconfident."
+  },
+  {
+    "id": 583,
+    "spelling": "Sozzled",
+    "pronunciation": "SOZ-uld",
+    "meaning": "Thoroughly and impressively intoxicated."
+  },
+  {
+    "id": 584,
+    "spelling": "Splutterer",
+    "pronunciation": "SPLUT-er-er",
+    "meaning": "A person who splutters indignantly when surprised or offended."
+  },
+  {
+    "id": 585,
+    "spelling": "Spoonerize",
+    "pronunciation": "SPOO-ner-yze",
+    "meaning": "To accidentally swap the initial sounds of two words."
+  },
+  {
+    "id": 586,
+    "spelling": "Sputtering",
+    "pronunciation": "SPUT-er-ing",
+    "meaning": "Making explosive, spitting sounds of anger or machinery failure."
+  },
+  {
+    "id": 587,
+    "spelling": "Squirreling",
+    "pronunciation": "SKWIR-ul-ing",
+    "meaning": "Hiding things away compulsively for an emergency that won't come."
+  },
+  {
+    "id": 588,
+    "spelling": "Stodgy",
+    "pronunciation": "STOJ-ee",
+    "meaning": "Heavy, filling, and very boring. Used for food and for people."
+  },
+  {
+    "id": 589,
+    "spelling": "Stomping",
+    "pronunciation": "STOMP-ing",
+    "meaning": "Walking heavily and loudly to express displeasure without words."
+  },
+  {
+    "id": 590,
+    "spelling": "Stroppiness",
+    "pronunciation": "STROP-ee-nes",
+    "meaning": "The quality of being bad-tempered and uncooperative."
+  },
+  {
+    "id": 591,
+    "spelling": "Stubbornness",
+    "pronunciation": "STUB-ern-nes",
+    "meaning": "An absolute refusal to change your mind regardless of all evidence."
+  },
+  {
+    "id": 592,
+    "spelling": "Snubbish",
+    "pronunciation": "SNUB-ish",
+    "meaning": "Inclined to snub others with short, dismissive responses."
+  },
+  {
+    "id": 593,
+    "spelling": "Tarboosh",
+    "pronunciation": "tar-BOOSH",
+    "meaning": "A fez-like brimless hat worn across parts of the Middle East."
+  },
+  {
+    "id": 594,
+    "spelling": "Tatterdemalion",
+    "pronunciation": "tat-er-duh-MAYL-yun",
+    "meaning": "A ragged, tattered person dressed in shreds and remnants."
+  },
+  {
+    "id": 595,
+    "spelling": "Tergiversate",
+    "pronunciation": "ter-JIV-er-sayt",
+    "meaning": "To keep changing your position on an issue to avoid commitment."
+  },
+  {
+    "id": 596,
+    "spelling": "Thingummywot",
+    "pronunciation": "THING-um-ee-wot",
+    "meaning": "Any object you know exists but cannot name in the moment."
+  },
+  {
+    "id": 597,
+    "spelling": "Thrawnness",
+    "pronunciation": "THRON-nes",
+    "meaning": "The quality of being twisted, contrary, and uncooperative."
+  },
+  {
+    "id": 598,
+    "spelling": "Tizzy",
+    "pronunciation": "TIZ-ee",
+    "meaning": "A state of nervous excitement or anxious confusion."
+  },
+  {
+    "id": 599,
+    "spelling": "Tomfoolishness",
+    "pronunciation": "tom-FOO-lish-nes",
+    "meaning": "The quality of acting in a completely silly and playful manner."
+  },
+  {
+    "id": 600,
+    "spelling": "Trumpery",
+    "pronunciation": "TRUM-per-ee",
+    "meaning": "Showy but worthless things, or deceitful nonsense."
+  },
+  {
+    "id": 601,
+    "spelling": "Tumbledown",
+    "pronunciation": "TUM-bul-down",
+    "meaning": "In a state of extreme dilapidation and about to fall over."
+  },
+  {
+    "id": 602,
+    "spelling": "Turdiform",
+    "pronunciation": "TER-dih-form",
+    "meaning": "Having the form or shape of a thrush. That's the bird."
+  },
+  {
+    "id": 603,
+    "spelling": "Twaddle-merchant",
+    "pronunciation": "TWOD-ul-MER-chunt",
+    "meaning": "A person who trades in meaningless, trivial conversation."
+  },
+  {
+    "id": 604,
+    "spelling": "Twirp",
+    "pronunciation": "TWIRP",
+    "meaning": "An irritating, insignificant, and rather annoying little person."
+  },
+  {
+    "id": 605,
+    "spelling": "Ulotrichous",
+    "pronunciation": "yoo-LOT-rih-kus",
+    "meaning": "Having tightly curled or woolly hair."
+  },
+  {
+    "id": 606,
+    "spelling": "Umbrageous",
+    "pronunciation": "um-BRAY-jus",
+    "meaning": "Prone to taking offence at the smallest possible imagined slight."
+  },
+  {
+    "id": 607,
+    "spelling": "Unctuous",
+    "pronunciation": "UNK-choo-us",
+    "meaning": "Excessively flattering in a greasy, insincere manner."
+  },
+  {
+    "id": 608,
+    "spelling": "Undulate",
+    "pronunciation": "UN-dyoo-layt",
+    "meaning": "To move in a smooth, wave-like, gently rolling motion."
+  },
+  {
+    "id": 609,
+    "spelling": "Ungainly",
+    "pronunciation": "un-GAYN-lee",
+    "meaning": "Moving awkwardly and clumsily with no natural grace whatsoever."
+  },
+  {
+    "id": 610,
+    "spelling": "Unkempt",
+    "pronunciation": "un-KEMPT",
+    "meaning": "Untidy in appearance, as though combs don't exist for you."
+  },
+  {
+    "id": 611,
+    "spelling": "Unruly",
+    "pronunciation": "un-ROO-lee",
+    "meaning": "Disorderly and difficult to manage in any conventional way."
+  },
+  {
+    "id": 612,
+    "spelling": "Vacuous",
+    "pronunciation": "VAK-yoo-us",
+    "meaning": "Having or showing a complete absence of thought or meaning."
+  },
+  {
+    "id": 613,
+    "spelling": "Vaingloriously",
+    "pronunciation": "vayn-GLOR-ee-us-lee",
+    "meaning": "In a manner showing excessive pride and boastfulness."
+  },
+  {
+    "id": 614,
+    "spelling": "Varmint",
+    "pronunciation": "VAR-mint",
+    "meaning": "A troublesome wild animal or a mischievous, annoying person."
+  },
+  {
+    "id": 615,
+    "spelling": "Verbosity",
+    "pronunciation": "ver-BOS-ih-tee",
+    "meaning": "The quality of using far more words than the situation warrants."
+  },
+  {
+    "id": 616,
+    "spelling": "Vexatious",
+    "pronunciation": "vek-SAY-shus",
+    "meaning": "Causing annoyance, frustration, or worry in a persistent way."
+  },
+  {
+    "id": 617,
+    "spelling": "Vexillographer",
+    "pronunciation": "veks-ih-LOG-ruh-fer",
+    "meaning": "A person who designs flags. Yes, it's a real profession."
+  },
+  {
+    "id": 618,
+    "spelling": "Villanous",
+    "pronunciation": "VIL-uh-nus",
+    "meaning": "Wicked and evil in a dramatically theatrical sort of way."
+  },
+  {
+    "id": 619,
+    "spelling": "Wabbit",
+    "pronunciation": "WAB-it",
+    "meaning": "Scottish for exhausted, worn out, or completely depleted."
+  },
+  {
+    "id": 620,
+    "spelling": "Waggish",
+    "pronunciation": "WAG-ish",
+    "meaning": "Fond of making jokes in a playful, witty, slightly roguish way."
+  },
+  {
+    "id": 621,
+    "spelling": "Wamble",
+    "pronunciation": "WOM-bul",
+    "meaning": "To move unsteadily or to feel nauseated and queasy."
+  },
+  {
+    "id": 622,
+    "spelling": "Waspish",
+    "pronunciation": "WOS-pish",
+    "meaning": "Quick to get angry and make biting, sharp remarks."
+  },
+  {
+    "id": 623,
+    "spelling": "Wazzock",
+    "pronunciation": "WAZ-uk",
+    "meaning": "British term for a stupid or annoying person."
+  },
+  {
+    "id": 624,
+    "spelling": "Widdiful",
+    "pronunciation": "WID-ih-ful",
+    "meaning": "Someone deserving to be hanged, according to old Scottish law."
+  },
+  {
+    "id": 625,
+    "spelling": "Wiffler",
+    "pronunciation": "WIF-ler",
+    "meaning": "A person who shifts from opinion to opinion based on the room."
+  },
+  {
+    "id": 626,
+    "spelling": "Winklepicker",
+    "pronunciation": "WIN-kul-pik-er",
+    "meaning": "A shoe with an extremely long, pointed toe."
+  },
+  {
+    "id": 627,
+    "spelling": "Wobblesome",
+    "pronunciation": "WOB-ul-sum",
+    "meaning": "Prone to wobbling in an unstable and unreliable manner."
+  },
+  {
+    "id": 628,
+    "spelling": "Wobbegong",
+    "pronunciation": "WOB-ee-gong",
+    "meaning": "A carpet shark that sits on the sea floor looking utterly unbothered."
+  },
+  {
+    "id": 629,
+    "spelling": "Wombat",
+    "pronunciation": "WOM-bat",
+    "meaning": "A sturdy, cube-poop-producing Australian marsupial."
+  },
+  {
+    "id": 630,
+    "spelling": "Wonky",
+    "pronunciation": "WONK-ee",
+    "meaning": "Unsteady, crooked, or not working quite as it should."
+  },
+  {
+    "id": 631,
+    "spelling": "Woozy",
+    "pronunciation": "WOO-zee",
+    "meaning": "Feeling dizzy, confused, or slightly unwell."
+  },
+  {
+    "id": 632,
+    "spelling": "Wormwood",
+    "pronunciation": "WURM-wood",
+    "meaning": "A bitter plant or the source of painful, bitter feelings."
+  },
+  {
+    "id": 633,
+    "spelling": "Worriment",
+    "pronunciation": "WOR-ee-ment",
+    "meaning": "The act of worrying persistently about things beyond your control."
+  },
+  {
+    "id": 634,
+    "spelling": "Wumple",
+    "pronunciation": "WUM-pul",
+    "meaning": "To flatten or crumple something that was carefully arranged."
+  },
+  {
+    "id": 635,
+    "spelling": "Yabber",
+    "pronunciation": "YAB-er",
+    "meaning": "To talk noisily and rapidly without conveying anything useful."
+  },
+  {
+    "id": 636,
+    "spelling": "Yammer",
+    "pronunciation": "YAM-er",
+    "meaning": "To talk or complain continuously and loudly."
+  },
+  {
+    "id": 637,
+    "spelling": "Yokel",
+    "pronunciation": "YOH-kul",
+    "meaning": "An unsophisticated rural person viewed with gentle condescension."
+  },
+  {
+    "id": 638,
+    "spelling": "Yomp",
+    "pronunciation": "YOMP",
+    "meaning": "To march over difficult terrain carrying heavy equipment."
+  },
+  {
+    "id": 639,
+    "spelling": "Zaftig",
+    "pronunciation": "ZAF-tig",
+    "meaning": "Having a full, rounded figure in an attractively soft way."
+  },
+  {
+    "id": 640,
+    "spelling": "Zilch",
+    "pronunciation": "ZILCH",
+    "meaning": "Absolutely nothing at all. Zero. Nought. Not a thing."
+  }
+]

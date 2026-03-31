@@ -113,6 +113,17 @@
         font-size: 14px;
         color: #ccc;
     }
+    .card-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    }
+
+    .card {
+    width: 30%; /* smaller so 2 fit nicely */
+    min-width: 300px; /* prevents breaking on smaller screens */
+}
 </style>
 </head>
 <body>
@@ -141,27 +152,29 @@
         </svg>
     </div>
 </div>
-
 <div class="content">
 
-    <a href="sillymillyclicker.html" class="card">
-        <img src="sillymillythumbnail.png" class="card-img">
-        <div class="card-info">
-            <h2>Silly Milly Clicker</h2>
-            <p>Click silly milly also just cookie clicker basiclyyy - Democracy update soon</p>
-        </div>
-    </a>
+    <div class="card-row">
 
-    <a href="#" class="card">
-        <img src="TSDThumbnail.png" class="card-img">
-        <div class="card-info">
-            <h2>The Silly Dictionary</h2>
-            <p>TSD (The Silly Dictionary) is a dictionary but it only contains silly, weird, funny and strange words. Over 400 individual words.</p>
-        </div>
-    </a>
+        <a href="sillymillyclicker.html" class="card">
+            <img src="sillymillythumbnail.png" class="card-img">
+            <div class="card-info">
+                <h2>Silly Milly Clicker</h2>
+                <p>Click silly milly also just cookie clicker basiclyyy - Democracy update soon</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <img src="TSDThumbnail.png" class="card-img">
+            <div class="card-info">
+                <h2>The Silly Dictionary</h2>
+                <p>TSD (The Silly Dictionary) is a dictionary but it only contains silly, weird, funny and strange words. Over 600+ individual words.</p>
+            </div>
+        </a>
+
+    </div>
 
 </div>
-
 <script>
     const cone = document.querySelector(".cone");
 

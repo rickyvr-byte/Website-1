@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Silly Dictionary</title>
+<link rel="icon" type="image/png" href="ConeTransp.png">
+
+<style>
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('LEMONMILK-Regular.otf') format('opentype');
+}
+
+/* 🔥 FORCE DARK EVERYWHERE */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #2b2b2b;
+    color: white;
+    font-family: 'LemonMilk', sans-serif;
+    min-height: 100%;
+}
+
+/* TOP */
+.top {
+    background: #8b2e00;
+    height: 220px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.cone {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%) translateY(-30px);
+    height: 80px;
+    cursor: pointer;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateY(-30px);
+    height: 80px;
+}
+
+/* WAVES */
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+svg {
+    width: 200%;
+    height: 100%;
+    animation: waveMove 6s linear infinite;
+}
+
+@keyframes waveMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* CONTENT */
+.content {
+    margin-top: 220px;
+    padding: 30px;
+    text-align: center;
+    min-height: 100vh; /* 🔥 prevents white gaps */
+}
+
+/* BUTTONS */
+.button {
+    background: #c94a00;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* BACK BUTTON */
+#backBtn {
+    display: none;
+    position: fixed;
+    top: 240px;
+    left: 20px;
+    z-index: 2000;
+}
+
+/* WORD SECTION */
+#wordSection {
+    display: none;
+}
+
+/* LOADING */
+#loadingContainer {
+    width: 60%;
+    margin: 20px auto;
+    background: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.5s;
+}
+
+#loadingBar {
+    width: 0%;
+    height: 20px;
+    background: #c94a00;
+}
+
+#loadingText {
+    transition: opacity 0.5s;
+}
+
+/* SEARCH BAR */
+#searchBar {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 20px auto 10px;
+    display: block;
+    background: #3a3a3a;
+    border: 2px solid #c94a00;
+    border-radius: 10px;
+    color: white;
+    font-family: 'LemonMilk', sans-serif;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#searchBar::placeholder {
+    color: #aaa;
+}
+
+#searchBar:focus {
+    border-color: #ff6a1a;
+    box-shadow: 0 0 8px rgba(201, 74, 0, 0.5);
+}
+
+/* CARDS */
+.card {
+    width: 50%;
+    margin: 30px auto;
+    background: #3a3a3a;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* WORD PAGE */
+#wordPage {
+    display: none;
+    text-align: center;
+    margin-top: 260px;
+    min-height: 100vh; /* 🔥 prevents white bottom */
+}
+
+.wordTitle {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.pronounce {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.meaning {
+    font-size: 22px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+    <img src="ConeTransp.png" class="cone" onclick="goHome()">
+    <img src="TSDLogo.png" class="logo">
+
+    <div class="wave-container">
+        <svg viewBox="0 0 2400 120" preserveAspectRatio="none">
+            <path d="M0,30 C150,70 350,-30 600,30 C850,90 1050,-10 1200,30 C1350,70 1550,-30 1800,30 C2050,90 2250,-10 2400,30 L2400,120 L0,120 Z" fill="#c94a00"></path>
+            <path d="M0,60 C150,100 350,0 600,60 C850,120 1050,20 1200,60 C1350,100 1550,0 1800,60 C2050,120 2250,20 2400,60 L2400,120 L0,120 Z" fill="#2b2b2b"></path>
+        </svg>
+    </div>
+</div>
+
+<div class="content" id="mainContent">
+
+    <h1>The Silly Dictionary</h1>
+
+    <div id="mainButtons">
+        <div class="button" onclick="randomWord()">Random Word</div>
+        <div class="button" onclick="openWords()">Search Words</div>
+    </div>
+
+    <div id="backBtn" class="button" onclick="goBack()">Back</div>
+
+    <div id="wordSection">
+        <div id="loadingContainer">
+            <div id="loadingBar"></div>
+        </div>
+        <div id="loadingText">0 / 0 words indexed</div>
+        <div id="wordCount" style="display:none; color:#aaa; font-size:14px; margin: 10px 0;"></div>
+        <input type="text" id="searchBar" placeholder="Search words..." oninput="filterWords(this.value)" style="display:none;">
+        <div id="wordList"></div>
+    </div>
+
+</div>
+
+<div id="wordPage">
+    <div class="button" onclick="closeWord()">Back</div>
+    <div class="wordTitle" id="wordTitle"></div>
+    <div class="pronounce" id="wordPronounce"></div>
+    <div class="meaning" id="wordMeaning"></div>
+</div>
+
+<script>
+
+function flashWhite(callback) {
+    const flash = document.createElement("div");
+    flash.style.position = "fixed";
+    flash.style.top = 0;
+    flash.style.left = 0;
+    flash.style.width = "100%";
+    flash.style.height = "100%";
+    flash.style.background = "white";
+    flash.style.opacity = "1";
+    flash.style.pointerEvents = "none";
+    flash.style.transition = "opacity 0.4s ease";
+    flash.style.zIndex = "9999";
+    document.body.appendChild(flash);
+    if (callback) callback();
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            flash.style.opacity = "0";
+        });
+    });
+    setTimeout(() => flash.remove(), 420);
+}
+
+function goHome() {
+    flashWhite(() => {
+        document.getElementById("mainContent").style.display = "block";
+        document.getElementById("wordPage").style.display = "none";
+        document.getElementById("mainButtons").style.display = "block";
+        document.getElementById("backBtn").style.display = "none";
+        document.getElementById("wordSection").style.display = "none";
+        lastView = "home";
+        window.scrollTo({ top: 0 });
+    });
+}
+
+let words = [];
+let index = 0;
+let lastView = "home";
+let wordsLoaded = false;
+
+function openWords() {
+    lastView = "list";
+    document.getElementById("mainButtons").style.display = "none";
+    document.getElementById("backBtn").style.display = "block";
+    document.getElementById("wordSection").style.display = "block";
+    if (!wordsLoaded) loadWords();
+}
+
+function goBack() {
+    window.scrollTo({ top: 0 });
+    flashWhite(() => {
+        document.getElementById("mainContent").style.display = "block";
+        document.getElementById("wordPage").style.display = "none";
+        document.getElementById("mainButtons").style.display = "block";
+        document.getElementById("backBtn").style.display = "none";
+        document.getElementById("wordSection").style.display = "none";
+        document.getElementById("searchBar").value = "";
+        filterWords("");
+    });
+}
+
+async function loadWords() {
+    const bar = document.getElementById("loadingBar");
+    const text = document.getElementById("loadingText");
+
+    text.style.opacity = "1";
+    text.innerText = "Loading TSDWords.json...";
+
+    let data;
+    try {
+        const res = await fetch("TSDWords.json");
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        data = await res.json();
+    } catch (e) {
+        text.innerText = "⚠ Could not load TSDWords.json";
+        bar.style.background = "#a00";
+        bar.style.width = "100%";
+        return;
+    }
+
+    words = data;
+    const total = words.length;
+
+    // Animate the loading bar word-by-word
+    function step() {
+        if (index < total) {
+            index++;
+            bar.style.width = (index / total) * 100 + "%";
+            text.innerText = index + " / " + total + " words indexed";
+            setTimeout(step, Math.max(20, Math.min(200, 1200 / total)));
+        } else {
+            wordsLoaded = true;
+            document.getElementById("loadingContainer").style.opacity = "0";
+            document.getElementById("loadingText").style.opacity = "0";
+            document.getElementById("wordCount").style.display = "block";
+            document.getElementById("wordCount").innerText = total + " words indexed";
+            document.getElementById("searchBar").style.display = "block";
+            displayWords();
+        }
+    }
+    step();
+}
+
+function filterWords(query) {
+    const q = query.toLowerCase().trim();
+    const filtered = q ? words.filter(w =>
+        w.spelling.toLowerCase().includes(q) || w.meaning.toLowerCase().includes(q)
+    ) : words;
+    const list = document.getElementById("wordList");
+    list.innerHTML = "";
+    filtered.forEach(w => {
+        const div = document.createElement("div");
+        div.className = "card";
+        div.innerHTML = "<h2>" + w.spelling + "</h2><p>" + w.meaning + "</p>";
+        div.onclick = () => openWordPage(w);
+        list.appendChild(div);
+    });
+    if (filtered.length === 0) {
+        list.innerHTML = "<p style='color:#aaa;margin-top:20px;'>No words found.</p>";
+    }
+}
+
+function displayWords() {
+    filterWords(document.getElementById("searchBar").value || "");
+}
+
+function randomWord() {
+    if (words.length === 0) {
+        fetch("TSDWords.json")
+            .then(r => r.json())
+            .then(data => {
+                words = data;
+                wordsLoaded = true;
+                const r = words[Math.floor(Math.random() * words.length)];
+                openWordPage(r);
+            })
+            .catch(() => alert("Could not load TSDWords.json"));
+        return;
+    }
+    lastView = "home";
+    const r = words[Math.floor(Math.random() * words.length)];
+    openWordPage(r);
+}
+
+function openWordPage(w) {
+    document.getElementById("mainContent").style.display = "none";
+    document.getElementById("wordPage").style.display = "block";
+
+    document.getElementById("wordTitle").innerText = w.spelling;
+    document.getElementById("wordPronounce").innerText = "/" + w.pronunciation + "/";
+    document.getElementById("wordMeaning").innerText = w.meaning;
+}
+
+function closeWord() {
+    document.getElementById("wordPage").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+
+    if (lastView === "list") {
+        document.getElementById("mainButtons").style.display = "none";
+        document.getElementById("backBtn").style.display = "block";
+        document.getElementById("wordSection").style.display = "block";
+    } else {
+        document.getElementById("mainButtons").style.display = "block";
+        document.getElementById("backBtn").style.display = "none";
+        document.getElementById("wordSection").style.display = "none";
+    }
+}
+
+</script>
+
+</body>
+</html>

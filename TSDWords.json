@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "spelling": "Flibbertigibbet",
+    "pronunciation": "flib-er-ti-jib-it",
+    "meaning": "A silly or talkative person."
+  },
+  {
+    "id": 2,
+    "spelling": "Snollygoster",
+    "pronunciation": "snol-ee-gos-ter",
+    "meaning": "A clever but unprincipled person."
+  },
+  {
+    "id": 3,
+    "spelling": "Widdershins",
+    "pronunciation": "wid-er-shins",
+    "meaning": "In the wrong direction, typically counterclockwise."
+  },
+  {
+    "id": 4,
+    "spelling": "Gobbledegook",
+    "pronunciation": "gob-uhl-dee-gook",
+    "meaning": "Language that is meaningless or hard to understand."
+  },
+  {
+    "id": 5,
+    "spelling": "Bumfuzzle",
+    "pronunciation": "bum-fuh-zuhl",
+    "meaning": "To confuse or perplex someone."
+  },
+  {
+    "id": 6,
+    "spelling": "Skedaddle",
+    "pronunciation": "ske-dad-uhl",
+    "meaning": "To run away quickly."
+  }
+]

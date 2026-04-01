@@ -70,14 +70,13 @@
 
     .content {
         margin-top: 220px;
-        height: 2000px;
         background: #2b2b2b;
         padding-top: 40px;
+        padding-bottom: 60px;
     }
 
+    /* ── CARD BASE ── */
     .card {
-        width: 50%;
-        margin: 40px auto;
         background: #3a3a3a;
         border-radius: 10px;
         overflow: hidden;
@@ -113,17 +112,29 @@
         font-size: 14px;
         color: #ccc;
     }
-    .card-row {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+
+    /* ── TOP CARD (75% wide, centred) ── */
+    .card-top {
+        width: 75%;
+        margin: 0 auto 30px auto;
     }
 
-    .card {
-    width: 30%; /* smaller so 2 fit nicely */
-    min-width: 300px; /* prevents breaking on smaller screens */
-}
+    /* ── BOTTOM ROW (two cards, each half of 75%) ── */
+    .card-row {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .card-row .card {
+        /* each card = half of 75% minus half the gap */
+        flex: 1 1 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+        min-width: 300px;
+    }
 </style>
 </head>
 <body>
@@ -152,8 +163,19 @@
         </svg>
     </div>
 </div>
+
 <div class="content">
 
+    <!-- TOP: RS Wordle spanning 75% -->
+    <a href="RSWordle.html" class="card card-top">
+        <img src="RSWordlethumb.png" class="card-img">
+        <div class="card-info">
+            <h2>RS Wordle</h2>
+            <p>Wordle its wordle roughly around 130 diffrent words</p>
+        </div>
+    </a>
+
+    <!-- BOTTOM: two cards each at half of 75% -->
     <div class="card-row">
 
         <a href="sillymillyclicker.html" class="card">
@@ -175,6 +197,7 @@
     </div>
 
 </div>
+
 <script>
     const cone = document.querySelector(".cone");
 

@@ -372,13 +372,16 @@ const WORDS = [
 
 // ─── STATE ─────────────────────────────────────────────────────────────────
 let answer, currentRow, currentCol, board, gameOver;
+let WORD_LEN  = 5;
+let MAX_ROWS  = 6;
 
-function initGame() {
-    answer   = WORDS[Math.floor(Math.random() * WORDS.length)].toUpperCase();
+function initGame(forcedAnswer) {
+    answer     = (forcedAnswer || WORDS[Math.floor(Math.random() * WORDS.length)]).toUpperCase();
+    WORD_LEN   = answer.length;
     currentRow = 0;
     currentCol = 0;
     gameOver   = false;
-    board      = Array.from({length: 6}, () => Array(5).fill(''));
+    board      = Array.from({length: MAX_ROWS}, () => Array(WORD_LEN).fill(''));
     buildGrid();
     buildKeyboard();
 }
@@ -387,14 +390,25 @@ function initGame() {
 function buildGrid() {
     const grid = document.getElementById('grid');
     grid.innerHTML = '';
-    for (let r = 0; r < 6; r++) {
+
+    // Responsive tile size based on word length
+    const vw       = Math.min(window.innerWidth, 700);
+    const tileSize = Math.max(26, Math.min(62, Math.floor((vw - 40) / WORD_LEN) - 6));
+    const fontSize = Math.max(10, Math.floor(tileSize * 0.38));
+    grid.style.setProperty('--ts', tileSize + 'px');
+    grid.style.setProperty('--fs', fontSize + 'px');
+
+    for (let r = 0; r < MAX_ROWS; r++) {
         const row = document.createElement('div');
         row.className = 'row';
         row.id = `row-${r}`;
-        for (let c = 0; c < 5; c++) {
+        for (let c = 0; c < WORD_LEN; c++) {
             const tile = document.createElement('div');
             tile.className = 'tile';
             tile.id = `tile-${r}-${c}`;
+            tile.style.width     = 'var(--ts)';
+            tile.style.height    = 'var(--ts)';
+            tile.style.fontSize  = 'var(--fs)';
             row.appendChild(tile);
         }
         grid.appendChild(row);
@@ -445,20 +459,20 @@ function colorKey(letter, state) {
 // ─── INPUT ──────────────────────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
     if (e.ctrlKey || e.altKey || e.metaKey) return;
-    if (e.key === 'Enter')     handleKey('ENTER');
+    if (e.key === 'Enter')          handleKey('ENTER');
     else if (e.key === 'Backspace') handleKey('⌫');
     else if (/^[a-zA-Z]$/.test(e.key)) handleKey(e.key.toUpperCase());
 });
 
 function handleKey(k) {
     if (gameOver) return;
-    if (k === '⌫') deleteLetter();
+    if (k === '⌫')      deleteLetter();
     else if (k === 'ENTER') submitRow();
     else if (/^[A-Z]$/.test(k)) addLetter(k);
 }
 
 function addLetter(letter) {
-    if (currentCol >= 5) return;
+    if (currentCol >= WORD_LEN) return;
     board[currentRow][currentCol] = letter;
     const tile = getTile(currentRow, currentCol);
     tile.textContent = letter;
@@ -480,50 +494,53 @@ function deleteLetter() {
 
 // ─── EVALUATION ─────────────────────────────────────────────────────────────
 function submitRow() {
-    if (currentCol < 5) { showToast('not enough letters'); shakeRow(); return; }
+    if (currentCol < WORD_LEN) { showToast('not enough letters'); shakeRow(); return; }
 
-    const guess = board[currentRow].join('');
-
-    // allow any 5-letter input — no word list check
+    const guess       = board[currentRow].join('');
+    const rowSnapshot = currentRow;
 
     const result = evaluate(guess, answer);
-    revealRow(currentRow, result, () => {
+    revealRow(rowSnapshot, result, () => {
         result.forEach(({letter, state}) => colorKey(letter, state));
 
         if (result.every(r => r.state === 'correct')) {
-            setTimeout(() => {
-                bounceRow(currentRow);
-                showToast(['genius!','brilliant!','great!','nice!','phew!','lucky..'][currentRow]);
-            }, 200);
+            const WIN_MSGS = [
+                ['GENIUS!!', 'are you cheating lol', 'FIRST TRY??? no way!!', 'bro how'],
+                ['ok that was fast wtf', 'Brilliant!!', 'how did you do that??', 'nah that was too quick'],
+                ['great job!!', 'yeah ok impressive', 'very nice!!', 'solid work ngl'],
+                ['nice one!', 'not bad honestly', 'yeah ok that works', 'decent'],
+                ['phew!! close one', 'that was cutting it fine lol', 'nearly had me worried there', 'ok but that was stressful'],
+                ['lucky!!! down to the wire!!', 'you scraped it!!', 'last chance and you nailed it!!', 'my heart lol']
+            ];
+            const msgs = WIN_MSGS[rowSnapshot] || WIN_MSGS[WIN_MSGS.length - 1];
+            const msg  = msgs[Math.floor(Math.random() * msgs.length)];
+            gameOver   = true;
+            isDailyGame && saveState(true);
+            setTimeout(() => { bounceRow(rowSnapshot); showToast(msg, 2800); }, 200);
+        } else if (rowSnapshot === MAX_ROWS - 1) {
             gameOver = true;
-        } else if (currentRow === 5) {
-            setTimeout(() => showToast(answer, 3000), 200);
-            gameOver = true;
+            isDailyGame && saveState(false);
+            setTimeout(() => showToast('The word was: ' + answer, 5000), 200);
+        } else {
+            isDailyGame && saveState(false);
         }
         currentRow++;
         currentCol = 0;
     });
 }
 
-function evaluate(guess, answer) {
-    const result = Array(5).fill(null).map((_,i) => ({
-        letter: guess[i], state: 'wrong'
-    }));
-    const ansArr = answer.split('');
-    const used   = Array(5).fill(false);
+function evaluate(guess, ans) {
+    const len    = ans.length;
+    const result = Array.from({length: len}, (_, i) => ({ letter: guess[i] || '', state: 'wrong' }));
+    const used   = Array(len).fill(false);
 
-    // correct pass
-    for (let i = 0; i < 5; i++) {
-        if (guess[i] === answer[i]) {
-            result[i].state = 'correct';
-            used[i] = true;
-        }
+    for (let i = 0; i < len; i++) {
+        if (guess[i] === ans[i]) { result[i].state = 'correct'; used[i] = true; }
     }
-    // misplace pass
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < len; i++) {
         if (result[i].state === 'correct') continue;
-        for (let j = 0; j < 5; j++) {
-            if (!used[j] && guess[i] === answer[j]) {
+        for (let j = 0; j < len; j++) {
+            if (!used[j] && guess[i] === ans[j]) {
                 result[i].state = 'misplace';
                 used[j] = true;
                 break;
@@ -539,21 +556,16 @@ function revealRow(row, result, cb) {
         const tile = getTile(row, i);
         setTimeout(() => {
             tile.classList.add('flip');
-            setTimeout(() => {
-                tile.classList.remove('filled');
-                tile.classList.add(state);
-            }, 250);
-        }, i * 120);
+            setTimeout(() => { tile.classList.remove('filled'); tile.classList.add(state); }, 250);
+        }, i * 100);
     });
-    setTimeout(cb, result.length * 120 + 400);
+    setTimeout(cb, result.length * 100 + 400);
 }
 
 function bounceRow(row) {
-    for (let c = 0; c < 5; c++) {
+    for (let c = 0; c < WORD_LEN; c++) {
         const tile = getTile(row, c);
-        setTimeout(() => {
-            tile.classList.add('bounce');
-        }, c * 80);
+        setTimeout(() => tile.classList.add('bounce'), c * 60);
     }
 }
 
@@ -574,26 +586,33 @@ function showToast(msg, dur = 1800) {
     toastTimer = setTimeout(() => t.classList.remove('show'), dur);
 }
 
-// ─── CONE / RESTART ─────────────────────────────────────────────────────────
-document.getElementById('cone').addEventListener('click', () => {
+// ─── FLASH HELPER ────────────────────────────────────────────────────────────
+function doFlash() {
     const flash = document.getElementById('flash');
-    flash.style.opacity = '1';
     flash.style.transition = 'none';
+    flash.style.opacity    = '1';
     setTimeout(() => {
         flash.style.transition = 'opacity 0.4s ease';
-        flash.style.opacity = '0';
+        flash.style.opacity    = '0';
     }, 10);
-    setTimeout(() => { initGame(); startHintFade(); }, 80);
+}
+
+// ─── CONE / RESTART ─────────────────────────────────────────────────────────
+document.getElementById('cone').addEventListener('click', () => {
+    doFlash();
+    setTimeout(() => {
+        isDailyGame = false;
+        initGame(null);
+        startHintFade();
+    }, 80);
 });
 
 // ─── HINT FADE ───────────────────────────────────────────────────────────────
 function startHintFade() {
     const hint = document.getElementById('restart-hint');
     clearTimeout(hint._fadeTimer);
-    // reset instantly with no transition
     hint.style.transition = 'none';
     hint.style.opacity    = '1';
-    // after a frame, kick off the 3s delay then 3s fade
     requestAnimationFrame(() => {
         hint._fadeTimer = setTimeout(() => {
             hint.style.transition = 'opacity 3s ease';
@@ -602,9 +621,70 @@ function startHintFade() {
     });
 }
 
+// ─── CACHE ───────────────────────────────────────────────────────────────────
+const TODAY      = new Date().toISOString().slice(0, 10);
+const CACHE_KEY  = 'rswordle_' + TODAY;
+let   isDailyGame = false;
+
+function saveState(finished) {
+    localStorage.setItem(CACHE_KEY, JSON.stringify({
+        answer, board, currentRow, gameOver, finished
+    }));
+}
+
+function loadState() {
+    try {
+        const raw = localStorage.getItem(CACHE_KEY);
+        return raw ? JSON.parse(raw) : null;
+    } catch { return null; }
+}
+
+function restoreBoard(savedBoard, upToRow) {
+    for (let r = 0; r < upToRow; r++) {
+        const result = evaluate(savedBoard[r].join(''), answer);
+        for (let c = 0; c < WORD_LEN; c++) {
+            const tile = getTile(r, c);
+            tile.textContent = savedBoard[r][c];
+            tile.classList.add(result[c].state);
+        }
+        result.forEach(({letter, state}) => colorKey(letter, state));
+    }
+}
+
 // ─── INIT ────────────────────────────────────────────────────────────────────
-initGame();
-startHintFade();
+async function fetchTodaysWord() {
+    try {
+        const res  = await fetch('https://wordle-api-kappa.vercel.app/answer');
+        const data = await res.json();
+        if (data && data.word && data.word.length === 5) return data.word.toUpperCase();
+    } catch (e) {
+        console.warn('Wordle API failed, falling back to random word.', e);
+    }
+    return null;
+}
+
+(async () => {
+    const saved      = loadState();
+    const todaysWord = await fetchTodaysWord();
+
+    if (saved && !saved.finished) {
+        isDailyGame = true;
+        initGame(saved.answer);
+        board      = saved.board;
+        currentRow = saved.currentRow;
+        currentCol = 0;
+        restoreBoard(saved.board, saved.currentRow);
+        showToast('welcome back!', 2000);
+    } else if (saved && saved.finished) {
+        isDailyGame = false;
+        initGame(null);
+    } else {
+        isDailyGame = true;
+        initGame(todaysWord);
+    }
+
+    startHintFade();
+})();
 </script>
 </body>
 </html>
